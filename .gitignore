@@ -19,3 +19,6 @@ bin-release/
 
 # Python
 __pycache__/
+
+# Rendered video deliverables (too large for git)
+edit/*.mp4
