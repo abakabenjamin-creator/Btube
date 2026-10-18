@@ -4,7 +4,9 @@ Every event comes from the scenes' events.json (written by render.js) or from
 the beat sheet (transition whooshes, punch-in hits), so each sound lands on
 its visual frame. Sounds are synthesized: quiet, short and tonal, no
 cartoon or meme effects.
-usage: python3 sfx.py <scene_frames> <out.wav>
+usage: python3 sfx.py <scene_frames> <out.wav> [--clicks-only]
+--clicks-only keeps just cursor clicks, keyboard typing and calculator taps:
+no whooshes, swells, chimes, shimmers, pops or hits.
 """
 import glob
 import json
@@ -163,7 +165,10 @@ def place(buf, t, snd):
         buf[i:j] += snd[:j - i]
 
 
-def main(scenes, out):
+CLICKS = {"click", "tap", "keys", "key"}
+
+
+def main(scenes, out, clicks_only=False):
     data = json.load(open(os.path.join(HERE, "beats.json")))
     dur = data["duration"]
     buf = np.zeros(int((dur + 2) * SR))
@@ -174,6 +179,8 @@ def main(scenes, out):
         for e in json.load(open(f)):
             t, k = e["t"], e["type"]
             soft = bool(e.get("soft"))
+            if clicks_only and k not in CLICKS:
+                continue
             if k == "keys":
                 for i in range(e["n"]):
                     place(buf, t + i / e["cps"] + rng.uniform(-0.008, 0.008), s_key())
@@ -194,7 +201,7 @@ def main(scenes, out):
             count += 1
     beats = data["beats"]
     avatar = {"AVATAR_TALK", "AVATAR_PUSH", "AVATAR_CALC", "AVATAR_PHONE_DEMO"}
-    for a, b in zip(beats, beats[1:]):
+    for a, b in zip([] if clicks_only else beats, beats[1:]):
         if a["type"] in avatar and b["type"] in avatar:
             continue
         k = b.get("trans", "blur")
@@ -206,7 +213,7 @@ def main(scenes, out):
         else:
             place(buf, b["t0"] - 0.3, s_whoosh(0.6, True) * db(-3))
         count += 1
-    for b in beats:  # punch-in hits land with the push
+    for b in [] if clicks_only else beats:  # punch-in hits land with the push
         for (ta, sa, _), (tb, sb, e) in zip(b.get("cam", []), b.get("cam", [])[1:]):
             if e == "expo" and sb / sa > 1.05:
                 place(buf, ta, s_hit())
@@ -221,4 +228,4 @@ def main(scenes, out):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2], "--clicks-only" in sys.argv[3:])
