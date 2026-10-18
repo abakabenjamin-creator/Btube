@@ -58,7 +58,7 @@ Deliverable: `best_one_glass_ui_1080p.mp4`, 1920×1080, 30 fps, H.264 High, ~18 
    - Calculator and savings app are original designs.
    - B-roll was checked frame by frame. Gold bars (stamped refiner marks), the NYC zoom-out (lit sign) and a watch movement with an engraved brand were rejected and replaced.
 7. **B-roll clips used** (Mixkit Stock Video Free License): Hourglass with golden sand · Machinery of a very close watch · Luxury hotel room panning shot · New York City view at night · Signing a contract · Silhouette of business people by a high-rise window · Businessman putting on a watch · Man in suit checks his watch. All are graded (deep blacks, warm highlights, −18 % saturation, vignette) and joined with blur dissolves.
-8. **Music:**
+8. **Music (removed at Ben's request; final cut is voice + UI sounds only):**
    - Hook: Mixkit "Silent Descent" (0–17.5 s).
    - Bed: "Lo-Fi 04" → "Sleepy Cat" → "Day Dreamin' with U", with 4 s crossfades.
    - The bed sits about 13 dB under the voice before sidechain ducking.
