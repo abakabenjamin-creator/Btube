@@ -1,0 +1,16 @@
+{
+  "avatar_look_id": "98487b8a84d0495884170e28d78e1c85",
+  "aroll": {
+    "part1": "d5a78476036e5b1c99c040e887d3a356",
+    "part2": "4a85b4328b0dc2ec5a2bdc11463e7fe9",
+    "engine": "avatar_v"
+  },
+  "broll": {
+    "b_water": "42455e1fa68241f68bc26aecb6bfb840",
+    "b_beach": "3c27491711694f2ba171f6cff823d752",
+    "b_garden": "0b0760b64acd4d0e9cbcaea7d52be641",
+    "b_bike": "b75f15dc689f478c934910f3d2dece88",
+    "b_skyline": "34c5f891732d4f34a33fac2b0381f377",
+    "b_car": "5929180fcada42158590490a873da84b"
+  }
+}

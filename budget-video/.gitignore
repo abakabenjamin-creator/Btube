@@ -1,0 +1,7 @@
+node_modules/
+out/
+assets/avatar_frames/
+assets/broll/
+assets/broll_src/
+assets/part*.mp4
+build/__pycache__/

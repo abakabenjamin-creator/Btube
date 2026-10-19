@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="style.css">
+<script src="../node_modules/gsap/dist/gsap.min.js"></script></head>
+<body>
+<div id="stage">
+  <div id="bg" class="full">
+    <div class="orb" style="left:-300px;top:-200px;width:1100px;height:1100px;background:radial-gradient(circle, rgba(30,118,82,.30), transparent 65%)"></div>
+    <div class="orb" style="left:1100px;top:-300px;width:1000px;height:1000px;background:radial-gradient(circle, rgba(72,72,48,.32), transparent 65%)"></div>
+    <div class="orb" style="left:1200px;top:500px;width:1000px;height:1000px;background:radial-gradient(circle, rgba(48,72,96,.30), transparent 65%)"></div>
+    <div class="orb" style="left:200px;top:600px;width:900px;height:900px;background:radial-gradient(circle, rgba(90,30,30,.20), transparent 65%)"></div>
+    <svg class="full" viewBox="0 0 1920 1080" style="opacity:.18"><path d="M-50 760 C 400 640, 800 900, 1200 740 S 1800 640, 1990 720" fill="none" stroke="#48D8A8" stroke-width="2"/></svg>
+  </div>
+  <div id="aroll" class="layer" style="display:none">
+    <div id="avWrap"><img class="av" alt=""></div>
+    <div id="arollBeats" class="full"></div>
+    <div id="overlays" class="full"></div>
+  </div>
+  <div id="scenes" class="full"></div>
+  <div id="vignette" class="full" style="pointer-events:none"></div>
+  <svg width="0" height="0" style="position:absolute"><defs id="filters"></defs></svg>
+</div>
+<script src="app.js"></script>
+</body></html>
