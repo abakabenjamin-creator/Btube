@@ -97,4 +97,4 @@ os.makedirs(f"{ROOT}/out", exist_ok=True)
 for name, x in (("sfx", sfx),):
     x = x / max(1e-9, np.abs(x).max()) * .89
     wavfile.write(f"{ROOT}/out/{name}.wav", SR, x.astype(np.float32))
-print("audio ok", round(DUR, 1), "s,", len(EV["sfx"]), "sfx events, no music")
+print("audio ok", round(DUR, 1), "s,", len(EV["sfx"]), "sfx events")

@@ -15,4 +15,7 @@ curl -fsSL -o broll_src/b_garden.mp4  "$R/01a1525b-31e3-7d4e-bf43-81b85d0f3f04.m
 curl -fsSL -o broll_src/b_bike.mp4    "$R/01a1525b-9f24-7066-aee4-39fa8281513d.mp4"
 curl -fsSL -o broll_src/b_skyline.mp4 "$R/01a1525b-aae5-7955-a416-07da0f367c57.mp4"
 curl -fsSL -o broll_src/b_car.mp4     "$R/01a1525b-f552-7462-90f9-942872d66ec0.mp4"
+# Music bed: HeyGen music catalog track d595a8290bfd48a6bc37cc4386c88d6f (link expires ~2026-10-26; refresh with search_audio_sounds)
+mkdir -p music
+curl -fsSL -o music/bed.wav "https://heygen-product.s3-accelerate.amazonaws.com/astral_generated_music/d595a8290bfd48a6bc37cc4386c88d6f.wav?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3FLD4S3AS7WYJKBK%2F20261019%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20261019T155811Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=6cfd2197cdf84e694e1fed17766e025ff5ac44cad40e7073d6deddd343df1390"
 echo fetched
