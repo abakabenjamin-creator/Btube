@@ -33,7 +33,7 @@ echo "== 5. mix (voice cleanup + sfx + ducked music bed) + grade + encode"
 ffmpeg -v error -y -i out/picture.mp4 -i out/voice.wav -i out/sfx.wav -i out/music.wav -filter_complex "
  [1:a]highpass=f=70,acompressor=threshold=-20dB:ratio=3:attack=5:release=90:makeup=2,asplit[vo][key];
  [2:a]volume=-7dB[s];
- [3:a]lowpass=f=9000,volume=-24dB[m0];[m0][key]sidechaincompress=threshold=0.03:ratio=3:attack=120:release=900:makeup=1[m];
+ [3:a]lowpass=f=9000,volume=-11dB[m0];[m0][key]sidechaincompress=threshold=0.05:ratio=2:attack=150:release=900:makeup=1[m];
  [vo][s][m]amix=inputs=3:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11:print_format=summary[a];
  [0:v]eq=contrast=1.03:saturation=1.03,noise=alls=4:allf=t,format=yuv420p[v]" \
  -map "[v]" -map "[a]" -c:v libx264 -profile:v high -preset slow -b:v 18M -maxrate 20M -bufsize 36M -r 30 \
