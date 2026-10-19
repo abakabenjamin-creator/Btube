@@ -27,11 +27,11 @@
 | 6 | Truth lines on myth cards use exact script fragments (e.g. "Fun just gets its own spot in the box."). | The script is sacred. |
 | 7 | "$7 a week is about $30 a month" is shown as `$7/wk → month ≈ $30`, not as a multiplication. | Doing the sum would need ×52÷12, numbers that aren't spoken. |
 | 8 | "$2 a week, that's $8 a month" is shown as `$2 × 4 wks = $8`. | Matches the spoken $8 (exact maths would be $8.67). The year figure `$2 × 52 wks = $104` is exact. |
-| 9 | Disclaimer at roughly 0:20–0:26, low in frame, nothing else animating. | QC: money video, disclaimer in the first 60 s. Uses the default text, since no custom text was supplied. |
+| 9 | Disclaimer at 0:15.6–0:20.8 (re-timed from HeyGen's captions), low in frame, nothing else animating. | QC: money video, disclaimer in the first 60 s. Uses the default text, since no custom text was supplied. |
 | 10 | **No background music.** Voice plus the UI sound layer only (clicks, keys, whooshes, pops, chimes, calculator taps). | Ben asked for no music. The SFX are synthesized because no stock library is reachable from here. |
 | 11 | B-roll generated with HeyGen Video 1 (6 shots). | No stock site is reachable. Every prompt asks for no text, logos, badges or plates. Shots longer than 4 s are split into ~3.4 s sub-shots with blur dissolves. |
 | 12 | No captions burned in. | Your caption style wasn't specified. HeyGen's SRT sidecars are in `assets/`. |
-| 13 | Ring check (`AVATAR_FRAMED`): **pending**. | Needs the downloaded footage to inspect. If a ring shows, those clips get the framed-card layout plus Runway inpainting before assembly. |
+| 13 | Ring check (`AVATAR_FRAMED`): **passed**. | Frames from both A-roll parts were checked and show no ring-light reflection in the glasses, so no framed-card fallback or inpainting was needed. |
 
 ## Tools actually used
 | Step | Tool |
@@ -42,6 +42,11 @@
 | UI rebuilds, motion, type, camera (Roles 2–5) | HTML/CSS + GSAP 3.12.5, rendered frame by frame in headless Chromium (Playwright), instead of HyperFrames/Figma. HyperFrames' compose tool is disabled for CLI agents. |
 | Sound (Role 6) | NumPy/SciPy SFX synthesis (no music); FFmpeg `loudnorm` (−14 LUFS, −1.5 dBTP) |
 | Finish (Role 7) | FFmpeg: H.264 high profile at 18 Mbps, AAC 320 kbps, light grade, 1–2% grain |
+
+## Final render
+- `out/Budgeting_Magic_Trick_1080p.mp4` (not committed; `out/` is gitignored): 6:56.9, 1920×1080 at 30 fps, H.264 at 18 Mbps, AAC audio.
+- Loudness: −14.0 LUFS integrated, −1.5 dBFS true peak, 1.7 LU range.
+- 370 SFX events, no music.
 
 ## Files
 - `script.txt`, `script_part1.txt`, `script_part2.txt`: narration exactly as sent to HeyGen.
