@@ -1,6 +1,6 @@
 {
- "duration": 493.302,
- "timing": "estimate",
+ "duration": 416.92,
+ "timing": "srt",
  "layout": [
   {
    "type": "AVATAR_TALK",
@@ -11,9 +11,9 @@
    ],
    "t0": 0.0,
    "push_t": [
-    1.194
+    1.288
    ],
-   "t1": 2.124
+   "t1": 2.13
   },
   {
    "type": "GLASS_UI",
@@ -28,16 +28,16 @@
     "rabbit": "No rabbit",
     "gone": "Just gone"
    },
-   "t0": 2.124,
+   "t0": 2.13,
    "cues_t": {
-    "mon": 2.254,
-    "tada": 4.5,
-    "fri": 5.2219999999999995,
-    "smoke": 7.072,
-    "rabbit": 8.078000000000001,
-    "gone": 9.142000000000001
+    "mon": 2.26,
+    "tada": 4.86,
+    "fri": 5.62,
+    "smoke": 7.46,
+    "rabbit": 8.440000000000001,
+    "gone": 9.520000000000001
    },
-   "t1": 10.076
+   "t1": 10.43
   },
   {
    "type": "AVATAR_TALK",
@@ -46,11 +46,11 @@
    "push": [
     "I'm the magician"
    ],
-   "t0": 10.076,
+   "t0": 10.43,
    "push_t": [
-    11.848
+    11.96
    ],
-   "t1": 32.292
+   "t1": 28.73
   },
   {
    "type": "MYTH_FLIP",
@@ -61,16 +61,16 @@
    "truth": "Fun just gets its own spot in the box.",
    "key": "spot",
    "hold": 2.6,
-   "t0": 32.292,
-   "myth_end": 35.952,
-   "t1": 38.552
+   "t0": 28.73,
+   "myth_end": 32.16,
+   "t1": 34.76
   },
   {
    "type": "AVATAR_TALK",
    "title": "See why people never start",
    "start": "This is why most people never start",
-   "t0": 38.552,
-   "t1": 44.074
+   "t0": 34.76,
+   "t1": 38.87
   },
   {
    "type": "GRID_SLIDE",
@@ -83,14 +83,14 @@
     "fruit": "some fruit",
     "treat": "a little treat"
    },
-   "t0": 44.074,
+   "t0": 38.87,
    "cues_t": {
-    "veg": 47.036,
-    "sandwich": 49.752,
-    "fruit": 50.654,
-    "treat": 52.24
+    "veg": 41.549,
+    "sandwich": 44.001000000000005,
+    "fruit": 44.764,
+    "treat": 46.21
    },
-   "t1": 53.866
+   "t1": 47.31
   },
   {
    "type": "GRID_SLIDE",
@@ -103,21 +103,21 @@
     "part": "That $2 is part of the plan",
     "follow": "You're following them"
    },
-   "t0": 53.866,
+   "t0": 47.31,
    "cues_t": {
-    "ten": 56.312000000000005,
-    "two": 59.242000000000004,
-    "part": 63.752,
-    "follow": 70.3
+    "ten": 49.38,
+    "two": 51.92,
+    "part": 56.04,
+    "follow": 61.480000000000004
    },
-   "t1": 71.924
+   "t1": 62.73
   },
   {
    "type": "AVATAR_TALK",
    "title": "Give fun its spot",
    "start": "Fun isn't banned",
-   "t0": 71.924,
-   "t1": 76.79
+   "t0": 62.73,
+   "t1": 66.89
   },
   {
    "type": "MYTH_FLIP",
@@ -128,16 +128,16 @@
    "truth": "The less money you have, the more every dollar matters.",
    "key": "every dollar",
    "hold": 2.4,
-   "t0": 76.79,
-   "myth_end": 81.476,
-   "t1": 81.946
+   "t0": 66.89,
+   "myth_end": 70.8,
+   "t1": 70.95
   },
   {
    "type": "AVATAR_TALK",
    "title": "Flip it around",
    "start": "It's actually the other way around",
-   "t0": 81.946,
-   "t1": 84.61
+   "t0": 70.95,
+   "t1": 73.09
   },
   {
    "type": "GLASS_UI",
@@ -153,17 +153,17 @@
     "second": "For the second person",
     "fifth": "That's a fifth"
    },
-   "t0": 84.61,
+   "t0": 73.09,
    "cues_t": {
-    "a": 86.378,
-    "b": 87.88799999999999,
-    "drop": 89.74,
-    "first": 92.728,
-    "notice": 97.11,
-    "second": 98.74799999999999,
-    "fifth": 102.788
+    "a": 74.67999999999999,
+    "b": 76.46,
+    "drop": 78.16,
+    "first": 80.67999999999999,
+    "notice": 84.53999999999999,
+    "second": 86.11999999999999,
+    "fifth": 89.47999999999999
    },
-   "t1": 105.898
+   "t1": 91.51
   },
   {
    "type": "AVATAR_TALK",
@@ -172,11 +172,11 @@
    "push": [
     "every dollar matters"
    ],
-   "t0": 105.898,
+   "t0": 91.51,
    "push_t": [
-    108.812
+    93.74
    ],
-   "t1": 110.316
+   "t1": 95.09
   },
   {
    "type": "BROLL",
@@ -184,15 +184,15 @@
    "start": "If you have a big bucket of water",
    "clip": "b_water",
    "prompt": "Extreme slow-motion macro of a single water droplet falling into a crystal glass of water on polished black marble, dark moody studio light, warm rim highlights, glossy reflections, shallow depth of field, slow push-in, cinematic 4K. No text, no logos, no people.",
-   "t0": 110.316,
-   "t1": 119.482
+   "t0": 95.09,
+   "t1": 103.19
   },
   {
    "type": "AVATAR_TALK",
    "title": "Know what you're working with",
    "start": "A budget is how you stop the spills",
-   "t0": 119.482,
-   "t1": 132.288
+   "t0": 103.19,
+   "t1": 113.63
   },
   {
    "type": "MYTH_FLIP",
@@ -203,16 +203,16 @@
    "truth": "So write it down.",
    "key": "write",
    "hold": 2.4,
-   "t0": 132.288,
-   "myth_end": 136.284,
-   "t1": 138.684
+   "t0": 113.63,
+   "myth_end": 116.98,
+   "t1": 119.38
   },
   {
    "type": "AVATAR_TALK",
    "title": "Spot the little spends",
    "start": "Your head is great at lots of things",
-   "t0": 138.684,
-   "t1": 143.276
+   "t0": 119.38,
+   "t1": 122.51
   },
   {
    "type": "AVATAR_CALC",
@@ -228,7 +228,7 @@
      ],
      "result": "$7",
      "label": "per week",
-     "t": 151.32999999999998
+     "t": 128.48
     },
     {
      "at": "$7 a week is about $30 a month",
@@ -239,7 +239,7 @@
      ],
      "result": "\u2248 $30",
      "label": "per month",
-     "t": 154.14
+     "t": 131.0
     },
     {
      "at": "And in one year",
@@ -250,11 +250,11 @@
      ],
      "result": "$365",
      "label": "per year",
-     "t": 157.524
+     "t": 134.38
     }
    ],
-   "t0": 143.276,
-   "t1": 162.144
+   "t0": 122.51,
+   "t1": 139.0
   },
   {
    "type": "BROLL",
@@ -262,8 +262,8 @@
    "start": "One grain of sand is nothing",
    "clip": "b_beach",
    "prompt": "Slow cinematic aerial drone glide over a pristine private white-sand beach at golden hour, turquoise water, a minimalist modern luxury villa at the edge of the sand, warm highlights, deep shadows, no people, no text, no logos.",
-   "t0": 162.144,
-   "t1": 164.962
+   "t0": 139.0,
+   "t1": 142.09
   },
   {
    "type": "GLASS_UI",
@@ -276,14 +276,14 @@
     "anywhere": "anywhere",
     "see": "you can see it"
    },
-   "t0": 164.962,
+   "t0": 142.09,
    "cues_t": {
-    "paper": 166.666,
-    "notes": 167.452,
-    "anywhere": 168.864,
-    "see": 171.244
+    "paper": 143.5,
+    "notes": 144.134,
+    "anywhere": 145.403,
+    "see": 147.286
    },
-   "t1": 173.322
+   "t1": 148.33
   },
   {
    "type": "MYTH_FLIP",
@@ -294,9 +294,9 @@
    "truth": "Little spends show you what you really care about.",
    "key": "care",
    "hold": 2.4,
-   "t0": 173.322,
-   "myth_end": 176.878,
-   "t1": 179.278
+   "t0": 148.33,
+   "myth_end": 151.62,
+   "t1": 154.02
   },
   {
    "type": "AVATAR_TALK",
@@ -305,11 +305,11 @@
    "push": [
     "matter much more"
    ],
-   "t0": 179.278,
+   "t0": 154.02,
    "push_t": [
-    186.252
+    159.025
    ],
-   "t1": 191.906
+   "t1": 163.35
   },
   {
    "type": "AVATAR_CALC",
@@ -325,7 +325,7 @@
      ],
      "result": "$80",
      "label": "per month",
-     "t": 197.476
+     "t": 168.28
     },
     {
      "at": "And over a whole year",
@@ -336,11 +336,11 @@
      ],
      "result": "$1,040",
      "label": "per year",
-     "t": 199.328
+     "t": 170.07999999999998
     }
    ],
-   "t0": 191.906,
-   "t1": 203.948
+   "t0": 163.35,
+   "t1": 174.7
   },
   {
    "type": "GRID_SLIDE",
@@ -362,20 +362,20 @@
      "a big start on your savings"
     ]
    ],
-   "t0": 203.948,
+   "t0": 174.7,
    "items_t": [
-    203.392,
-    204.346,
-    205.926
+    174.474,
+    175.177,
+    176.528
    ],
-   "t1": 208.112
+   "t1": 178.55
   },
   {
    "type": "AVATAR_TALK",
    "title": "Find your $1,040",
    "start": "If the snacks make you happy",
-   "t0": 208.112,
-   "t1": 216.82
+   "t0": 178.55,
+   "t1": 186.05
   },
   {
    "type": "MYTH_FLIP",
@@ -386,9 +386,9 @@
    "truth": "It's more like a garden.",
    "key": "garden",
    "hold": 1.2,
-   "t0": 216.82,
-   "myth_end": 220.866,
-   "t1": 222.066
+   "t0": 186.05,
+   "myth_end": 189.84,
+   "t1": 191.04
   },
   {
    "type": "BROLL",
@@ -396,22 +396,22 @@
    "start": "A budget isn't a statue",
    "clip": "b_garden",
    "prompt": "Slow gimbal glide through a manicured formal garden of a modern luxury estate at dusk, sculpted hedges, a long reflecting pool, warm garden lights, glass villa softly lit in the background, cinematic shallow depth of field, no people, no text.",
-   "t0": 222.066,
-   "t1": 231.464
+   "t0": 191.04,
+   "t1": 198.21
   },
   {
    "type": "AVATAR_TALK",
    "title": "Plan for the birthday",
    "start": "Here's an example",
-   "t0": 231.464,
-   "t1": 250.908
+   "t0": 198.21,
+   "t1": 214.59
   },
   {
    "type": "AVATAR_TALK",
    "title": "Check in once a month",
    "start": "That's what checking your budget does",
-   "t0": 250.908,
-   "t1": 263.9
+   "t0": 214.59,
+   "t1": 224.09
   },
   {
    "type": "MYTH_FLIP",
@@ -422,16 +422,16 @@
    "truth": "The only budget that truly fails is the one you stop using.",
    "key": "stop using",
    "hold": 2.4,
-   "t0": 263.9,
-   "myth_end": 268.862,
-   "t1": 269.332
+   "t0": 224.09,
+   "myth_end": 228.42,
+   "t1": 228.53
   },
   {
    "type": "AVATAR_TALK",
    "title": "Expect to go over",
    "start": "You will go over",
-   "t0": 269.332,
-   "t1": 272.202
+   "t0": 228.53,
+   "t1": 230.99
   },
   {
    "type": "AVATAR_CALC",
@@ -447,7 +447,7 @@
      ],
      "result": "$5",
      "label": "over",
-     "t": 277.584
+     "t": 236.14
     },
     {
      "at": "Next month, you just plan $25",
@@ -458,11 +458,11 @@
      ],
      "result": "$25",
      "label": "next month's fun",
-     "t": 281.40999999999997
+     "t": 239.68
     }
    ],
-   "t0": 272.202,
-   "t1": 286.706
+   "t0": 230.99,
+   "t1": 244.31
   },
   {
    "type": "BROLL",
@@ -470,8 +470,8 @@
    "start": "It's like learning to ride a bike",
    "clip": "b_bike",
    "prompt": "Cinematic low tracking shot of a premium carbon road bicycle rolling along an empty coastal cliff road at golden hour, rider seen from behind, ocean below, shallow depth of field, warm highlights, deep rich blacks, no logos, no text.",
-   "t0": 286.706,
-   "t1": 293.292
+   "t0": 244.31,
+   "t1": 249.49
   },
   {
    "type": "AVATAR_TALK",
@@ -480,11 +480,11 @@
    "push": [
     "stop using"
    ],
-   "t0": 293.292,
+   "t0": 249.49,
    "push_t": [
-    300.282
+    255.07
    ],
-   "t1": 301.504
+   "t1": 255.81
   },
   {
    "type": "CHAPTER_CARD",
@@ -493,8 +493,8 @@
    "num": "3",
    "label": "The Three-Jar Plan",
    "hold": 2.0,
-   "t0": 301.504,
-   "t1": 304.564
+   "t0": 255.81,
+   "t1": 257.73
   },
   {
    "type": "GRID_SLIDE",
@@ -506,13 +506,13 @@
     "j2": "Jar number two",
     "j3": "Jar number three"
    },
-   "t0": 304.564,
+   "t0": 257.73,
    "cues_t": {
-    "j1": 312.294,
-    "j2": 322.438,
-    "j3": 333.522
+    "j1": 264.46,
+    "j2": 272.78,
+    "j3": 282.3
    },
-   "t1": 346.18
+   "t1": 292.39
   },
   {
    "type": "GRID_SLIDE",
@@ -532,28 +532,28 @@
     "k3": "$300 for wants",
     "k2": "$200 for future you"
    },
-   "t0": 346.18,
+   "t0": 292.39,
    "cues_t": {
-    "half": 350.736,
-    "third": 352.206,
-    "fifth": 354.24399999999997,
-    "ten": 356.51,
-    "t5": 359.738,
-    "t3": 362.45,
-    "t2": 365.162,
-    "k": 368.106,
-    "k5": 371.676,
-    "k3": 373.652,
-    "k2": 375.628
+    "half": 295.78,
+    "third": 296.993,
+    "fifth": 298.751,
+    "ten": 300.46,
+    "t5": 302.933,
+    "t3": 304.62,
+    "t2": 306.94,
+    "k": 309.68,
+    "k5": 312.248,
+    "k3": 314.48,
+    "k2": 316.42
    },
-   "t1": 377.816
+   "t1": 318.79
   },
   {
    "type": "AVATAR_TALK",
    "title": "Be honest about rent",
    "start": "But here's the honest part",
-   "t0": 377.816,
-   "t1": 390.234
+   "t0": 318.79,
+   "t1": 329.93
   },
   {
    "type": "AVATAR_CALC",
@@ -577,24 +577,24 @@
       "$150 for future you",
       "adds up"
      ],
-     "t": 390.364,
+     "t": 330.06,
      "taps_t": [
-      390.884,
-      392.29,
-      393.98,
-      396.69
+      330.864,
+      332.622,
+      335.168,
+      338.522
      ]
     }
    ],
-   "t0": 390.234,
-   "t1": 399.64
+   "t0": 329.93,
+   "t1": 341.472
   },
   {
    "type": "AVATAR_TALK",
    "title": "Always pay future you",
    "start": "The numbers are a starting point",
-   "t0": 399.64,
-   "t1": 410.026
+   "t0": 341.472,
+   "t1": 349.41
   },
   {
    "type": "GLASS_UI",
@@ -607,14 +607,14 @@
     "away": "put the future-you money away",
     "grows": "Watch how it grows"
    },
-   "t0": 410.026,
+   "t0": 349.41,
    "cues_t": {
-    "first": 413.33,
-    "arrives": 415.486,
-    "away": 417.304,
-    "grows": 421.278
+    "first": 351.86,
+    "arrives": 353.42,
+    "away": 354.714,
+    "grows": 357.96
    },
-   "t1": 423.188
+   "t1": 359.19
   },
   {
    "type": "AVATAR_CALC",
@@ -631,8 +631,8 @@
      "result": "$8",
      "label": "per month",
      "resat": "$8 a month",
-     "t": 423.318,
-     "res_t": 426.148
+     "t": 359.32,
+     "res_t": 362.173
     },
     {
      "at": "In one year, that's $104",
@@ -643,7 +643,7 @@
      ],
      "result": "$104",
      "label": "per year",
-     "t": 427.42199999999997
+     "t": 363.2
     },
     {
      "at": "If a grown-up saves $200",
@@ -655,19 +655,19 @@
      "result": "$2,400",
      "label": "per year",
      "resat": "that's $2,400",
-     "t": 430.126,
-     "res_t": 433.858
+     "t": 366.34,
+     "res_t": 370.362
     }
    ],
-   "t0": 423.188,
-   "t1": 436.808
+   "t0": 359.19,
+   "t1": 373.312
   },
   {
    "type": "AVATAR_TALK",
    "title": "Start with future you",
    "start": "Same idea",
-   "t0": 436.808,
-   "t1": 441.584
+   "t0": 373.312,
+   "t1": 377.47
   },
   {
    "type": "BROLL",
@@ -675,8 +675,8 @@
    "start": "None of this makes you rich overnight",
    "clip": "b_skyline",
    "prompt": "Slow cinematic drone push toward a glass skyscraper skyline at dusk, city lights switching on, warm amber highlights against deep blue-black sky, glossy reflections, no text, no logos.",
-   "t0": 441.584,
-   "t1": 446.46
+   "t0": 377.47,
+   "t1": 381.59
   },
   {
    "type": "BROLL",
@@ -684,15 +684,15 @@
    "start": "But it's the boring thing",
    "clip": "b_car",
    "prompt": "Slow orbit around a sleek dark grey supercar parked in a minimalist concrete private garage, soft overhead light strips, glossy reflections, deep blacks, warm highlights, shallow depth of field, no badges, no license plate, no text.",
-   "t0": 446.46,
-   "t1": 451.182
+   "t0": 381.59,
+   "t1": 385.05
   },
   {
    "type": "AVATAR_TALK",
    "title": "Check in every month",
    "start": "The hard part isn't the math",
-   "t0": 451.182,
-   "t1": 458.492
+   "t0": 385.05,
+   "t1": 390.51
   },
   {
    "type": "GLASS_UI",
@@ -705,21 +705,21 @@
     "free": "It's free",
     "link": "the link is in the description"
    },
-   "t0": 458.492,
+   "t0": 390.51,
    "cues_t": {
-    "steps": 464.984,
-    "never": 466.054,
-    "free": 469.228,
-    "link": 470.298
+    "steps": 395.58299999999997,
+    "never": 396.39,
+    "free": 399.06,
+    "link": 399.724
    },
-   "t1": 473.008
+   "t1": 401.59
   },
   {
    "type": "AVATAR_TALK",
    "title": "Say yes on purpose",
    "start": "A budget isn't about saying no",
-   "t0": 473.008,
-   "t1": 481.49
+   "t0": 401.59,
+   "t1": 408.65
   },
   {
    "type": "END_SCREEN",
@@ -729,12 +729,12 @@
     "card": "watch this video right here",
     "grow": "once it starts to grow"
    },
-   "t0": 481.49,
+   "t0": 408.65,
    "cues_t": {
-    "card": 482.806,
-    "grow": 488.374
+    "card": 409.596,
+    "grow": 413.827
    },
-   "t1": 493.302
+   "t1": 416.92
   }
  ],
  "overlays": [
@@ -746,16 +746,16 @@
    "b": "No idea how it works",
    "cueb": "I have no idea",
    "end": "how the trick works.|end",
-   "t0": 10.206000000000001,
-   "cueb_t": 13.256,
-   "t1": 16.332
+   "t0": 10.56,
+   "cueb_t": 13.100000000000001,
+   "t1": 15.88
   },
   {
    "type": "DISCLAIMER_CARD",
    "start": "And trust me",
    "end": "more times than I can count.|end",
-   "t0": 16.082,
-   "t1": 22.338
+   "t0": 15.64,
+   "t1": 20.76
   },
   {
    "type": "HOOK_SPLIT_TITLE",
@@ -767,10 +767,10 @@
    "strike": "once they're gone",
    "cueb": "really simple",
    "end": "really simple.|end",
-   "t0": 25.145999999999997,
-   "cueb_t": 30.776,
-   "strike_t": 28.79,
-   "t1": 32.322
+   "t0": 23.14,
+   "cueb_t": 27.709,
+   "strike_t": 26.072,
+   "t1": 29.1
   },
   {
    "type": "TEXT_ON_AROLL",
@@ -792,15 +792,15 @@
     "spot"
    ],
    "end": "spot in the box.|end",
-   "t0": 72.054,
+   "t0": 62.86,
    "words_t": [
-    72.054,
-    73.80199999999999,
-    74.48599999999999,
-    74.77,
-    75.054
+    62.86,
+    64.59599999999999,
+    65.163,
+    65.399,
+    65.63499999999999
    ],
-   "t1": 76.82
+   "t1": 67.2
   },
   {
    "type": "TEXT_ON_AROLL",
@@ -809,9 +809,9 @@
    "a": "Guessing",
    "strikecue": "so you're not guessing",
    "end": "so you're not guessing.|end",
-   "t0": 122.496,
-   "strikecue_t": 130.204,
-   "t1": 132.318
+   "t0": 105.82,
+   "strikecue_t": 112.155,
+   "t1": 113.98
   },
   {
    "type": "TEXT_ON_AROLL",
@@ -821,9 +821,9 @@
    "b": "Little spends",
    "cueb": "But little spends",
    "end": "really care about.|end",
-   "t0": 183.76,
-   "cueb_t": 187.654,
-   "t1": 191.936
+   "t0": 157.04,
+   "cueb_t": 160.29999999999998,
+   "t1": 163.66
   },
   {
    "type": "TEXT_ON_AROLL",
@@ -843,14 +843,14 @@
     "$1,040"
    ],
    "end": "something you want more.|end",
-   "t0": 212.01999999999998,
+   "t0": 181.84,
    "words_t": [
-    212.69,
-    212.974,
-    213.316,
-    213.716
+    182.49099999999999,
+    182.852,
+    183.286,
+    183.792
    ],
-   "t1": 216.85
+   "t1": 186.38
   },
   {
    "type": "PROGRESS_TRACKER",
@@ -878,15 +878,15 @@
     "$15 ALL AT ONCE",
     "you'll need $15 all at once"
    ],
-   "t0": 233.11599999999999,
+   "t0": 199.64,
    "stages_t": [
-    244.922,
-    246.504,
-    247.748,
-    249.058
+    209.792,
+    210.944,
+    211.934,
+    212.966
    ],
-   "sticker_t": 240.928,
-   "t1": 251.288
+   "sticker_t": 205.814,
+   "t1": 214.94
   },
   {
    "type": "CHECKLIST_ON_AROLL",
@@ -910,14 +910,14 @@
      "What's coming next?"
     ]
    ],
-   "t0": 256.308,
+   "t0": 218.57999999999998,
    "items_t": [
-    258.618,
-    259.798,
-    260.978,
-    262.1
+    220.16,
+    221.16,
+    221.98,
+    222.85999999999999
    ],
-   "t1": 263.93
+   "t1": 224.42
   },
   {
    "type": "TEXT_ON_AROLL",
@@ -928,10 +928,10 @@
    "cueb": "you're back to even",
    "end": "you're back to even.|end",
    "startcue": "You went over by $5",
-   "t0": 269.462,
-   "cueb_t": 284.796,
-   "startcue_t": 277.584,
-   "t1": 286.736
+   "t0": 228.66,
+   "cueb_t": 243.136,
+   "startcue_t": 236.14,
+   "t1": 244.66
   },
   {
    "type": "TEXT_ON_AROLL",
@@ -951,14 +951,14 @@
     "$1,000"
    ],
    "end": "That's okay.|end",
-   "t0": 380.094,
+   "t0": 320.62,
    "words_t": [
-    381.68,
-    385.08,
-    385.642,
-    386.49399999999997
+    321.842,
+    324.959,
+    325.366,
+    326.385
    ],
-   "t1": 388.866
+   "t1": 328.9
   },
   {
    "type": "TEXT_ON_AROLL",
@@ -980,15 +980,15 @@
     "something"
    ],
    "end": "even if it's small.|end",
-   "t0": 403.924,
+   "t0": 344.56,
    "words_t": [
-    405.84,
-    406.582,
-    406.582,
-    407.04,
-    407.382
+    346.01099999999997,
+    346.71,
+    346.71,
+    347.18,
+    347.478
    ],
-   "t1": 410.056
+   "t1": 349.74
   },
   {
    "type": "TEXT_ON_AROLL",
@@ -999,9 +999,9 @@
    "key": "yes",
    "cueb": "saying yes",
    "end": "on purpose.|end",
-   "t0": 473.138,
-   "cueb_t": 476.254,
-   "t1": 478.528
+   "t0": 401.71999999999997,
+   "cueb_t": 404.675,
+   "t1": 406.54
   }
  ]
 }
