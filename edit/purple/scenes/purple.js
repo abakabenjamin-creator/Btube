@@ -212,6 +212,9 @@ function cardFrame(c, t) {
     const clear = clamp((y - 200) / 90) * clamp((1010 - y) / 90);   // wheel: rows fade out before the title and the bottom edge
     row.r.style.opacity = (drop * dim * clear).toFixed(3);
     row.r.style.transform = `scale(${sc.toFixed(3)})`;
+    // once a point is mentioned, every other row is blurred out so only that point can be read
+    const hide = act.i >= 0 && !isAct ? P(t, act.at - 0.25, 0.3, E.outCubic) : 0;
+    row.r.style.filter = hide > 0.01 ? `blur(${(18 * hide).toFixed(1)}px)` : 'none';
     row.r.style.boxShadow = isAct ? '0 0 30px rgba(240,72,248,0.45), 0 12px 30px rgba(0,0,0,0.45)' : '0 12px 30px rgba(0,0,0,0.45)';
     row.nm.textContent = isAct ? typeText(row.text, t, act.at, 32) : row.text;
     if (b.card === 'menu' && i > act.i && first) row.nm.textContent = row.text;
