@@ -21,5 +21,5 @@ bin-release/
 __pycache__/
 
 # Rendered video deliverables (too large for git)
-edit/*.mp4
+edit/**/*.mp4
 edit/parts/
