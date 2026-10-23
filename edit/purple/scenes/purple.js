@@ -159,10 +159,10 @@ function buildCard(st, b) {
   c.sub = el(c.e, 'menu-sub', escapeHtml(sub)); c.sub.style.top = '188px';
   c.rows = names.map((n, i) => {
     const r = el(c.e, 'row');
-    el(r, 'tab', String(i + 1).padStart(2, '0'));
+    const tab = el(r, 'tab', String(i + 1).padStart(2, '0'));
     const nm = el(r, 'name', '');
-    el(r, 'ri', glyph(icons[i], ORCHID, 2.4));
-    return { r, nm, text: n };
+    const ri = el(r, 'ri', glyph(icons[i], ORCHID, 2.4));
+    return { r, tab, nm, ri, text: n };
   });
   return c;
 }
@@ -207,14 +207,18 @@ function cardFrame(c, t) {
     const y = 640 + off * 124 - 50 - (1 - drop) * 220;
     const isAct = i === act.i && t >= act.at - 0.1;
     const sc = isAct ? 1 + 0.1 * P(t, act.at - 0.1, 0.35, E.outCubic) : 0.94;
-    const dim = act.i < 0 ? 0.85 : isAct ? 1 : 0.4;
+    const ahead = act.i >= 0 && i > act.i;   // points not covered yet
+    const dim = act.i < 0 ? 0.85 : isAct ? 1 : ahead ? 0.75 : 0.4;
     row.r.style.top = y + 'px';
     const clear = clamp((y - 200) / 90) * clamp((1010 - y) / 90);   // wheel: rows fade out before the title and the bottom edge
     row.r.style.opacity = (drop * dim * clear).toFixed(3);
     row.r.style.transform = `scale(${sc.toFixed(3)})`;
-    // once a point is mentioned, every other row is blurred out so only that point can be read
-    const hide = act.i >= 0 && !isAct ? P(t, act.at - 0.25, 0.3, E.outCubic) : 0;
-    row.r.style.filter = hide > 0.01 ? `blur(${(18 * hide).toFixed(1)}px)` : 'none';
+    // points already covered stay readable; points still to come keep their pill frame
+    // but their number, name and icon are blurred so they can't be read yet
+    const hide = ahead ? P(t, act.at - 0.25, 0.3, E.outCubic) : 0;
+    const f = hide > 0.01 ? `blur(${(14 * hide).toFixed(1)}px)` : 'none';
+    row.tab.style.filter = row.nm.style.filter = row.ri.style.filter = f;
+    row.r.style.filter = 'none';
     row.r.style.boxShadow = isAct ? '0 0 30px rgba(240,72,248,0.45), 0 12px 30px rgba(0,0,0,0.45)' : '0 12px 30px rgba(0,0,0,0.45)';
     row.nm.textContent = isAct ? typeText(row.text, t, act.at, 32) : row.text;
     if (b.card === 'menu' && i > act.i && first) row.nm.textContent = row.text;
@@ -253,22 +257,21 @@ function webFrame(w, t) {
   w.url.textContent = typeText(b.url, t, b.t0, 70);
   w.caret.style.opacity = (t - b.t0) * 70 < b.url.length + 6 && Math.floor(t * 2.4) % 2 === 0 ? 1 : 0;
   const k = webKeys(w.spec.keys, t);
-  // page scroll (image px -> css px)
-  w.pane.style.transform = `translateY(${(-k.s / 2).toFixed(1)}px)`;
-  // proof push-in: scale the whole window about the detail, cropping past its edges
-  const lx = k.fx / 2, ly = 56 + (k.fy - k.s) / 2;          // detail, window-local px
+  // proof push-in happens INSIDE the browser window: the window frame never moves or grows
+  const px = k.fx / 2, py = k.fy / 2;                        // detail, page css px
   const q = clamp((k.z - 1) / 0.9);
-  const tx = lerp(240 + lx, 960, q), ty = lerp(110 + ly, 540, q);  // detail drifts to centre as we push
-  w.w.style.left = '0px'; w.w.style.top = '0px';
-  w.w.style.transform = `translate(${(tx - k.z * lx).toFixed(1)}px, ${(ty - k.z * ly).toFixed(1)}px) scale(${k.z.toFixed(4)})`;
+  const tx = lerp(px, 720, q), ty = lerp(py - k.s / 2, 380, q);  // detail drifts to the window centre as we zoom
+  const ox = tx - k.z * px, oy = ty - k.z * py;
+  w.pane.style.transform = `translate(${ox.toFixed(1)}px, ${oy.toFixed(1)}px) scale(${k.z.toFixed(4)})`;
+  w.w.style.transform = 'none';
   // highlighter sweeps left to right in ~300 ms
   w.hls.forEach(({ d, h }) => { d.style.width = (h.w / 2 * P(t, h.t, 0.3, E.inOutCubic)).toFixed(1) + 'px'; });
   // cursor glides to the detail, then drags along it with the highlight
   const h = w.spec.hl.filter(x => t >= x.t - 1.0).pop() || w.spec.hl[0];
   const cx0 = 1200, cy0 = 620;
-  const cx1 = h.x / 2, cy1 = (h.y - k.s) / 2 + h.h / 4;
+  const cx1 = ox + k.z * h.x / 2, cy1 = oy + k.z * (h.y / 2 + h.h / 4);   // through the zoom
   const pm = P(t, h.t - 0.9, 0.8, E.inOutCubic), pd = P(t, h.t, 0.3, E.inOutCubic);
-  const cx = lerp(cx0, cx1, pm) + pd * h.w / 2, cy = lerp(cy0, cy1, pm);
+  const cx = lerp(cx0, cx1, pm) + pd * k.z * h.w / 2, cy = lerp(cy0, cy1, pm);
   place(w.cur, cx, cy);
   w.cur.style.opacity = t > b.t0 + 0.6 ? 1 : 0;
 }
