@@ -256,7 +256,7 @@ def main():
     cuts, keep = cut_list(words)
     tl = timeline(keep)
     data = dict(fps=FPS, src_end=SRC_END, keep=keep, cuts=cuts, frames=len(tl), beats=B, overlays=O,
-                framing=framing(keep), captions=captions(words), pip=dict(x=1490, y=560, w=330, h=440))
+                framing=framing(keep), captions=captions(words), pip=dict(x=1490, y=520, w=330, h=440))
     json.dump(data, open(os.path.join(HERE, "plan.json"), "w"), indent=1)
     json.dump(tl, open(os.path.join(HERE, "timeline.json"), "w"))
     with open(os.path.join(HERE, "scenes", "plan.js"), "w") as f:
