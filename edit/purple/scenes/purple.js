@@ -93,6 +93,9 @@ function build() {
     return { c, e, words };
   });
   L.ovs = PL.overlays.map(o => buildOverlay(st, o));
+  // channel branding, on every scene: Subscribe button top-left, name bottom-left
+  el(st, 'subbtn', '<svg viewBox="0 0 22 16"><rect x="0" y="0" width="22" height="16" rx="4" fill="#fff"/><path d="M9 4.5 L15 8 L9 11.5 Z" fill="#E21B1B"/></svg><span>Subscribe</span>');
+  el(st, 'signame', 'Abaka<br>Sika');
 }
 
 function buildOverlay(st, o) {

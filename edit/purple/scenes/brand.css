@@ -104,3 +104,8 @@ body { font-family: "Instrument Sans", sans-serif; color: var(--text); letter-sp
 .bigflow .tile .ico { width: 104px; height: 104px; }
 .bigflow .tile .lab { font-size: 40px; }
 .bigflow .arrow { width: 90px; height: 64px; }
+
+/* channel branding on every scene */
+.subbtn { position: absolute; left: 64px; top: 52px; display: flex; align-items: center; gap: 8px; padding: 6px 13px 6px 9px; border-radius: 4px; background: #E21B1B; color: #fff; font-size: 17px; font-weight: 600; letter-spacing: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.45); z-index: 90; }
+.subbtn svg { width: 22px; height: 16px; flex: none; }
+.signame { position: absolute; left: 64px; bottom: 46px; font-size: 32px; font-weight: 700; line-height: 0.95; letter-spacing: 0.01em; text-transform: uppercase; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.6); z-index: 90; }
