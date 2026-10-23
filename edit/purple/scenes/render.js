@@ -1,6 +1,6 @@
 // Render the graphics layer for every output frame (30 fps, cut timeline).
 // Presenter frames -> PNG with alpha; card / web frames -> opaque JPEG.
-// usage: node render.js <outDir> <workers> [first last] [--every N]
+// usage: node render.js <outDir> <workers> [first last] [--every N] [--dsf 2]
 'use strict';
 const { chromium } = require(process.env.PW || '/opt/node22/lib/node_modules/playwright');
 const fs = require('fs');
@@ -12,6 +12,7 @@ const tl = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'timeline.json'
 const first = args[2] && !args[2].startsWith('--') ? +args[2] : 0;
 const last = args[3] && !args[3].startsWith('--') ? +args[3] : tl.length - 1;
 const every = args.includes('--every') ? +args[args.indexOf('--every') + 1] : 1;
+const dsf = args.includes('--dsf') ? +args[args.indexOf('--dsf') + 1] : 1;   // 2 = native 4K frames
 fs.mkdirSync(out, { recursive: true });
 
 (async () => {
@@ -25,7 +26,7 @@ fs.mkdirSync(out, { recursive: true });
   await Promise.all(Array.from({ length: workers }, async (_, w) => {
     const mine = frames.slice(w * chunk, (w + 1) * chunk);
     if (!mine.length) return;
-    const p = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
+    const p = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: dsf });
     await p.goto('file://' + path.join(__dirname, 'index.html'));
     await p.evaluate(() => R2.ready());
     await p.evaluate(() => Promise.all([...document.fonts].map(f => f.load())));

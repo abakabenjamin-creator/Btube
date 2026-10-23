@@ -7,7 +7,8 @@ laid over it. Web beats: the graphics JPEG plus the presenter in the PiP.
 Card beats: the graphics JPEG. Section changes into a card get a violet
 light-leak flash.
 
-usage: python3 composite.py <source.mp4> <graphics_frames> <out_dir> [workers]
+usage: python3 composite.py <source.mp4> <graphics_frames> <out_dir> [workers [first last]]
+       OUT_SCALE=2 for the 3840x2160 HEVC master (graphics rendered with render.js --dsf 2)
 """
 import json
 import math
@@ -20,7 +21,9 @@ import cv2
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-W, H, FPS, SRC_FPS = 1920, 1080, 30, 25
+K = int(os.environ.get("OUT_SCALE", "1"))   # 2 = 3840x2160 master (graphics rendered with --dsf 2)
+SW, SH = 1920, 1080                           # source and design size
+W, H, FPS, SRC_FPS = SW * K, SH * K, 30, 25
 PLAN = json.load(open(os.path.join(HERE, "plan.json")))
 TL = json.load(open(os.path.join(HERE, "timeline.json")))
 BEATS = PLAN["beats"]
@@ -39,7 +42,7 @@ LUT = np.stack([np.clip(_base * 0.975, 0, 255), np.clip(_base * 1.0, 0, 255), np
 
 def grade(img):
     out = cv2.LUT(img, LUT.reshape(256, 1, 3))
-    return cv2.GaussianBlur(out, (0, 0), 0.6)  # a touch soft
+    return cv2.GaussianBlur(out, (0, 0), 0.6 * K)  # a touch soft
 
 
 def beat_at(t):
@@ -82,10 +85,10 @@ class Source:
     def frame(self, t):
         k = max(self.k0, int(round(t * SRC_FPS)))
         while self.next <= k:
-            b = self.p.stdout.read(W * H * 3)
-            if len(b) < W * H * 3:
+            b = self.p.stdout.read(SW * SH * 3)
+            if len(b) < SW * SH * 3:
                 break
-            self.cur = np.frombuffer(b, np.uint8).reshape(H, W, 3)
+            self.cur = np.frombuffer(b, np.uint8).reshape(SH, SW, 3)
             self.next += 1
         return self.cur
 
@@ -94,8 +97,9 @@ def presenter(f, t):
     s = scale_at(t)
     fx = FACE[0] + (960 - FACE[0]) * clamp((s - 1) / 0.32)   # reframe toward centre as we push in
     fy = FACE[1]                                             # eyes stay on the upper-third line
-    M = np.float32([[s, 0, fx - s * FACE[0]], [0, s, fy - s * FACE[1]]])
-    return grade(cv2.warpAffine(f, M, (W, H), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_REFLECT))
+    M = np.float32([[s, 0, fx - s * FACE[0]], [0, s, fy - s * FACE[1]]]) * K
+    flags = cv2.INTER_LANCZOS4 if K > 1 else cv2.INTER_LINEAR   # clean upscale for the 4K master
+    return grade(cv2.warpAffine(f, M, (W, H), flags=flags, borderMode=cv2.BORDER_REFLECT))
 
 
 def rounded(w, h, r):
@@ -107,21 +111,22 @@ def rounded(w, h, r):
     return m.astype(np.float32)[..., None] / 255
 
 
-PIP_MASK = rounded(PIP["w"], PIP["h"], 12)
-_inner = rounded(PIP["w"] - 4, PIP["h"] - 4, 10)
+PX, PY, PW, PH = (PIP[k] * K for k in ("x", "y", "w", "h"))
+PIP_MASK = rounded(PW, PH, 12 * K)
+_inner = rounded(PW - 4 * K, PH - 4 * K, 10 * K)
 PIP_LINE = PIP_MASK.copy()
-PIP_LINE[2:-2, 2:-2] -= _inner
+PIP_LINE[2 * K:-2 * K, 2 * K:-2 * K] -= _inner
 PIP_LINE = np.clip(PIP_LINE, 0, 1) * 0.85
 
 
 def pip(base, f):
     x0, y0, x1, y1 = PIP_CROP
-    clip = cv2.resize(grade(f[y0:y1, x0:x1]), (PIP["w"], PIP["h"]), interpolation=cv2.INTER_AREA).astype(np.float32)
-    x, y = PIP["x"], PIP["y"]
-    roi = base[y:y + PIP["h"], x:x + PIP["w"]].astype(np.float32)
+    clip = cv2.resize(grade(f[y0:y1, x0:x1]), (PW, PH), interpolation=cv2.INTER_AREA).astype(np.float32)
+    x, y = PX, PY
+    roi = base[y:y + PH, x:x + PW].astype(np.float32)
     roi = clip * PIP_MASK + roi * (1 - PIP_MASK)
     roi = 255 * PIP_LINE + roi * (1 - PIP_LINE)   # thin white inner line
-    base[y:y + PIP["h"], x:x + PIP["w"]] = roi.astype(np.uint8)
+    base[y:y + PH, x:x + PW] = roi.astype(np.uint8)
     return base
 
 
@@ -171,12 +176,17 @@ def render(src, gdir, n):
     return img
 
 
+VCODEC = (["-c:v", "libx265", "-preset", "fast", "-b:v", os.environ.get("VBITRATE", "7200k"), "-tag:v", "hvc1",
+           "-x265-params", "vbv-maxrate=11000:vbv-bufsize=22000:log-level=error"] if K > 1 else
+          ["-c:v", "libx264", "-preset", "medium", "-crf", "18"])
+
+
 def work(job):
     idx, n0, n1, src_path, gdir, out = job
     src = Source(src_path, TL[n0])
-    path = os.path.join(out, f"chunk_{idx:02d}.mp4")
+    path = os.path.join(out, f"chunk_{n0:06d}.mp4")
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS),
-                            "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
+                            "-i", "-", *VCODEC, "-pix_fmt", "yuv420p",
                             "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", path], stdin=subprocess.PIPE)
     for n in range(n0, n1):
         enc.stdin.write(render(src, gdir, n).tobytes())
@@ -191,13 +201,14 @@ def work(job):
 def main():
     src, gdir, out = sys.argv[1:4]
     workers = int(sys.argv[4]) if len(sys.argv) > 4 else 4
+    first = int(sys.argv[5]) if len(sys.argv) > 6 else 0          # optional frame range [first, last)
+    N = int(sys.argv[6]) if len(sys.argv) > 6 else len(TL)
     os.makedirs(out, exist_ok=True)
-    N = len(TL)
-    step = math.ceil(N / workers)
-    jobs = [(i, a, min(a + step, N), src, gdir, out) for i, a in enumerate(range(0, N, step))]
+    step = math.ceil((N - first) / workers)
+    jobs = [(i, a, min(a + step, N), src, gdir, out) for i, a in enumerate(range(first, N, step))]
     with Pool(len(jobs)) as pool:
         paths = pool.map(work, jobs)
-    with open(os.path.join(out, "chunks.txt"), "w") as f:
+    with open(os.path.join(out, f"chunks_{first:06d}.txt"), "w") as f:
         f.writelines(f"file '{os.path.basename(p)}'\n" for p in paths)
     print("done")
 
