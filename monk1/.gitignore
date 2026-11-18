@@ -2,3 +2,4 @@
 src/
 work/
 __pycache__/
+*.zip
