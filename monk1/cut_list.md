@@ -1,7 +1,7 @@
 # monk1 clean cut — approved edit list
 
 Source: `monk 1.mp4` (19:05, phone screen-recording of YouTube, 1080×2406, video area cropped at 860×484 @ x110,y960).
-Output: `monk1_clean.mp4` — 18:01.29, 1920×1080, 30 fps, H.264 CRF 18 + AAC 192k.
+Output: `monk1_clean.mp4` — 18:01.29, 1920×1080, 30 fps, H.264 CRF 22 (delivery encode; source is only 484p) + AAC 192k.
 
 ## Removed (source timecodes)
 | ID | From | To | Length | What |
