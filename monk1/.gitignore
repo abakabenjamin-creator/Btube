@@ -1,0 +1,4 @@
+*.mp4
+src/
+work/
+__pycache__/
