@@ -15,7 +15,7 @@ for k,p in enumerate(P):
     a=max(0, p['start']-(LEAD if k else 0)); pend=p['start']+p['out']-p['in']
     b=pend+LEAD if k<len(P)-1 else DUR
     z=0
-    if b-a>=8: n_long+=1; z=3 if n_long%2==1 else 0     # slow push-in on every other long section only
+    # no zooms: every presenter shot keeps the full original framing (head to waist)
     shots.append(dict(t0=a,t1=b,zoom=z,src_off=p['in']-p['start']))
 # split shots at definition-moment edges; inside them use the SIDE framing
 out=[]
