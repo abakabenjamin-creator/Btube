@@ -8,7 +8,7 @@ def zone(z):
     x0,x1,y0,y1=F['x0']-PAD,F['x1']+PAD,F['y0']-PAD,F['y1']+PAD
     if z==1: return [(x0-192)*1.25,(x1-192)*1.25,(y0-40)*1.25,(y1-40)*1.25]
     if z==2: return [x0-SHIFT,x1-SHIFT,y0,y1]
-    if z==3: k=1.06; return [920+(x0-920)*k,920+(x1-920)*k,330+(y0-330)*k,330+(y1-330)*k]
+    if z==3: k=1.03; return [920+(x0-920)*k,920+(x1-920)*k,1080+(y0-1080)*k,1080+(y1-1080)*k]
     return [x0,x1,y0,y1]
 cardt=lambda t: any(c['t0']<=t<c['t1'] for c in S['cards']) or t>=S['end']['t0']
 ts=[]; 

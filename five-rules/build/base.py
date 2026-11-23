@@ -15,7 +15,7 @@ for k,p in enumerate(P):
     a=max(0, p['start']-(LEAD if k else 0)); pend=p['start']+p['out']-p['in']
     b=pend+LEAD if k<len(P)-1 else DUR
     z=0
-    # no zooms: every presenter shot keeps the full original framing (head to waist)
+    if b-a>=8: n_long+=1; z=3 if n_long%2==1 else 0     # gentle 3% push-in on every other long section
     shots.append(dict(t0=a,t1=b,zoom=z,src_off=p['in']-p['start']))
 # split shots at definition-moment edges; inside them use the SIDE framing
 out=[]
@@ -50,9 +50,9 @@ for i,s in enumerate(segs):
         subprocess.run(['ffmpeg','-v','error','-y','-stream_loop','-1','-ss',f'{off:.3f}','-i',f"{ROOT}/assets/stock/clips/{br['id']}.mp4",'-vf',vf,'-frames:v',str(n),*enc,out],check=True)
     else:
         sh=s[3]; st=s[1]/FPS+sh['src_off']
-        if sh['zoom']==3:   # slow push-in toward his face (cx 920, cy 330), 1.00 -> 1.06 over the whole section
-            D=sh['t1']-sh['t0']; t_in=max(0.0,s[1]/FPS-sh['t0']); Z=f"(1+0.06*max(0\\,t+{t_in:.3f})/{D:.3f})"
-            pre=f"scale=w='2*trunc(960*{Z})':h='2*trunc(540*{Z})':eval=frame:flags=lanczos,crop=1920:1080:'920*({Z}-1)':'330*({Z}-1)',"
+        if sh['zoom']==3:   # gentle push-in 1.00 -> 1.03, anchored bottom-centre so the full torso stays in frame
+            D=sh['t1']-sh['t0']; t_in=max(0.0,s[1]/FPS-sh['t0']); Z=f"(1+0.03*max(0\\,t+{t_in:.3f})/{D:.3f})"
+            pre=f"scale=w='2*trunc(960*{Z})':h='2*trunc(540*{Z})':eval=frame:flags=lanczos,crop=1920:1080:'920*({Z}-1)':'1080*({Z}-1)',"
         else: pre={0:'',2:SIDE+','}[sh['zoom']]
         vf=pre+'tpad=stop_mode=clone:stop_duration=10,fps=25'
         subprocess.run(['ffmpeg','-v','error','-y','-ss',f'{max(0,st):.3f}','-i',f'{ROOT}/src/aroll.mp4','-vf',vf,'-frames:v',str(n),*enc,out],check=True)
