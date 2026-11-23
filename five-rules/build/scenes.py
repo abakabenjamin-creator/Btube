@@ -275,26 +275,30 @@ cards += [card(25, clean([
 captions += [cap(26, 'a guy who was not famous', 'At all', keys=['famous'])]
 rd = 27
 _rp = 'read.jpg' if os.path.exists(f'{PEOPLE}/read.jpg') else 'brattleboro.jpg'
-cards += [card(rd, clean([
+cards += [dict(card(rd, clean([
     photo('read_old.jpg', T(rd, 'His name'), 1160, 0, 760, 1080, fade='left', fy=0.3),   # Ronald Read in later life (photo supplied by the channel)
-    tx('Ronald Read', T(rd, 'His name'), x=260, y=210, size=96, align='left'),
-    tx('Brattleboro, Vermont', T(rd, 'Brattleboro'), x=260, y=280, size=40, align='left', weight=500, font='"Inter", sans-serif', color='rgba(255,255,255,0.75)'),
+    tx('Ronald Read', T(rd, 'His name'), x=150, y=400, size=96, align='left'),
+    tx('Brattleboro, Vermont', T(rd, 'Brattleboro'), x=150, y=475, size=44, align='left', weight=500, font='"Inter", sans-serif', color='rgba(255,255,255,0.75)'),
     tx('Hitchhiked ~4 miles to high school', T(rd, 'hitchhiked'), x=260, y=420, size=46, align='left', weight=600, font='"Inter", sans-serif'),
     tx('Pumped gas · ~25 years', T(rd, 'pumped gas'), x=260, y=510, size=46, align='left', weight=600, font='"Inter", sans-serif'),
     tx('Janitor at JCPenney · ~17 years', T(rd, 'janitor'), x=260, y=600, size=46, align='left', weight=600, font='"Inter", sans-serif'),
     tx('Coat held together with *safety pins*', T(rd, 'safety pins'), x=260, y=690, size=46, align='left', weight=600, font='"Inter", sans-serif'),
     tx('Cut his own firewood', T(rd, 'firewood'), x=260, y=780, size=46, align='left', weight=600, font='"Inter", sans-serif'),
-    tx('The only hint: he read the Wall Street Journal', T(rd, 'only hint'), x=260, y=900, size=40, align='left', weight=500, font='"Inter", sans-serif', color=Y)]))]
-cards += [dict(t0=T(rd, 'As a teenager'), t1=T(rd, 'pumped gas'), els=clean([   # young Ronald Read at the teenage line
+    tx('The only hint: he read the Wall Street Journal', T(rd, 'only hint'), x=260, y=900, size=40, align='left', weight=500, font='"Inter", sans-serif', color=Y)])), clear=True)]
+cards += [dict(t0=T(rd, 'As a teenager'), t1=T(rd, 'pumped gas'), clear=True, els=clean([   # young Ronald Read at the teenage line
     photo('read_young.jpg', T(rd, 'As a teenager'), 1160, 0, 760, 1080, fade='left', fy=0.3, gray=True),
     tx('Ronald Read, as a teenager', T(rd, 'As a teenager'), x=150, y=360, size=64, align='left'),
     tx('Hitchhiked ~4 miles', T(rd, 'hitchhiked'), x=150, y=500, size=56, align='left'),
     tx('just to get to *high school.*', T(rd, 'just to get'), x=150, y=580, size=56, align='left', impact=True)]))]
-cards += [dict(t0=T(rd, 'safety pins'), t1=T(rd, 'firewood'), els=clean([
+cards += [dict(t0=T(rd, 'safety pins'), t1=T(rd, 'firewood'), clear=True, els=clean([
     photo('read_old.jpg', T(rd, 'safety pins'), 1160, 0, 760, 1080, fade='left', fy=0.3),
     tx('Ronald Read', T(rd, 'safety pins'), x=150, y=360, size=84, align='left'),
     tx('His coat was held together', T(rd, 'safety pins') + .2, x=150, y=500, size=56, align='left'),
     tx('with *safety pins.*', T(rd, 'safety pins') + .5, x=150, y=580, size=56, align='left', impact=True)]))]
+cards += [dict(t0=T(29, 'Companies he actually'), t1=T(29, 'local hospital'), clear=True, els=clean([
+    photo('read_pair.jpg', T(29, 'Companies he actually'), 880, 250, 980, 510, r=24, fy=0.3, dur=6),
+    tx('Same man. Same habit.', T(29, 'Companies he actually'), x=150, y=470, size=56, align='left'),
+    tx('Held for *decades.*', T(29, 'for decades'), x=150, y=560, size=64, align='left', impact=True)]))]
 captions += [cap(28, 'nobody had a clue', 'nobody had a clue', keys=['clue'])]
 cards += [card(29, [
     tx('2014 · died at 92', P0(29) + .1, y=220, size=64),
@@ -407,8 +411,8 @@ from broll_plan import BROLL
 VO = [i for i, p in enumerate(PC) if p['src'] == 'V']
 KEEP = {1: [(P0(1), T(1, 'While you were'))], 3: [(P0(3), P1(3))], 9: [(P0(9), T(9, 'But there was a catch'))],
         11: [(P0(11), T(11, 'No single year'))], 15: [(P0(15), T(15, 'Run the rule'))], 19: [(P0(19), P1(19))],
-        23: [(T(23, 'Saver B waits'), P1(23))], 25: [(P0(25), T(25, "If he'd retired"))], 27: [(P0(27), T(27, 'pumped gas')), (T(27, 'safety pins'), T(27, 'firewood'))],
-        29: [(T(29, 'built almost') - .1, T(29, 'boring dividend'))], 33: [(P0(33), P1(33))]}
+        23: [(T(23, 'Saver B waits'), P1(23))], 25: [(P0(25), T(25, "If he'd retired"))], 27: [(P0(27), T(27, 'pumped gas'), 'clear'), (T(27, 'safety pins'), T(27, 'firewood'), 'clear')],
+        29: [(T(29, 'built almost') - .1, T(29, 'boring dividend')), (T(29, 'Companies he actually'), T(29, 'local hospital'), 'clear')], 33: [(P0(33), P1(33))]}
 DIM = {33}                                  # recap list sits over stock (dimmed), not on black
 def piece_at(t):
     for i in range(len(PC)):
@@ -418,11 +422,12 @@ newcards = []
 for c in cards:
     i = piece_at(c['t0'] + 0.01)
     if PC[i]['src'] == 'P': newcards.append(c); continue
-    for a, b in KEEP.get(i, []):
+    for a, b, *fl in KEEP.get(i, []):
         a2, b2 = max(a, c['t0']), min(b, c['t1'])
         if b2 - a2 > 0.3:
             c2 = dict(c, t0=round(a2, 3), t1=round(b2, 3))
             if i in DIM: c2['dim'] = True
+            if fl: c2['clear'] = True
             newcards.append(c2)
 cards = sorted(newcards, key=lambda c: c['t0'])
 # b-roll segments = VO time not covered by an opaque kept card
@@ -430,7 +435,7 @@ broll = []
 cues = sorted([(T(i, ph), mid) for i, ph, mid in BROLL])
 for i in VO:
     a, b = P0(i), P1(i)
-    blocks = sorted([(x, y) for x, y in KEEP.get(i, []) if i not in DIM])
+    blocks = sorted([(x, y) for x, y, *fl in KEEP.get(i, []) if i not in DIM and not fl])
     free, cur = [], a
     for x, y in blocks:
         if x > cur + 0.05: free.append((cur, x))

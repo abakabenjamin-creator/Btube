@@ -128,7 +128,10 @@ const EL = {
     g.save(); g.globalAlpha = p * fadeOut(e, t); rr(e.x, e.y, e.w, e.h, e.r ?? 0); g.clip();
     if (e.gray) g.filter = 'grayscale(1) contrast(1.08)';
     g.drawImage(im, e.x + (e.w - dw) * fx, e.y + (e.h - dh) * fy, dw, dh); g.filter = 'none';
-    if (e.fade === 'left') { const gr = g.createLinearGradient(e.x, 0, e.x + 260, 0); gr.addColorStop(0, C.black); gr.addColorStop(1, 'rgba(10,10,10,0)'); g.fillStyle = gr; g.fillRect(e.x, e.y, 260, e.h); }
+    if (e.fade === 'left') { const gr = g.createLinearGradient(e.x, 0, e.x + 260, 0);
+      if (CLEAR) { g.globalCompositeOperation = 'destination-out'; gr.addColorStop(0, 'rgba(0,0,0,1)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); }   // soft edge into the clip
+      else { gr.addColorStop(0, C.black); gr.addColorStop(1, 'rgba(10,10,10,0)'); }
+      g.fillStyle = gr; g.fillRect(e.x, e.y, 260, e.h); g.globalCompositeOperation = 'source-over'; }
     const gb = g.createLinearGradient(0, e.y + e.h - 220, 0, e.y + e.h); gb.addColorStop(0, 'rgba(10,10,10,0)'); gb.addColorStop(1, 'rgba(10,10,10,0.7)'); g.fillStyle = gb; g.fillRect(e.x, e.y + e.h - 220, e.w, 220);
     g.restore();
     if (e.credit) { g.globalAlpha = p * fadeOut(e, t); font(20, 600); g.fillStyle = 'rgba(255,255,255,0.7)'; g.fillText(e.credit, e.x + 280, e.y + e.h - 18); g.globalAlpha = 1; }
@@ -309,7 +312,7 @@ function drawBrand(a) {
   g.globalAlpha = 1;
 }
 // ---------- scene runner
-let S = null; const IMG = {};
+let S = null; const IMG = {}; let CLEAR = false;
 async function loadImages(list) { await Promise.all(list.map(src => new Promise(res => { const im = new Image(); im.onload = () => { IMG[src] = im; res(); }; im.onerror = () => res(); im.src = src; }))); return Object.keys(IMG).length; }
 window.loadImages = loadImages;
 function setup(scenes) { S = scenes; return { cards: scenes.cards.length, overlays: scenes.overlays.length, captions: scenes.captions.length }; }
@@ -319,8 +322,10 @@ function drawAt(t) {
   const card = cardAt(t);
   if (card) {
     const p = ease(prog(t, card.t0, 0.28)), q = 1 - ease(prog(t, card.t1 - 0.22, 0.22));
-    g = OG; SHADOW = !!card.dim; g.clearRect(0, 0, W, H);
-    if (card.dim) { g.fillStyle = 'rgba(10,10,10,0.62)'; g.fillRect(0, 0, W, H); }   // list over stock footage
+    g = OG; SHADOW = !!card.dim; CLEAR = !!card.clear; g.clearRect(0, 0, W, H);
+    if (card.clear) { const gl = g.createLinearGradient(0, 0, 1150, 0); gl.addColorStop(0, 'rgba(10,10,10,0.62)'); gl.addColorStop(1, 'rgba(10,10,10,0.1)');
+      g.fillStyle = gl; g.fillRect(0, 0, 1200, H); SHADOW = true; }   // split screen: stock clip shows through on the left
+    else if (card.dim) { g.fillStyle = 'rgba(10,10,10,0.62)'; g.fillRect(0, 0, W, H); }   // list over stock footage
     else { g.fillStyle = C.black; g.fillRect(0, 0, W, H);
       const rg = g.createRadialGradient(W * 0.78, H * 0.2, 50, W * 0.78, H * 0.2, 1100);
       rg.addColorStop(0, hexA(C.red, 0.13)); rg.addColorStop(1, 'rgba(225,6,0,0)'); g.fillStyle = rg; g.fillRect(0, 0, W, H); }
