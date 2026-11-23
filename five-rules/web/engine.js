@@ -248,14 +248,14 @@ function drawCaption(cap, t) {
   if (t < cap.t0 - 0.05 || t > cap.t1 + 0.35) return;
   const out = 1 - ease(prog(t, cap.t1, 0.3)); SHADOW = true;
   const size = cap.impact ? 92 : (cap.size || 74); font(size, cap.impact ? 900 : 800);
-  const up = w => w.toUpperCase(); const sp = g.measureText(' ').width; const maxw = 760;
+  const up = w => w.toUpperCase(); const sp = g.measureText(' ').width; const maxw = 1450;
   const lines = [[]]; let lw = 0, prevEnd = false;
   for (const w of cap.words) { const ww = g.measureText(up(w.w)).width; const L = lines[lines.length - 1];
     if (L.length && (lw + ww > maxw || (prevEnd && lw > maxw * 0.25))) { lines.push([]); lw = 0; }
     lines[lines.length - 1].push({ ...w, ww }); lw += ww + sp; prevEnd = /[.?!,]$/.test(w.w); }
   let cur = 0; lines.forEach((ln, i) => { if (t >= ln[0].t - 0.06) cur = i; });
   const ln = lines[cur]; const tot = ln.reduce((a, w) => a + w.ww, 0) + sp * (ln.length - 1);
-  let x = 1080; const y = 800;
+  let x = W / 2 - tot / 2; const y = cap.broll ? 930 : 730;   // presenter: centred across the chest (reference); b-roll: lower third
   for (const w of ln) {
     if (t >= w.t - 0.08) { const wi = wordIn(prog(t, w.t - 0.08, RISE.dur));
       g.globalAlpha = wi.a * out; g.fillStyle = w.key ? C.yellow : w.gkey ? C.green : '#FFFFFF';
@@ -319,9 +319,11 @@ function drawAt(t) {
   const card = cardAt(t);
   if (card) {
     const p = ease(prog(t, card.t0, 0.28)), q = 1 - ease(prog(t, card.t1 - 0.22, 0.22));
-    g = OG; SHADOW = false; g.clearRect(0, 0, W, H); g.fillStyle = C.black; g.fillRect(0, 0, W, H);
-    const rg = g.createRadialGradient(W * 0.78, H * 0.2, 50, W * 0.78, H * 0.2, 1100);
-    rg.addColorStop(0, hexA(C.red, 0.13)); rg.addColorStop(1, 'rgba(225,6,0,0)'); g.fillStyle = rg; g.fillRect(0, 0, W, H);
+    g = OG; SHADOW = !!card.dim; g.clearRect(0, 0, W, H);
+    if (card.dim) { g.fillStyle = 'rgba(10,10,10,0.62)'; g.fillRect(0, 0, W, H); }   // list over stock footage
+    else { g.fillStyle = C.black; g.fillRect(0, 0, W, H);
+      const rg = g.createRadialGradient(W * 0.78, H * 0.2, 50, W * 0.78, H * 0.2, 1100);
+      rg.addColorStop(0, hexA(C.red, 0.13)); rg.addColorStop(1, 'rgba(225,6,0,0)'); g.fillStyle = rg; g.fillRect(0, 0, W, H); }
     g.save(); const s = 1 + 0.03 * (1 - p); g.translate(W / 2, H / 2); g.scale(s, s); g.translate(-W / 2, -H / 2);
     for (const e of card.els) { g.save(); EL[e.type](e, t); g.restore(); }
     g.restore(); g = G0;

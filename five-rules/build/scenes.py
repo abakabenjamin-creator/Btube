@@ -392,8 +392,75 @@ for c in cards:
 cards.sort(key=lambda c: c['t0'])
 for a, b in zip(cards, cards[1:]):
     if a['t1'] > b['t0']: print(f"  clip card {a['t0']}: t1 {a['t1']} -> {b['t0']}"); a['t1'] = b['t0']
+# ===== STOCK B-ROLL PASS: ~75% of voiceover time on stock footage, graphs only where a number must be seen =====
+import sys; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from broll_plan import BROLL
+VO = [i for i, p in enumerate(PC) if p['src'] == 'V']
+KEEP = {1: [(P0(1), T(1, 'While you were'))], 3: [(P0(3), P1(3))], 9: [(P0(9), T(9, 'But there was a catch'))],
+        11: [(P0(11), T(11, 'No single year'))], 15: [(P0(15), T(15, 'Run the rule'))], 19: [(P0(19), P1(19))],
+        23: [(T(23, 'Saver B waits'), P1(23))], 25: [(P0(25), T(25, "If he'd retired"))], 27: [(P0(27), T(27, 'As a teenager'))],
+        29: [(T(29, 'built almost') - .1, T(29, 'boring dividend'))], 33: [(P0(33), P1(33))]}
+DIM = {33}                                  # recap list sits over stock (dimmed), not on black
+def piece_at(t):
+    for i in range(len(PC)):
+        if P0(i) - 0.02 <= t < P1(i): return i
+    return min(range(len(PC)), key=lambda i: min(abs(t - P0(i)), abs(t - P1(i))))
+newcards = []
+for c in cards:
+    i = piece_at(c['t0'] + 0.01)
+    if PC[i]['src'] == 'P': newcards.append(c); continue
+    for a, b in KEEP.get(i, []):
+        a2, b2 = max(a, c['t0']), min(b, c['t1'])
+        if b2 - a2 > 0.3:
+            c2 = dict(c, t0=round(a2, 3), t1=round(b2, 3))
+            if i in DIM: c2['dim'] = True
+            newcards.append(c2)
+cards = sorted(newcards, key=lambda c: c['t0'])
+# b-roll segments = VO time not covered by an opaque kept card
+broll = []
+cues = sorted([(T(i, ph), mid) for i, ph, mid in BROLL])
+for i in VO:
+    a, b = P0(i), P1(i)
+    blocks = sorted([(x, y) for x, y in KEEP.get(i, []) if i not in DIM])
+    free, cur = [], a
+    for x, y in blocks:
+        if x > cur + 0.05: free.append((cur, x))
+        cur = max(cur, y)
+    if b > cur + 0.05: free.append((cur, b))
+    for fa, fb in free:
+        inside = [(t, m) for t, m in cues if fa - 0.5 <= t < fb]
+        prior = [(t, m) for t, m in cues if t < fa]
+        if not inside or inside[0][0] > fa + 0.05:
+            if prior or inside: inside = [(fa, (prior[-1] if prior else inside[0])[1])] + inside
+        else: inside[0] = (fa, inside[0][1])
+        for k, (t, m) in enumerate(inside):
+            e = inside[k + 1][0] if k + 1 < len(inside) else fb
+            if e - t > 0.2: broll.append(dict(t0=round(t, 3), t1=round(e, 3), id=m))
+# tidy: merge slivers (<0.8 s) into the neighbour, merge contiguous pieces of the same clip
+m = []
+for x in broll:
+    if m and abs(m[-1]['t1'] - x['t0']) < 0.02 and (m[-1]['id'] == x['id'] or x['t1'] - x['t0'] < 0.8): m[-1]['t1'] = x['t1']; continue
+    if m and abs(m[-1]['t1'] - x['t0']) < 0.02 and m[-1]['t1'] - m[-1]['t0'] < 0.8: m[-1]['t1'] = x['t1']; m[-1]['id'] = x['id']; continue
+    m.append(dict(x))
+broll = m
+# captions over b-roll: every spoken word, sentence chunks, centred low; $ amounts green, % yellow
+for sg in broll:
+    i = piece_at(sg['t0'] + 0.2)
+    ws = [w for w in PC[i]['words'] if sg['t0'] - 0.05 <= w[0] < sg['t1'] - 0.05]
+    if not ws: continue
+    out = []
+    for w in ws:
+        x = FIX.get(w[2], w[2])
+        if out and (x[0] in '.,%' ): out[-1]['w'] += x; continue
+        out.append({'w': x, 't': w[0], 'key': False})
+    for o in out:
+        if '$' in o['w'] or re.search(r'\d', o['w']) and any(k in o['w'].lower() for k in ('million', '000')): o['gkey'] = True
+        elif '%' in o['w']: o['key'] = True
+    captions.append({'t0': ws[0][0], 't1': min(ws[-1][1], sg['t1'] - 0.05), 'words': out, 'upper': True, 'pos': 'c', 'broll': True, 'size': 66})
+VO_T = sum(P1(i) - P0(i) for i in VO); BR_T = sum(x['t1'] - x['t0'] for x in broll)
+print(f'b-roll {len(broll)} segments, {BR_T:.0f}s of {VO_T:.0f}s voiceover ({100 * BR_T / VO_T:.0f}%)')
 images = sorted({e['src'] for c in cards for e in c['els'] if e['type'] == 'photo'})
-json.dump(dict(images=images, duration=DUR, cards=cards, overlays=overlays, captions=captions, sides=sides, chapters=chapters, end=end, facts=FACTS),
+json.dump(dict(broll=broll, images=images, duration=DUR, cards=cards, overlays=overlays, captions=captions, sides=sides, chapters=chapters, end=end, facts=FACTS),
           open(f'{ROOT}/build/scenes.json', 'w'))
 print(f'{len(cards)} cards, {len(overlays)} overlays, {len(captions)} captions; duration {DUR}s')
 print({k: round(v, 2) for k, v in FACTS.items()})

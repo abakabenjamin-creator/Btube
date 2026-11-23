@@ -6,3 +6,5 @@ out/
 *.wav
 
 assets/people/*.jpg
+assets/stock/clips/
+assets/stock/search_cache.json
