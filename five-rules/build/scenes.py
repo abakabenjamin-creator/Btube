@@ -3,7 +3,19 @@ Writes build/scenes.json (cards = full-screen black graphics over VO; overlays +
 chapter pills). All money figures are computed here, not typed in."""
 import json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-E = json.load(open(f'{ROOT}/build/edl.json')); PC = E['pieces']
+# Graphics are authored against the v1 piece structure (build/edl_v1.json) and anchored to WORDS;
+# every word is re-timed onto the current edit (build/edl.json), so re-ordering the edit moves each graphic with its words.
+NEW = json.load(open(f'{ROOT}/build/edl.json'))['pieces']
+def remap(src, st, edge=False):
+    cand = [q for q in NEW if q['src'] == src]
+    q = min(cand, key=lambda q: 0 if q['in'] - 0.02 <= st <= q['out'] + 0.02 else min(abs(st - q['in']), abs(st - q['out'])))
+    if not (q['in'] - 0.3 <= st <= q['out'] + 0.3): raise SystemExit(f'source time {src}:{st} not in the edit')
+    return round(q['start'] + min(max(st, q['in']), q['out']) - q['in'], 3)
+PC = []
+for p in json.load(open(f'{ROOT}/build/edl_v1.json'))['pieces']:
+    sh = p['in'] - p['start']   # old timeline -> source
+    ws = [[remap(p['src'], w[0] + sh), remap(p['src'], w[1] + sh), w[2]] for w in p['words']]
+    PC.append(dict(p, words=ws, start=remap(p['src'], p['in']), end=remap(p['src'], p['out'] - 0.001)))
 R, Wt, Y, G = '#E10600', '#FFFFFF', '#FFD400', '#00A651'
 
 # ---------- timing helpers -------------------------------------------------
@@ -21,7 +33,7 @@ def _find(i, phrase):
 def T(i, ph): return round(_find(i, ph)[0], 3)
 def TE(i, ph): return round(_find(i, ph)[1], 3)
 def P0(i): return PC[i]['start']
-def P1(i): return round(PC[i]['start'] + PC[i]['out'] - PC[i]['in'], 3)
+def P1(i): return PC[i]['end']
 
 FIX = {'Reed': 'Read', "Reed's": "Read's", 'Adeny': 'Adeney'}
 CAPN = [0]
@@ -402,6 +414,22 @@ for c in cards:
             break
         if e['type'] == 'text' and e['y'] < 330 and e.get('align') == 'left' and e['x'] < 460: e['y'] += 70
         if e['type'] == 'text' and e['y'] < 200 and e.get('align', 'center') == 'center': e['y'] += 30
+SEG = [(q['src'], q['start'], q['start'] + q['out'] - q['in']) for q in NEW]
+def seg_at(t): return min(SEG, key=lambda z: 0 if z[1] - 0.05 <= t < z[2] + 0.35 else min(abs(t - z[1]), abs(t - z[2])))
+_c = []
+for c in cards:   # split a card over the pieces of its own speaker only
+    src = seg_at(c['t0'] + 0.05)[0]
+    for z in SEG:
+        if z[0] != src: continue
+        a2, b2 = max(c['t0'], z[1] - (0.35 if src == 'V' else 0)), min(c['t1'], z[2] + 0.3)
+        if b2 - a2 > 0.3: _c.append(dict(c, t0=round(a2, 3), t1=round(b2, 3)))
+cards = [c for c in _c if c['t1'] - c['t0'] >= 1.0]
+for L in (overlays, captions):
+    for o in L:
+        z = seg_at(o['t0'] + 0.05)
+        if o['t1'] > z[2] + 0.3: o['t1'] = round(z[2] + 0.1, 3)
+for sd in sides:
+    z = seg_at(sd['t0'] + 0.05); sd['t1'] = min(sd['t1'], round(z[2] + 0.2, 3))
 cards.sort(key=lambda c: c['t0'])
 for a, b in zip(cards, cards[1:]):
     if a['t1'] > b['t0']: print(f"  clip card {a['t0']}: t1 {a['t1']} -> {b['t0']}"); a['t1'] = b['t0']
@@ -414,13 +442,15 @@ KEEP = {1: [(P0(1), T(1, 'While you were'))], 3: [(P0(3), P1(3))], 9: [(P0(9), T
         23: [(T(23, 'Saver B waits'), P1(23))], 25: [(P0(25), T(25, "If he'd retired"))], 27: [(P0(27), T(27, 'pumped gas'), 'clear'), (T(27, 'safety pins'), T(27, 'firewood'), 'clear')],
         29: [(T(29, 'built almost') - .1, T(29, 'boring dividend')), (T(29, 'Companies he actually'), T(29, 'local hospital'), 'clear')], 33: [(P0(33), P1(33))]}
 DIM = {33}                                  # recap list sits over stock (dimmed), not on black
-def piece_at(t):
-    for i in range(len(PC)):
-        if P0(i) - 0.02 <= t < P1(i): return i
+def piece_at(t):   # original piece of the speaker actually on air at time t
+    on = [q for q in NEW if q['start'] - 0.36 <= t < q['start'] + q['out'] - q['in'] + 0.05]
+    src = on[0]['src'] if on else None
+    c = [i for i in range(len(PC)) if (src is None or PC[i]['src'] == src) and P0(i) - 0.36 <= t < P1(i) + 0.05]
+    if c: return min(c, key=lambda i: P1(i) - P0(i))
     return min(range(len(PC)), key=lambda i: min(abs(t - P0(i)), abs(t - P1(i))))
 newcards = []
 for c in cards:
-    i = piece_at(c['t0'] + 0.01)
+    i = piece_at(c['t0'] + 0.4)
     if PC[i]['src'] == 'P': newcards.append(c); continue
     for a, b, *fl in KEEP.get(i, []):
         a2, b2 = max(a, c['t0']), min(b, c['t1'])
@@ -457,6 +487,13 @@ for x in broll:
     if m and abs(m[-1]['t1'] - x['t0']) < 0.02 and m[-1]['t1'] - m[-1]['t0'] < 0.8: m[-1]['t1'] = x['t1']; m[-1]['id'] = x['id']; continue
     m.append(dict(x))
 broll = m
+VOI = [(q['start'], q['start'] + q['out'] - q['in']) for q in NEW if q['src'] == 'V']
+sp = []
+for x in broll:
+    for a, b in VOI:
+        a2, b2 = max(a, x['t0']), min(b + 0.3, x['t1'])
+        if b2 - a2 > 0.3: sp.append(dict(x, t0=round(a2, 3), t1=round(b2, 3)))
+broll = sp
 # captions over b-roll: every spoken word, sentence chunks, centred low; $ amounts green, % yellow
 for sg in broll:
     i = piece_at(sg['t0'] + 0.2)
