@@ -5,8 +5,8 @@ ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__))); FPS=25
 E=json.load(open(f'{ROOT}/build/edl.json')); SC=json.load(open(f'{ROOT}/build/scenes.json'))
 DUR=SC['duration']; NF=round(DUR*FPS); SRC_DUR=263.12; LEAD=0.6
 TIGHT='crop=1536:864:192:40,scale=1920:1080:flags=lanczos'
-SHIFT=420   # definition moments: avatar slides left at full framing; right strip = mirrored, softened continuation of the room
-SIDE=f'split=3[a][b][c];[a]crop={1920-SHIFT}:1080:{SHIFT}:0[l];[b]crop=240:1080:1680:0,hflip,gblur=sigma=6[m];[c]crop={SHIFT-240}:1080:1680:0,gblur=sigma=6[n];[l][m][n]hstack=3'
+SHIFT=340   # definition moments: avatar slides left at full framing; right strip = mirrored, softened continuation of the room
+SIDE=f'crop={1920-SHIFT}:1080:{SHIFT}:0,pad=1920:1080:0:0[f];movie={ROOT}/work/sideplate.png[p];[f][p]overlay=0:0:format=auto'   # clean room beyond his silhouette (no stray hands)
 SIDES=[(d['t0'],d['t1']) for d in SC['sides']]
 P=[p for p in E['pieces'] if p['src']=='P']
 shots=[]; zoom=0

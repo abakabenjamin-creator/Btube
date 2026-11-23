@@ -10,8 +10,9 @@ const ROOT = path.resolve(__dirname, '..');
   const pg = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
   pg.on('pageerror', e => { console.error('PAGEERROR', e.message); process.exit(2); });
   await pg.goto('file://' + ROOT + '/web/index.html');
-  await pg.evaluate(async () => { await document.fonts.load('700 40px "Google Sans"'); await document.fonts.load('600 40px "Google Sans"'); await document.fonts.load('500 40px "Google Sans"'); await document.fonts.load('600 40px "Inter"'); await document.fonts.load('500 40px "Inter"'); await document.fonts.load('500 40px "Space Grotesk"'); await document.fonts.load('400 40px "Inter"'); await document.fonts.load('800 40px "Inter"'); await document.fonts.load('700 40px "Inter"'); await document.fonts.ready; });
+  await pg.evaluate(async () => { for (const w of [600, 700, 800, 900]) await document.fonts.load(`${w} 40px "Inter"`); await document.fonts.ready; });
   const scenes = JSON.parse(fs.readFileSync(`${ROOT}/build/scenes.json`));
+  console.error('images', await pg.evaluate(l => loadImages(l), scenes.images || []));
   console.error('setup', JSON.stringify(await pg.evaluate(s => setup(s), scenes)));
   const grab = async t => Buffer.from((await pg.evaluate(t => { drawAt(t); return document.getElementById('c').toDataURL('image/png'); }, t)).split(',')[1], 'base64');
   if (mode === 'stills') {

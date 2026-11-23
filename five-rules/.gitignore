@@ -4,3 +4,5 @@ work/
 out/
 *.mp4
 *.wav
+
+assets/people/*.jpg

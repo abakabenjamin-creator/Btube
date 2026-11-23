@@ -63,10 +63,15 @@ def pill(s, at, x, y, fill=R, **k):   # template glass capsule; brand colour as 
 def card(i, els, t0=None, t1=None, **k): return dict(t0=round(P0(i) if t0 is None else t0, 3), t1=round(P1(i) if t1 is None else t1, 3), els=els, **k)
 
 cards, overlays, captions = [], [], []
+PEOPLE = f'{ROOT}/assets/people'
+def photo(name, at, x, y, w, h, **k):
+    src = f'{PEOPLE}/{name}'
+    return dict(type='photo', src='file://' + src, at=at, x=x, y=y, w=w, h=h, **k) if os.path.exists(src) else None
+def clean(els): return [e for e in els if e]
 
 # ===== HOOK (pieces 0-2) =====================================================
 captions += [cap(0, '500 bucks', "that's it", gkeys=['500'], upper=True, pos='bc'),
-             cap(0, 'Put that away', 'million dollars', keys=['40'], gkeys=['1.3', 'million'], upper=True, pos='bc')]
+             dict(cap(0, 'Put that away', 'million dollars', keys=['40'], gkeys=['1.3', 'million'], upper=True, pos='bc'), impact=True)]
 captions += [cap(0, 'Let that sit', 'school', keys=['school'])]
 cards += [card(1, [
     tx('Where the $1.3 million comes from', T(1, 'crazy part'), y=230, size=58, weight=600, font='"Inter", sans-serif'),
@@ -124,21 +129,24 @@ cards += [card(7, [
     tx('A tree you never have to *water.*', T(7, 'planting a tree'), y=700, size=52, weight=600, font='"Inter", sans-serif')])]
 captions += [cap(8, "you're 45", 'way behind', keys=['45']), cap(8, "It just means", 'Monday', keys=['Monday'])]
 fr = 9
-cards += [card(fr, [
-    tx('Benjamin Franklin', T(fr, 'Benjamin Franklin'), y=170, size=78),
-    dict(type='line', at=T(fr, 'When he died'), dur=1.2, x1=260, y1=520, x2=1660, y2=520, color='rgba(255,255,255,0.35)', lw=4),
-    dict(type='dot', at=T(fr, 'When he died'), x=260, y=520, r=16, color=Wt),
-    tx('1790', T(fr, 'When he died'), x=260, y=470, size=56),
-    tx('£1,000 → Boston', T(fr, 'thousand pounds'), x=260, y=610, size=40, align='left', weight=600, font='"Inter", sans-serif'),
-    tx('£1,000 → Philadelphia', T(fr, 'thousand to Philadelphia'), x=260, y=665, size=40, align='left', weight=600, font='"Inter", sans-serif'),
-    tx('≈ $4,000 each', T(fr, 'Roughly'), x=260, y=725, size=40, align='left', color=G),
-    pill('Locked for 200 years', T(fr, 'catch'), 960, 420, w=560),
+cards += [card(fr, clean([
+    photo('f_BenFranklinDuplessis.jpg', P0(fr), 1120, 0, 800, 1080, fade='left', fy=0.2, credit='Portrait after J.-S. Duplessis · public domain', until=T(fr, 'lent it out')),
+    tx('Benjamin Franklin', T(fr, 'Benjamin Franklin'), x=180, y=300, size=96, align='left', until=T(fr, 'lent it out')),
+    dict(type='line', at=T(fr, 'lent it out'), dur=1.2, x1=260, y1=520, x2=1660, y2=520, color='rgba(255,255,255,0.35)', lw=4),
+    dict(type='dot', at=T(fr, 'lent it out'), x=260, y=520, r=16, color=Wt),
+    tx('Died 1790', T(fr, 'When he died'), x=180, y=420, size=56, align='left', until=T(fr, 'lent it out')),
+    tx('1790', T(fr, 'lent it out'), x=260, y=470, size=56),
+    tx('£1,000 → Boston', T(fr, 'thousand pounds'), x=180, y=510, until=T(fr, 'lent it out'), size=40, align='left', weight=600, font='"Inter", sans-serif'),
+    tx('£1,000 → Philadelphia', T(fr, 'thousand to Philadelphia'), x=180, y=570, until=T(fr, 'lent it out'), size=40, align='left', weight=600, font='"Inter", sans-serif'),
+    tx('≈ $4,000 each', T(fr, 'Roughly'), x=180, y=640, until=T(fr, 'lent it out'), size=40, align='left', color=G),
+    pill('Locked for 200 years', T(fr, 'catch'), 460, 780, w=560, until=T(fr, 'lent it out')),
+    tx('200 years', T(fr, 'lent it out'), y=420, size=60, color=R),
     tx('Lent out. Interest piled up, generation after generation.', T(fr, 'lent it out'), y=880, size=40, weight=500, font='"Inter", sans-serif', color='rgba(255,255,255,0.85)', until=T(fr, 'by 1990')),
     dict(type='dot', at=T(fr, 'by 1990'), x=1660, y=520, r=16, color=G),
     tx('1990', T(fr, 'by 1990'), x=1660, y=470, size=56),
-    num(6.5e6, T(fr, 'worth about'), x=1660, y=640, size=90, fmt='M', dec=1, color=G, align='right', dur=1.0),
+    num(6.5e6, T(fr, 'worth about'), x=1660, y=640, size=110, impact=True, fmt='M', dec=1, color=G, align='right', dur=1.0),
     tx('both funds together', T(fr, 'together'), x=1660, y=695, size=34, align='right', weight=500, font='"Inter", sans-serif'),
-    tx('…even after Boston spent a big piece on a trade school', T(fr, 'even after'), y=880, size=38, weight=500, font='"Inter", sans-serif', color='rgba(255,255,255,0.8)')])]
+    tx('…even after Boston spent a big piece on a trade school', T(fr, 'even after'), y=880, size=38, weight=500, font='"Inter", sans-serif', color='rgba(255,255,255,0.8)')]))]
 
 # ===== RULE 2 — KNOW WHEN YOU DOUBLE (pieces 10-13) =========================
 captions += [cap(10, 'The money was small', 'rush it', keys=['rush'])]
@@ -157,7 +165,7 @@ cards += [card(r72, [
         dict(label='S&P 500, ~10% average since 1957', segs=[dict(v=7.2, color=G)], valueStr='≈ 7 years', at=T(r72, 'S&P 500')),
         dict(label='Savings account at 0.5%', segs=[dict(v=144, color=R)], valueStr='144 years', vcolor=R, at=T(r72, 'Your savings account'), dur=2.2)]),
     tx('No single year is promised — that’s a long-run average.', T(r72, 'No single year'), y=960, size=34, weight=500, font='"Inter", sans-serif', color='rgba(255,255,255,0.75)', until=T(r72, 'Your savings'))])]
-captions += [cap(12, 'Half a percent', 'parking', keys=['parking'])]
+captions += [dict(cap(12, 'Half a percent', 'parking', keys=['parking']), impact=True)]
 cards += [card(13, [
     tx('Your 401(k)', P0(13) + .1, y=260, size=84),
     tx('Find your actual return  →  72 ÷ return', T(13, 'find your actual'), y=400, size=52, weight=600, font='"Inter", sans-serif'),
@@ -255,16 +263,21 @@ cards += [card(23, [
     num(SB[-1], T(23, 'versus'), x=1600, y=520, size=64, fmt='k', align='left', dur=.8),
     tx('A put in *a third* of the money — and still came out ahead.', T(23, 'third of the money'), y=950, size=46, weight=600, font='"Inter", sans-serif')])]
 captions += [cap(24, 'Those first 10', '30 more years', keys=['30'])]
-cards += [card(25, [
-    tx('Warren Buffett', P0(25) + .1, y=230, size=84),
-    dict(type='bars', x=260, y=470, w=1400, h=110, gap=200, max=100, rows=[
+cards += [card(25, clean([
+    photo('buffett.jpg', P0(25), 1120, 0, 800, 1080, fade='left', fy=0.25, credit='Photo: U.S. International Trade Administration · public domain'),
+    tx('Warren Buffett', P0(25) + .1, x=150, y=250, size=96, align='left'),
+    tx('Started buying stock as a kid', T(25, 'started buying'), x=150, y=340, size=40, align='left', weight=600, color='rgba(255,255,255,0.8)'),
+    dict(type='bars', x=150, y=520, w=860, h=100, gap=200, max=100, rows=[
         dict(label='Share of his wealth (rough estimates)', segs=[dict(v=5, color='rgba(255,255,255,0.5)'), dict(v=95, color=G)], valueStr='', at=T(25, 'by most estimates'), dur=1.6)]),
-    tx('before 65', T(25, 'by most estimates'), x=260, y=650, size=34, align='left', weight=500, font='"Inter", sans-serif'),
-    tx('[~95%] came after he turned 65', T(25, 'after he turned'), x=1660, y=650, size=44, align='right'),
-    tx('Retire at 65 and you’d never know his *name.*', T(25, "If he'd retired"), y=880, size=56)])]
+    tx('[~95%]', T(25, 'after he turned'), x=150, y=760, size=110, align='left', impact=True),
+    tx('came after he turned 65', T(25, 'after he turned') + .3, x=150, y=830, size=44, align='left'),
+    tx('Retire at 65 → you’d never know his *name.*', T(25, "If he'd retired"), x=150, y=960, size=44, align='left')]))]
 captions += [cap(26, 'a guy who was not famous', 'At all', keys=['famous'])]
 rd = 27
-cards += [card(rd, [
+_rp = 'read.jpg' if os.path.exists(f'{PEOPLE}/read.jpg') else 'brattleboro.jpg'
+cards += [card(rd, clean([
+    photo(_rp, T(rd, 'Brattleboro'), 1160, 0, 760, 1080, fade='left', fx=0.55, fy=0.5,
+          credit='Brattleboro, VT · Quintin Soloviev · CC BY 4.0' if _rp == 'brattleboro.jpg' else ''),
     tx('Ronald Read', T(rd, 'His name'), x=260, y=210, size=96, align='left'),
     tx('Brattleboro, Vermont', T(rd, 'Brattleboro'), x=260, y=280, size=40, align='left', weight=500, font='"Inter", sans-serif', color='rgba(255,255,255,0.75)'),
     tx('Hitchhiked ~4 miles to high school', T(rd, 'hitchhiked'), x=260, y=420, size=46, align='left', weight=600, font='"Inter", sans-serif'),
@@ -272,11 +285,11 @@ cards += [card(rd, [
     tx('Janitor at JCPenney · ~17 years', T(rd, 'janitor'), x=260, y=600, size=46, align='left', weight=600, font='"Inter", sans-serif'),
     tx('Coat held together with *safety pins*', T(rd, 'safety pins'), x=260, y=690, size=46, align='left', weight=600, font='"Inter", sans-serif'),
     tx('Cut his own firewood', T(rd, 'firewood'), x=260, y=780, size=46, align='left', weight=600, font='"Inter", sans-serif'),
-    tx('The only hint: he read the Wall Street Journal', T(rd, 'only hint'), x=260, y=900, size=40, align='left', weight=500, font='"Inter", sans-serif', color=Y)])]
+    tx('The only hint: he read the Wall Street Journal', T(rd, 'only hint'), x=260, y=900, size=40, align='left', weight=500, font='"Inter", sans-serif', color=Y)]))]
 captions += [cap(28, 'nobody had a clue', 'nobody had a clue', keys=['clue'])]
 cards += [card(29, [
     tx('2014 · died at 92', P0(29) + .1, y=220, size=64),
-    num(8e6, T(29, 'built almost'), y=470, size=200, fmt='M', dec=0, color=G, dur=1.4),
+    num(8e6, T(29, 'built almost'), y=490, size=230, fmt='M', dec=0, color=G, dur=1.4),
     tx('almost — mostly boring dividend stocks, held for decades', T(29, 'boring dividend'), y=560, size=38, weight=500, font='"Inter", sans-serif'),
     pill('$4.8M → local hospital', T(29, 'local hospital'), 640, 760, w=600, fill=G),
     pill('$1.2M → library', T(29, 'library'), 1280, 760, w=600, fill=G),
@@ -288,7 +301,8 @@ overlays += [dict(t0=T(30, 'A janitor'), t1=TE(30, 'left it alone'), els=[
     tx('Good companies', T(30, 'Good companies'), x=1520, y=690, size=50, color=G),
     tx('*Left it alone*', T(30, 'left it alone'), x=1520, y=780, size=50)])]
 pt = 31
-cards += [card(pt, [
+cards += [card(pt, clean([
+    photo('pete.jpg', T(pt, 'Real name'), 1260, 0, 660, 1080, fade='left'),
     tx('Pete Adeney', T(pt, 'Real name'), x=260, y=210, size=96, align='left'),
     tx('“Mr. Money Mustache”', P0(pt) + .4, x=260, y=280, size=40, align='left', weight=500, font='"Inter", sans-serif', color='rgba(255,255,255,0.75)'),
     tx('Two software engineers — good money, not crazy money', T(pt, 'software engineers'), x=260, y=420, size=44, align='left', weight=600, font='"Inter", sans-serif'),
@@ -297,7 +311,7 @@ cards += [card(pt, [
     dict(type='dot', at=T(pt, 'About 10 years'), x=1660, y=700, r=16, color=G),
     tx('~10 years in · 2005', T(pt, 'About 10 years'), x=1660, y=660, size=44, align='right'),
     tx('Never needed a paycheck again', T(pt, 'never needed'), x=1660, y=780, size=40, align='right', weight=600, font='"Inter", sans-serif', color=G),
-    tx('Pete was *30.*', T(pt, 'Pete was 30'), x=260, y=900, size=90, align='left')])]
+    tx('Pete was *30.*', T(pt, 'Pete was 30'), x=260, y=900, size=90, align='left', impact=True)]))]
 captions += [cap(32, 'So he put in more', 'only difference', keys=['Earlier'])]
 
 # ===== RECAP + CLOSE (33-34) ===============================================
@@ -378,7 +392,8 @@ for c in cards:
 cards.sort(key=lambda c: c['t0'])
 for a, b in zip(cards, cards[1:]):
     if a['t1'] > b['t0']: print(f"  clip card {a['t0']}: t1 {a['t1']} -> {b['t0']}"); a['t1'] = b['t0']
-json.dump(dict(duration=DUR, cards=cards, overlays=overlays, captions=captions, sides=sides, chapters=chapters, end=end, facts=FACTS),
+images = sorted({e['src'] for c in cards for e in c['els'] if e['type'] == 'photo'})
+json.dump(dict(images=images, duration=DUR, cards=cards, overlays=overlays, captions=captions, sides=sides, chapters=chapters, end=end, facts=FACTS),
           open(f'{ROOT}/build/scenes.json', 'w'))
 print(f'{len(cards)} cards, {len(overlays)} overlays, {len(captions)} captions; duration {DUR}s')
 print({k: round(v, 2) for k, v in FACTS.items()})

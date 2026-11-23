@@ -18,10 +18,9 @@ const ease = x => { x = clamp(x); return 1 - Math.pow(1 - x, 3); };
 const easeIO = x => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
 const prog = (t, a, d) => clamp((t - a) / d);
 function rr(x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
-function font(size, weight = 700, fam) {
-  if (fam === 'inter') { g.font = `${weight} ${size}px "Inter", sans-serif`; g.letterSpacing = `${(-0.01 * size).toFixed(2)}px`; return; }
-  const w = weight < 500 ? 500 : weight > 700 ? 700 : weight;
-  g.font = `${w} ${size}px "Google Sans", sans-serif`; g.letterSpacing = `${(-0.012 * size).toFixed(2)}px`; }
+function font(size, weight = 700, fam) {   // channel font: Inter, heavy weights; 900 = impact
+  const w = weight === 900 ? 900 : weight >= 750 ? 800 : weight >= 650 ? 700 : 600;
+  g.font = `${w} ${size}px "Inter", sans-serif`; g.letterSpacing = `${(-0.015 * size).toFixed(2)}px`; }
 // Word entrance (template DNA): the next word rises slowly from below, small and dim, and settles into line beside the previous one.
 const RISE = { dur: 0.6, dy: 0.6, s0: 0.72, a0: 0.2 };
 function wordIn(p) { const q = ease(p); return { dy: (1 - q) * RISE.dy, sc: RISE.s0 + (1 - RISE.s0) * q, a: RISE.a0 + (1 - RISE.a0) * q * q }; }
@@ -63,11 +62,11 @@ function parseRich(s) {
 
 // Draw a line of rich text, optionally word-by-word reveal. Returns width.
 function richLine(e, t) {
-  let size = e.size || 64; font(size, e.weight || 700, e.font || F.disp);
+  let size = (e.size || 64) * (e.impact ? 1.15 : 1); font(size, e.impact ? 900 : (e.weight || 700));
   const words = parseRich(e.str); let sp = g.measureText(' ').width;
   let widths = words.map(w => g.measureText(w.w).width);
   let total = widths.reduce((a, b) => a + b, 0) + sp * (words.length - 1);
-  if (e.maxw && total > e.maxw) { size *= e.maxw / total; font(size, e.weight || 700, e.font || F.disp);
+  if (e.maxw && total > e.maxw) { size *= e.maxw / total; font(size, e.impact ? 900 : (e.weight || 700));
     sp = g.measureText(' ').width; widths = words.map(w => g.measureText(w.w).width); total = widths.reduce((a, b) => a + b, 0) + sp * (words.length - 1); }
   let x = e.align === 'left' ? e.x : e.align === 'right' ? e.x - total : e.x - total / 2;
   const n = words.length, span = e.span ?? (e.words ? Math.min(1.2, 0.18 * n) : 0);
@@ -99,7 +98,7 @@ const EL = {
   num(e, t) {   // count-up number
     const p = easeIO(prog(t, e.at, e.dur ?? 1.2)); if (t < e.at) return;
     const v = (e.from ?? 0) + ((e.to) - (e.from ?? 0)) * p;
-    font(e.size || 120, e.weight || 700, e.font || F.disp); g.fillStyle = e.color || C.white;
+    font(e.size || 120, e.impact === false ? 700 : 900); g.fillStyle = e.color || C.white;
     g.textAlign = e.align || 'center'; g.globalAlpha = ease(prog(t, e.at, 0.25)) * fadeOut(e, t);
     g.fillText(fmtNum(v, e), e.x, e.y); g.textAlign = 'left'; g.globalAlpha = 1;
   },
@@ -122,6 +121,18 @@ const EL = {
     g.beginPath(); g.arc(e.x, e.y, (e.r || 12) * p, 0, 7); g.fill(); g.globalAlpha = 1; },
   lower(e, t) { const p = ease(prog(t, e.at, 0.4)); if (p <= 0) return; g.globalAlpha = p * fadeOut(e, t);
     glass(e.x, e.y - (1 - p) * 14, e.w, e.h, 30, null); g.globalAlpha = 1; },
+  photo(e, t) { const im = IMG[e.src]; if (!im || t < e.at) return; const p = ease(prog(t, e.at, 0.6));
+    const z = 1.04 + 0.06 * prog(t, e.at, e.dur ?? 8), iw = im.width, ih = im.height;
+    const sc = Math.max(e.w / iw, e.h / ih) * z, dw = iw * sc, dh = ih * sc;
+    const fx = e.fx ?? 0.5, fy = e.fy ?? 0.35;
+    g.save(); g.globalAlpha = p * fadeOut(e, t); rr(e.x, e.y, e.w, e.h, e.r ?? 0); g.clip();
+    if (e.gray) g.filter = 'grayscale(1) contrast(1.08)';
+    g.drawImage(im, e.x + (e.w - dw) * fx, e.y + (e.h - dh) * fy, dw, dh); g.filter = 'none';
+    if (e.fade === 'left') { const gr = g.createLinearGradient(e.x, 0, e.x + 260, 0); gr.addColorStop(0, C.black); gr.addColorStop(1, 'rgba(10,10,10,0)'); g.fillStyle = gr; g.fillRect(e.x, e.y, 260, e.h); }
+    const gb = g.createLinearGradient(0, e.y + e.h - 220, 0, e.y + e.h); gb.addColorStop(0, 'rgba(10,10,10,0)'); gb.addColorStop(1, 'rgba(10,10,10,0.7)'); g.fillStyle = gb; g.fillRect(e.x, e.y + e.h - 220, e.w, 220);
+    g.restore();
+    if (e.credit) { g.globalAlpha = p * fadeOut(e, t); font(20, 600); g.fillStyle = 'rgba(255,255,255,0.7)'; g.fillText(e.credit, e.x + 280, e.y + e.h - 18); g.globalAlpha = 1; }
+  },
   chart: drawChart, bars: drawBars, wave: drawWave, tree: drawTree, map: drawMap,
 };
 
@@ -224,11 +235,11 @@ function drawMap(e, t) {
 }
 
 // ---------- persistent overlays on presenter footage
-function drawPill(label, t, a0) {   // template chapter pill: frosted light glass, top-left, ~350px
+function drawPill(label, t, a0, compact) {   // template chapter pill: frosted glass, top-left
   const p = ease(prog(t, a0, 0.45)); if (p <= 0) return;
-  const x = 60, y = 96 - (1 - p) * 14, w = 350, h = 64; g.globalAlpha = p;
+  font(36, 800); const tw = g.measureText(label).width; SHADOW = true;
+  const x = compact ? 36 : 60, y = (compact ? 40 : 96) - (1 - p) * 14, w = compact ? tw + 56 : 350, h = 62; g.globalAlpha = p;
   glass(x, y, w, h, h / 2, null);
-  font(38, 700); const tw = g.measureText(label).width; SHADOW = true;
   g.fillStyle = C.white; g.textBaseline = 'middle'; shadowOn(0.9); g.fillText(label, x + (w - tw) / 2, y + h / 2 + 2); shadowOff();
   g.textBaseline = 'alphabetic'; g.globalAlpha = 1;
 }
@@ -236,7 +247,7 @@ function drawPill(label, t, a0) {   // template chapter pill: frosted light glas
 function drawCaption(cap, t) {
   if (t < cap.t0 - 0.05 || t > cap.t1 + 0.35) return;
   const out = 1 - ease(prog(t, cap.t1, 0.3)); SHADOW = true;
-  const size = cap.size || 74; font(size, 800, 'inter');
+  const size = cap.impact ? 92 : (cap.size || 74); font(size, cap.impact ? 900 : 800);
   const up = w => w.toUpperCase(); const sp = g.measureText(' ').width; const maxw = 760;
   const lines = [[]]; let lw = 0, prevEnd = false;
   for (const w of cap.words) { const ww = g.measureText(up(w.w)).width; const L = lines[lines.length - 1];
@@ -244,7 +255,7 @@ function drawCaption(cap, t) {
     lines[lines.length - 1].push({ ...w, ww }); lw += ww + sp; prevEnd = /[.?!,]$/.test(w.w); }
   let cur = 0; lines.forEach((ln, i) => { if (t >= ln[0].t - 0.06) cur = i; });
   const ln = lines[cur]; const tot = ln.reduce((a, w) => a + w.ww, 0) + sp * (ln.length - 1);
-  let x = 1080; const y = 735;
+  let x = 1080; const y = 800;
   for (const w of ln) {
     if (t >= w.t - 0.08) { const wi = wordIn(prog(t, w.t - 0.08, RISE.dur));
       g.globalAlpha = wi.a * out; g.fillStyle = w.key ? C.yellow : w.gkey ? C.green : '#FFFFFF';
@@ -258,14 +269,14 @@ function wrapWords(words, maxw) { const lines = [[]]; let lw = 0; const sp = g.m
   for (const w of words) { const ww = g.measureText(w.w).width; if (lw + ww > maxw && lines[lines.length - 1].length) { lines.push([]); lw = 0; }
     lines[lines.length - 1].push({ ...w, ww }); lw += ww + sp; } return { lines, sp }; }
 function drawSide(sd, t) {
-  if (t < sd.t0 || t > sd.t1 + 0.3) return;
-  const out = 1 - ease(prog(t, sd.t1, 0.3)), inn = ease(prog(t, sd.t0, 0.3));
-  const gr = g.createLinearGradient(W, 0, 860, 0); gr.addColorStop(0, 'rgba(10,10,10,0.55)'); gr.addColorStop(1, 'rgba(10,10,10,0)');
-  g.globalAlpha = inn * out; g.fillStyle = gr; g.fillRect(860, 0, W - 860, H); g.globalAlpha = 1; SHADOW = true;
-  const X = 1010; let y = 300;
+  if (t < sd.t0 || t >= sd.t1) return;   // gone before the framing cuts back (never over his face)
+  const out = 1 - ease(prog(t, sd.t1 - 0.3, 0.3)), inn = ease(prog(t, sd.t0, 0.3));
+  const gr = g.createLinearGradient(W, 0, 980, 0); gr.addColorStop(0, 'rgba(10,10,10,0.55)'); gr.addColorStop(1, 'rgba(10,10,10,0)');
+  g.globalAlpha = inn * out; g.fillStyle = gr; g.fillRect(980, 0, W - 980, H); g.globalAlpha = 1; SHADOW = true;
+  const X = 1130; let y = 300;
   // heading: uppercase, words rise in one after another
   let hs = 64; font(hs, 800, 'inter'); const hwid = g.measureText(sd.heading.toUpperCase()).width;
-  if (hwid > 840) { hs = 64 * 840 / hwid; font(hs, 800, 'inter'); }
+  if (hwid > 730) { hs = 64 * 730 / hwid; font(hs, 800, 'inter'); }
   const hw = sd.heading.toUpperCase().split(' ').map((w, i) => ({ w, t: sd.t0 + 0.12 * i }));
   let x = X; const sp = g.measureText(' ').width;
   for (const w of hw) { const ww = g.measureText(w.w).width;
@@ -277,7 +288,7 @@ function drawSide(sd, t) {
   for (const blk of sd.body) {
     const words = blk.str.split(' ').map((w, i, arr) => ({ w: w.replace(/[*\[\]]/g, ''), c: /^\*/.test(w) ? C.yellow : /^\[/.test(w) ? C.green : null,
       t: blk.at + (blk.span ?? Math.min(1.4, 0.2 * arr.length)) * i / Math.max(1, arr.length - 1) }));
-    const { lines, sp: sp2 } = wrapWords(words, 780);
+    const { lines, sp: sp2 } = wrapWords(words, 700);
     for (const ln of lines) { let x2 = X;
       for (const w of ln) { if (t >= w.t) { const wi = wordIn(prog(t, w.t, RISE.dur)); g.globalAlpha = wi.a * out; g.fillStyle = w.c || '#FFFFFF';
           g.save(); g.translate(x2, y + wi.dy * 62); g.scale(wi.sc, wi.sc); shadowOn(); g.fillText(w.w, 0, 0); shadowOff(); g.restore(); }
@@ -298,7 +309,9 @@ function drawBrand(a) {
   g.globalAlpha = 1;
 }
 // ---------- scene runner
-let S = null;
+let S = null; const IMG = {};
+async function loadImages(list) { await Promise.all(list.map(src => new Promise(res => { const im = new Image(); im.onload = () => { IMG[src] = im; res(); }; im.onerror = () => res(); im.src = src; }))); return Object.keys(IMG).length; }
+window.loadImages = loadImages;
 function setup(scenes) { S = scenes; return { cards: scenes.cards.length, overlays: scenes.overlays.length, captions: scenes.captions.length }; }
 function cardAt(t) { return S.cards.find(c => t >= c.t0 && t < c.t1); }
 function drawAt(t) {
@@ -326,9 +339,9 @@ function drawAt(t) {
   SHADOW = false;
   const ch = S.chapters.filter(c => c.t <= t).pop();
   const inSide = S.sides.some(sd => t >= sd.t0 - 0.05 && t <= sd.t1 + 0.05);
-  if (ch && !(card && card.nopill) && !inSide) drawPill(ch.label, t, ch.t);
+  if (ch && !(card && card.nopill)) drawPill(ch.label, t, ch.t, inSide);
   if (S.end && t >= S.end.t0) drawEnd(t);
-  else { const c2 = cardAt(t); let a = 1; if (c2) a = 1 - Math.min(ease(prog(t, c2.t0, 0.28)), 1 - ease(prog(t, c2.t1 - 0.22, 0.22))); if (a > 0.01) drawBrand(a); }
+  drawBrand(1);
 }
 function drawEnd(t) {
   const p = ease(prog(t, S.end.t0, 0.6)); g.globalAlpha = p; g.fillStyle = C.black; g.fillRect(0, 0, W, H); g.globalAlpha = 1;
