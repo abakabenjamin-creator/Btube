@@ -9,14 +9,15 @@ TIGHT='crop=1536:864:192:40,scale=1920:1080:flags=lanczos'
 SHIFT=340   # definition moments: avatar slides left at full framing; right strip = mirrored, softened continuation of the room
 SIDE=f'crop={1920-SHIFT}:1080:{SHIFT}:0,pad=1920:1080:0:0[f];movie={ROOT}/work/sideplate.png[p];[f][p]overlay=0:0:format=auto'   # clean room beyond his silhouette (no stray hands)
 SIDES=[(d['t0'],d['t1']) for d in SC['sides']]
-P=[p for p in E['pieces'] if p['src']=='P']
+P=[p for p in E['pieces'] if p['src'] in ('P','C')]   # C = the closing call-to-action render (same avatar, same set)
+SRCF={'P':'src/aroll.mp4','C':'src/cta.mp4'}
 shots=[]; n_long=0
 for k,p in enumerate(P):
     a=max(0, p['start']-(LEAD if k else 0)); pend=p['start']+p['out']-p['in']
     b=pend+LEAD if k<len(P)-1 else DUR
     z=0
     if b-a>=8: n_long+=1; z=3 if n_long%2==1 else 0     # gentle 3% push-in on every other long section
-    shots.append(dict(t0=a,t1=b,zoom=z,src_off=p['in']-p['start']))
+    shots.append(dict(t0=a,t1=b,zoom=z,src_off=p['in']-p['start'],file=SRCF[p['src']]))
 # split shots at definition-moment edges; inside them use the SIDE framing
 out=[]
 for sh in shots:
@@ -55,7 +56,7 @@ for i,s in enumerate(segs):
             pre=f"scale=w='2*trunc(960*{Z})':h='2*trunc(540*{Z})':eval=frame:flags=lanczos,crop=1920:1080:'920*({Z}-1)':'1080*({Z}-1)',"
         else: pre={0:'',2:SIDE+','}[sh['zoom']]
         vf=pre+'tpad=stop_mode=clone:stop_duration=10,fps=25'
-        subprocess.run(['ffmpeg','-v','error','-y','-ss',f'{max(0,st):.3f}','-i',f'{ROOT}/src/aroll.mp4','-vf',vf,'-frames:v',str(n),*enc,out],check=True)
+        subprocess.run(['ffmpeg','-v','error','-y','-ss',f'{max(0,st):.3f}','-i',f"{ROOT}/{sh['file']}",'-vf',vf,'-frames:v',str(n),*enc,out],check=True)
 open(f'{d}/list.txt','w').write(''.join(f"file '{x}'\n" for x in lst))
 subprocess.run(['ffmpeg','-v','error','-y','-f','concat','-safe','0','-i',f'{d}/list.txt','-c','copy',f'{ROOT}/work/base.mp4'],check=True)
 json.dump(shots,open(f'{ROOT}/build/shots.json','w'),indent=0)

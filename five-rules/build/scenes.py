@@ -355,7 +355,17 @@ captions += [cap(34, "don't need to be some genius", 'whole game', keys=['patien
 overlays += [dict(t0=T(34, 'Your income'), t1=TE(34, 'make it your own'), els=[
     pill('Your income', T(34, 'Your income'), 1560, 400, w=420), pill('Your goals', T(34, 'Your goals'), 1560, 520, w=420),
     pill('Your family', T(34, 'Your family'), 1560, 640, w=420)])]
-END0 = round(P1(34) + 0.25, 3)
+# closing call-to-action (separate HeyGen render, src 'C'): captions on his chest, end card after it
+CT = [q for q in NEW if q['src'] == 'C'][0]
+def ctacap(a, b, keys):
+    ws = [w for w in CT['words'] if norm(a) <= norm(a) and True]
+    cat = [norm(w[2]) for w in CT['words']]
+    i0 = next(k for k in range(len(cat)) if ''.join(cat[k:]).startswith(norm(a)))
+    i1 = next(k for k in range(i0, len(cat)) if norm(b) in ''.join(cat[i0:k + 1]))
+    out = [{'w': w[2].strip(), 't': w[0], 'key': norm(w[2]) in [norm(x) for x in keys]} for w in CT['words'][i0:i1 + 1]]
+    return {'t0': CT['words'][i0][0], 't1': CT['words'][i1][1], 'words': out, 'upper': True, 'pos': 'c'}
+captions += [ctacap('If you could', 'what would it be', ['younger']), ctacap('Drop it in', 'comments', ['comments'])]
+END0 = round(CT['start'] + CT['out'] - CT['in'] + 0.35, 3)
 end = dict(t0=END0, els=[
     tx('Five Rules of Money', END0 + .2, y=250, size=96),
     *[tx(f'{k + 1}. {n}', END0 + .5 + .12 * k, x=600, y=380 + 80 * k, size=46, align='left', weight=600, font='"Inter", sans-serif') for k, n in enumerate(RULE_NAMES)],

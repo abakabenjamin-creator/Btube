@@ -3,6 +3,7 @@ Writes build/edl.json: list of pieces with src in/out and timeline start, plus t
 import json, os
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W={'P':[w for s in json.load(open(f'{ROOT}/work/transcript.json')) for w in s['words']],
+   'C':[w for s in json.load(open(f'{ROOT}/work/cta_transcript.json')) for w in s['words']],
    'V':[w for s in json.load(open(f'{ROOT}/work/vo_transcript.json')) for w in s['words']]}
 # (source, approx start, approx end, chapter) in source seconds, in playback order
 ORDER=[('P',0.00,9.36,'hook'),('V',0.00,8.58,'hook'),('P',9.98,16.84,'hook'),('V',8.96,16.64,'hook'),
@@ -13,9 +14,9 @@ ORDER=[('P',0.00,9.36,'hook'),('V',0.00,8.58,'hook'),('P',9.98,16.84,'hook'),('V
 ('P',176.98,181.26,'r4'),('V',176.42,184.76,'r4'),('P',181.96,189.74,'r4'),('V',185.28,192.06,'r4'),('P',190.42,197.66,'r5'),
 ('V',192.68,212.14,'r5'),('P',198.12,200.30,'r5'),('V',212.54,221.26,'r5'),('P',200.78,208.50,'r5'),('V',221.70,235.90,'r5'),
 ('P',209.06,214.64,'r5'),('V',236.34,283.42,'r5'),('P',215.06,234.42,'r5'),('V',283.42,310.44,'r5'),('P',235.18,254.14,'r5'),
-('V',310.90,329.42,'recap'),('P',254.62,262.84,'end')]
-GAP={'PV':0.35,'VP':0.30}   # breath between speakers
-dur={'P':263.12,'V':329.92}
+('V',310.90,329.42,'recap'),('P',254.62,262.84,'end'),('C',0.0,11.84,'end')]
+GAP={'PV':0.35,'VP':0.30,'PC':0.45}   # breath between speakers
+dur={'P':263.12,'V':329.92,'C':12.288}
 out=[];t=0.0;prev=None
 for src,a,b,ch in ORDER:
     ws=[w for w in W[src] if w[0]>=a-0.08 and w[1]<=b+0.08]

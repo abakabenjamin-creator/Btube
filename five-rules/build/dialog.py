@@ -6,7 +6,7 @@ E=json.load(open(f'{ROOT}/build/edl.json'))
 def load(path):
     raw=subprocess.run(['ffmpeg','-v','error','-i',path,'-vn','-ac','1','-ar',str(SR),'-f','f32le','-'],capture_output=True).stdout
     return np.frombuffer(raw,np.float32)
-SRC={'P':load(f'{ROOT}/src/aroll.mp4'),'V':load(f'{ROOT}/src/vo.wav')}
+SRC={'P':load(f'{ROOT}/src/aroll.mp4'),'V':load(f'{ROOT}/src/vo.wav'),'C':load(f'{ROOT}/src/cta.mp4')}
 out=np.zeros(int(E['duration']*SR),np.float32); f=int(0.012*SR)
 for p in E['pieces']:
     x=SRC[p['src']][int(p['in']*SR):int(p['out']*SR)].copy()
