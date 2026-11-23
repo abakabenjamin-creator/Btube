@@ -13,7 +13,7 @@ BROLL = [
  (21, 'That fund', 32129), (21, 'expense ratio', 38490), (21, 'Takes five', 3653), (21, 'free apps', 8768), (21, 'Look for spreads', 47213),
  (23, 'Saver A starts', 48503),
  (25, "If he'd retired", 35364),
- (27, 'His name', 10280), (27, 'As a teenager', 46915), (27, 'safety pins', 18263), (27, 'pumped gas', 31961), (27, 'janitor', 38416), (27, 'firewood', 13280), (27, 'only hint', 41191),
+ (27, 'His name', 10280), (27, 'As a teenager', 28320), (27, 'safety pins', 18263), (27, 'pumped gas', 31961), (27, 'janitor', 38416), (27, 'firewood', 13280), (27, 'only hint', 41191),
  (29, 'Then in 2014', 49020), (29, 'the town finds out', 7785), (29, 'boring dividend', 47006), (29, 'Companies he actually', 45708),
  (29, 'local hospital', 17469), (29, 'the library', 50726), (29, 'biggest gifts', 4009),
  (31, "There's a guy", 21249), (31, 'software engineers', 41646), (31, 'Good money', 25397), (31, 'every time they got', 2305),
