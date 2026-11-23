@@ -9,3 +9,5 @@ assets/people/*.jpg
 assets/stock/clips/
 assets/stock/search_cache.json
 __pycache__/
+
+assets/people/*.png

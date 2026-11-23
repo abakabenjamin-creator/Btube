@@ -276,8 +276,7 @@ captions += [cap(26, 'a guy who was not famous', 'At all', keys=['famous'])]
 rd = 27
 _rp = 'read.jpg' if os.path.exists(f'{PEOPLE}/read.jpg') else 'brattleboro.jpg'
 cards += [card(rd, clean([
-    photo(_rp, T(rd, 'Brattleboro'), 1160, 0, 760, 1080, fade='left', fx=0.55, fy=0.5,
-          credit='Brattleboro, VT · Quintin Soloviev · CC BY 4.0' if _rp == 'brattleboro.jpg' else ''),
+    photo('read_pair.jpg', T(rd, 'His name'), 880, 230, 980, 510, r=24, fy=0.3, dur=6),   # Ronald Read, young and old (supplied by the channel)
     tx('Ronald Read', T(rd, 'His name'), x=260, y=210, size=96, align='left'),
     tx('Brattleboro, Vermont', T(rd, 'Brattleboro'), x=260, y=280, size=40, align='left', weight=500, font='"Inter", sans-serif', color='rgba(255,255,255,0.75)'),
     tx('Hitchhiked ~4 miles to high school', T(rd, 'hitchhiked'), x=260, y=420, size=46, align='left', weight=600, font='"Inter", sans-serif'),
@@ -286,6 +285,11 @@ cards += [card(rd, clean([
     tx('Coat held together with *safety pins*', T(rd, 'safety pins'), x=260, y=690, size=46, align='left', weight=600, font='"Inter", sans-serif'),
     tx('Cut his own firewood', T(rd, 'firewood'), x=260, y=780, size=46, align='left', weight=600, font='"Inter", sans-serif'),
     tx('The only hint: he read the Wall Street Journal', T(rd, 'only hint'), x=260, y=900, size=40, align='left', weight=500, font='"Inter", sans-serif', color=Y)]))]
+cards += [dict(t0=T(rd, 'safety pins'), t1=T(rd, 'firewood'), els=clean([
+    photo('read_old.jpg', T(rd, 'safety pins'), 1160, 0, 760, 1080, fade='left', fy=0.3),
+    tx('Ronald Read', T(rd, 'safety pins'), x=150, y=360, size=84, align='left'),
+    tx('His coat was held together', T(rd, 'safety pins') + .2, x=150, y=500, size=56, align='left'),
+    tx('with *safety pins.*', T(rd, 'safety pins') + .5, x=150, y=580, size=56, align='left', impact=True)]))]
 captions += [cap(28, 'nobody had a clue', 'nobody had a clue', keys=['clue'])]
 cards += [card(29, [
     tx('2014 · died at 92', P0(29) + .1, y=220, size=64),
@@ -398,7 +402,7 @@ from broll_plan import BROLL
 VO = [i for i, p in enumerate(PC) if p['src'] == 'V']
 KEEP = {1: [(P0(1), T(1, 'While you were'))], 3: [(P0(3), P1(3))], 9: [(P0(9), T(9, 'But there was a catch'))],
         11: [(P0(11), T(11, 'No single year'))], 15: [(P0(15), T(15, 'Run the rule'))], 19: [(P0(19), P1(19))],
-        23: [(T(23, 'Saver B waits'), P1(23))], 25: [(P0(25), T(25, "If he'd retired"))], 27: [(P0(27), T(27, 'As a teenager'))],
+        23: [(T(23, 'Saver B waits'), P1(23))], 25: [(P0(25), T(25, "If he'd retired"))], 27: [(P0(27), T(27, 'As a teenager')), (T(27, 'safety pins'), T(27, 'firewood'))],
         29: [(T(29, 'built almost') - .1, T(29, 'boring dividend'))], 33: [(P0(33), P1(33))]}
 DIM = {33}                                  # recap list sits over stock (dimmed), not on black
 def piece_at(t):
