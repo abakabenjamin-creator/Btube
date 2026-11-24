@@ -323,7 +323,7 @@ function drawAt(t) {
   if (card) {
     const p = ease(prog(t, card.t0, 0.28)), q = 1 - ease(prog(t, card.t1 - 0.22, 0.22));
     g = OG; SHADOW = !!card.dim; CLEAR = !!card.clear; g.clearRect(0, 0, W, H);
-    if (card.clear) { const gl = g.createLinearGradient(0, 0, 1150, 0); gl.addColorStop(0, 'rgba(10,10,10,0.62)'); gl.addColorStop(1, 'rgba(10,10,10,0.1)');
+    if (card.clear) { const gl = g.createLinearGradient(0, 0, 1150, 0); gl.addColorStop(0, 'rgba(10,10,10,0.62)'); gl.addColorStop(1, 'rgba(10,10,10,0)');
       g.fillStyle = gl; g.fillRect(0, 0, 1200, H); SHADOW = true; }   // split screen: stock clip shows through on the left
     else if (card.dim) { g.fillStyle = 'rgba(10,10,10,0.62)'; g.fillRect(0, 0, W, H); }   // list over stock footage
     else { g.fillStyle = C.black; g.fillRect(0, 0, W, H);

@@ -303,12 +303,10 @@ cards += [dict(t0=T(rd, 'As a teenager'), t1=T(rd, 'pumped gas'), clear=True, el
     tx('Hitchhiked ~4 miles', T(rd, 'hitchhiked'), x=150, y=500, size=56, align='left'),
     tx('just to get to *high school.*', T(rd, 'just to get'), x=150, y=580, size=56, align='left', impact=True)]))]
 cards += [dict(t0=T(rd, 'safety pins'), t1=T(rd, 'firewood'), clear=True, els=clean([
-    photo('read_old.jpg', T(rd, 'safety pins'), 1160, 0, 760, 1080, fade='left', fy=0.3),
     tx('Ronald Read', T(rd, 'safety pins'), x=150, y=360, size=84, align='left'),
     tx('His coat was held together', T(rd, 'safety pins') + .2, x=150, y=500, size=56, align='left'),
     tx('with *safety pins.*', T(rd, 'safety pins') + .5, x=150, y=580, size=56, align='left', impact=True)]))]
 cards += [dict(t0=T(29, 'Companies he actually'), t1=T(29, 'local hospital'), clear=True, els=clean([
-    photo('read_pair.jpg', T(29, 'Companies he actually'), 880, 250, 980, 510, r=24, fy=0.3, dur=6),
     tx('Same man. Same habit.', T(29, 'Companies he actually'), x=150, y=470, size=56, align='left'),
     tx('Held for *decades.*', T(29, 'for decades'), x=150, y=560, size=64, align='left', impact=True)]))]
 captions += [cap(28, 'nobody had a clue', 'nobody had a clue', keys=['clue'])]
