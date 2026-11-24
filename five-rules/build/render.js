@@ -11,6 +11,7 @@ const ROOT = path.resolve(__dirname, '..');
   pg.on('pageerror', e => { console.error('PAGEERROR', e.message); process.exit(2); });
   await pg.goto('file://' + ROOT + '/web/index.html');
   await pg.evaluate(async () => { for (const w of [600, 700, 800, 900]) await document.fonts.load(`${w} 40px "Inter"`); await document.fonts.ready; });
+  console.error('canvas', await pg.evaluate(k => setScale(k), +(process.env.SCALE || 1)));
   const scenes = JSON.parse(fs.readFileSync(`${ROOT}/build/scenes.json`));
   console.error('images', await pg.evaluate(l => loadImages(l), scenes.images || []));
   console.error('setup', JSON.stringify(await pg.evaluate(s => setup(s), scenes)));

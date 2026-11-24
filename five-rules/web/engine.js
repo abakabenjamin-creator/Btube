@@ -24,7 +24,7 @@ function font(size, weight = 700, fam) {   // channel font: Inter, heavy weights
 // Word entrance (template DNA): the next word rises slowly from below, small and dim, and settles into line beside the previous one.
 const RISE = { dur: 0.6, dy: 0.6, s0: 0.72, a0: 0.2 };
 function wordIn(p) { const q = ease(p); return { dy: (1 - q) * RISE.dy, sc: RISE.s0 + (1 - RISE.s0) * q, a: RISE.a0 + (1 - RISE.a0) * q * q }; }
-function shadowOn(k = 1) { if (!SHADOW) return; g.shadowColor = `rgba(0,0,0,${0.5 * k})`; g.shadowBlur = 18; g.shadowOffsetY = 3; }
+function shadowOn(k = 1) { if (!SHADOW) return; g.shadowColor = `rgba(0,0,0,${0.5 * k})`; g.shadowBlur = 18 * SC; g.shadowOffsetY = 3 * SC; }
 function shadowOff() { g.shadowColor = 'transparent'; g.shadowBlur = 0; g.shadowOffsetY = 0; }
 // Frosted-glass capsule (template style): translucent white gradient, bright rim, soft top sheen. tint = optional accent glass
 function glass(x, y, w, h, r, tint) {
@@ -312,12 +312,16 @@ function drawBrand(a) {
   g.globalAlpha = 1;
 }
 // ---------- scene runner
-let S = null; const IMG = {}; let CLEAR = false;
+let S = null; const IMG = {}; let CLEAR = false; let SC = 1;
+// render scale: layout stays in 1920x1080 units, pixels are drawn at SC x (SC=2 -> native 3840x2160)
+function setScale(k) { SC = k; cv.width = W * k; cv.height = H * k; oc.width = W * k; oc.height = H * k; return [cv.width, cv.height]; }
+window.setScale = setScale;
 async function loadImages(list) { await Promise.all(list.map(src => new Promise(res => { const im = new Image(); im.onload = () => { IMG[src] = im; res(); }; im.onerror = () => res(); im.src = src; }))); return Object.keys(IMG).length; }
 window.loadImages = loadImages;
 function setup(scenes) { S = scenes; return { cards: scenes.cards.length, overlays: scenes.overlays.length, captions: scenes.captions.length }; }
 function cardAt(t) { return S.cards.find(c => t >= c.t0 && t < c.t1); }
 function drawAt(t) {
+  G0.setTransform(SC, 0, 0, SC, 0, 0); OG.setTransform(SC, 0, 0, SC, 0, 0);
   g.clearRect(0, 0, W, H);
   const card = cardAt(t);
   if (card) {
@@ -332,7 +336,7 @@ function drawAt(t) {
     g.save(); const s = 1 + 0.03 * (1 - p); g.translate(W / 2, H / 2); g.scale(s, s); g.translate(-W / 2, -H / 2);
     for (const e of card.els) { g.save(); EL[e.type](e, t); g.restore(); }
     g.restore(); g = G0;
-    g.globalAlpha = (card.cutIn ? 1 : p) * (card.cutOut ? 1 : q); g.drawImage(oc, 0, 0); g.globalAlpha = 1;
+    g.globalAlpha = (card.cutIn ? 1 : p) * (card.cutOut ? 1 : q); g.drawImage(oc, 0, 0, W, H); g.globalAlpha = 1;
   } else {
     SHADOW = true;
     for (const o of S.overlays) if (t >= o.t0 - 0.3 && t < o.t1 + 0.4) {
