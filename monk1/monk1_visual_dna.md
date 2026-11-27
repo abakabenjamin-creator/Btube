@@ -296,6 +296,7 @@ These come from the channel owner's notes on real edits ("Five Rules of Money", 
 - Show his **full torso** in every presenter shot.
 - **No sharp zoom/punch-in cuts.** Use only a gentle slow push-in (about 3%, anchored bottom-centre), and use it sparingly.
 - **Definition moments:** slide him to the side at full framing, with the heading and explanation on the right. No part of his body (no stray hand) may show on the emptied side.
+- **Off-camera (3/4 side-angle) shots always use the side layout.** Whenever the presenter is looking off-camera, push him aside (toward the side he is not facing). Put the words on the empty side as a heading plus a body line timed to his speech, instead of a chest caption. The freed strip continues the room (mirrored, softened set), with no body parts in it. Hold the shot at least about 2 s so the text can be read.
 - Cut presenter shots **exactly on his words**, so there is no silent mouthing at joins.
 - **Remove jewellery such as rings** from his fingers. Check every presenter frame and paint the ring out frame by frame. The watch can stay.
 

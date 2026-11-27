@@ -7,14 +7,13 @@ O2 = 5.75                     # Part 2 starts here (0.35 s breath after Part 1 e
 END0 = 16.0; DUR = 19.5       # end card from END0
 def words(part, i0, i1, off, key=(), impact=False):
     ws = W[part][i0:i1]
-    return [dict(w=w['w'], t=round(w['s'] + off, 2), key=w['w'].strip('.,').lower() in key) for w in ws]
+    return [dict(w=w['w'], t=round(w['s'] + off, 2), key=w['w'].lower() in key or w['w'].strip('.,').lower() in key) for w in ws]
 
 # ---- shots (global time): ('P', file, src_off, zoom) presenter / ('B', clip id, clip start) stock
 SHOTS = [
     (0.00, 1.88, 'B', 570, 3.0),             # "A river doesn't cut through rock"
-    (1.88, 2.80, 'P', 'part1_clean', 0.0),         # "with strength,"  (3/4 camera)
-    (2.80, 4.02, 'B', 50753, 0.6),           # "it does it by showing up" (alarm, every morning)
-    (4.02, 5.75, 'B', 32799, 1.0),           # "every single day" (daily run)
+    (1.88, 4.30, 'P', 'part1_clean', 0.0),   # "with strength, it does it by showing up" -- off-camera angle: SIDE layout
+    (4.30, 5.75, 'B', 32799, 1.0),           # "every single day" (daily run)
     (5.75, 7.47, 'P', 'part2', -O2),         # "Your habits are the river."  (frontal camera)
     (7.47, 9.00, 'B', 15375, 4.0),           # "Your goals are the rock."
     (9.00, 11.10, 'P', 'part2', -O2),        # "Be patient. Keep flowing."
@@ -23,8 +22,7 @@ SHOTS = [
 ]
 caps = [
     dict(t0=0.0, t1=1.88, words=words('part1', 0, 6, 0, key=('river',)), broll=True, size=72),
-    dict(t0=1.88, t1=2.80, words=words('part1', 6, 8, 0), impact=True),
-    dict(t0=2.86, t1=5.62, words=words('part1', 8, 16, 0, key=('showing', 'up')), broll=True, size=72),
+    dict(t0=4.28, t1=5.62, words=words('part1', 14, 17, 0, key=('day.',)), broll=True, size=72),
     dict(t0=O2, t1=7.47, words=words('part2', 0, 5, O2, key=('river',))),
     dict(t0=7.59, t1=9.00, words=words('part2', 5, 10, O2, key=('rock',)), broll=True, size=72),
     dict(t0=9.17, t1=11.10, words=words('part2', 10, 14, O2, key=('flowing',)), impact=True),
@@ -33,6 +31,7 @@ caps = [
 ]
 for c in caps: c['upper'] = True; c['pos'] = 'c'
 for a, b in zip(caps, caps[1:]): a['t1'] = min(a['t1'], b['t0'] - 0.3)   # each line has faded out before the next one rises
+caps[0]['t1'] = 1.88 - 0.3   # ...and before the side layout starts   # each line has faded out before the next one rises
 F = '"Inter", sans-serif'
 end = dict(t0=END0, els=[
     dict(type='text', str='The River', at=END0 + 0.25, x=960, y=330, size=110, align='center'),
@@ -41,7 +40,9 @@ end = dict(t0=END0, els=[
     dict(type='text', str='Keep flowing.', at=END0 + 1.3, x=960, y=680, size=56, align='center', weight=700, font=F),
     dict(type='text', str='Follow for more', at=END0 + 1.8, x=960, y=880, size=40, align='center', weight=600, font=F, color='rgba(255,255,255,0.8)'),
 ])
-scenes = dict(duration=DUR, broll=[], images=[], cards=[], overlays=[], sides=[], captions=caps,
+# off-camera (3/4) angle: he is pushed left, the words sit on the empty right side (channel rule)
+SIDES = [dict(t0=1.88, t1=4.30, heading='Not with strength', body=[dict(str='It does it by *showing up*', at=2.86, span=1.16)])]
+scenes = dict(duration=DUR, broll=[], images=[], cards=[], overlays=[], sides=SIDES, captions=caps,
               chapters=[dict(t=0.3, label='The River')], end=end)
 json.dump(scenes, open(f'{ROOT}/build/scenes.json', 'w'), indent=1)
 
@@ -60,12 +61,15 @@ for i, (a, b, kind, src, off) in enumerate(SHOTS):
     else:
         st = a + off
         pre = ''
+        if src.startswith('part1'):   # push him left by SH px; the freed right strip continues the room (mirrored sofa, softened)
+            SH = 240
+            pre = f"split[m][e];[m]crop={1920-SH}:1080:{SH}:0[l];[e]crop={SH}:1080:{1920-SH}:0,hflip,boxblur=3[r];[l][r]hstack,"
         if src == 'part2':
             Z = f"(1+0.03*t/{D:.3f})"
             pre = f"scale=w='2*trunc(960*{Z})':h='2*trunc(540*{Z})':eval=frame:flags=lanczos,crop=1920:1080:'920*({Z}-1)':'1080*({Z}-1)',"
         vf = pre + 'tpad=stop_mode=clone:stop_duration=5,fps=25'
         cmd = ['-ss', f'{st:.3f}', '-i', f'{ROOT}/src/{src}.mp4']
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', *cmd, '-vf', vf, '-frames:v', str(n), *enc, out], check=True)
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', *cmd, '-filter_complex' if 'split' in vf else '-vf', vf, '-frames:v', str(n), *enc, out], check=True)
 open(f'{d}/list.txt', 'w').write(''.join(f"file '{x}'\n" for x in lst))
 subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', f'{d}/list.txt', '-c', 'copy', f'{ROOT}/work/base.mp4'], check=True)
 # ---- dialog: Part 1 at 0, Part 2 at O2

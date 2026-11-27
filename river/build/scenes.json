@@ -4,7 +4,20 @@
  "images": [],
  "cards": [],
  "overlays": [],
- "sides": [],
+ "sides": [
+  {
+   "t0": 1.88,
+   "t1": 4.3,
+   "heading": "Not with strength",
+   "body": [
+    {
+     "str": "It does it by *showing up*",
+     "at": 2.86,
+     "span": 1.16
+    }
+   ]
+  }
+ ],
  "captions": [
   {
    "t0": 0.0,
@@ -47,58 +60,9 @@
    "pos": "c"
   },
   {
-   "t0": 1.88,
-   "t1": 2.56,
-   "words": [
-    {
-     "w": "with",
-     "t": 1.88,
-     "key": false
-    },
-    {
-     "w": "strength,",
-     "t": 2.12,
-     "key": false
-    }
-   ],
-   "impact": true,
-   "upper": true,
-   "pos": "c"
-  },
-  {
-   "t0": 2.86,
+   "t0": 4.28,
    "t1": 5.45,
    "words": [
-    {
-     "w": "it",
-     "t": 2.86,
-     "key": false
-    },
-    {
-     "w": "does",
-     "t": 3.12,
-     "key": false
-    },
-    {
-     "w": "it",
-     "t": 3.34,
-     "key": false
-    },
-    {
-     "w": "by",
-     "t": 3.5,
-     "key": false
-    },
-    {
-     "w": "showing",
-     "t": 3.68,
-     "key": true
-    },
-    {
-     "w": "up",
-     "t": 4.02,
-     "key": true
-    },
     {
      "w": "every",
      "t": 4.28,
@@ -108,6 +72,11 @@
      "w": "single",
      "t": 4.66,
      "key": false
+    },
+    {
+     "w": "day.",
+     "t": 4.96,
+     "key": true
     }
    ],
    "broll": true,
