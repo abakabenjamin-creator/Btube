@@ -1900,19 +1900,20 @@
 "t0": 57.14,
 "t1": 62.26,
 "panel": [
-880,
+875,
 740,
 1000,
 170
 ],
+"style": "tag",
 "els": [
 {
 "type": "text",
 "str": "Education, not financial advice",
 "at": 57.288,
-"x": 930,
-"y": 845,
-"size": 54,
+"x": 925,
+"y": 818,
+"size": 50,
 "align": "left",
 "weight": 700,
 "font": "\"Inter\", sans-serif"

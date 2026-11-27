@@ -342,8 +342,12 @@ function drawAt(t) {
     SHADOW = true;
     for (const o of S.overlays) if (t >= o.t0 - 0.3 && t < o.t1 + 0.4) {
       if (o.panel) { const [x, y, w, h] = o.panel; const a = ease(prog(t, o.t0 - 0.25, 0.3)) * (1 - ease(prog(t, o.t1 + 0.05, 0.3)));
-        g.globalAlpha = a; rr(x, y, w, h, 28); g.fillStyle = C.glass; g.fill(); g.lineWidth = 1.5; g.strokeStyle = 'rgba(255,255,255,0.18)'; g.stroke();
-        g.fillStyle = C.red; rr(x, y + 28, 8, h - 56, 4); g.fill(); g.globalAlpha = 1; }
+        if (o.style === 'tag') {   // disclaimer tag (reference): light grey frosted glass, rounded corners, thin light outline
+          g.globalAlpha = a; rr(x, y, w, h, 22); const gr = g.createLinearGradient(0, y, 0, y + h);
+          gr.addColorStop(0, 'rgba(200,200,205,0.42)'); gr.addColorStop(1, 'rgba(150,150,155,0.38)'); g.fillStyle = gr; g.fill();
+          g.lineWidth = 2.5; g.strokeStyle = 'rgba(255,255,255,0.75)'; g.stroke(); g.globalAlpha = 1; }
+        else { g.globalAlpha = a; rr(x, y, w, h, 28); g.fillStyle = C.glass; g.fill(); g.lineWidth = 1.5; g.strokeStyle = 'rgba(255,255,255,0.18)'; g.stroke();
+        g.fillStyle = C.red; rr(x, y + 28, 8, h - 56, 4); g.fill(); g.globalAlpha = 1; } }
       for (const e of o.els) { g.save(); EL[e.type]({ ...e, until: e.until ?? o.t1 }, t); g.restore(); } }
     for (const c of S.captions) drawCaption(c, t);
     for (const sd of S.sides) drawSide(sd, t);
