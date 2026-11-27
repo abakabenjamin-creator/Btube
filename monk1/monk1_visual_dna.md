@@ -187,8 +187,8 @@ His graphics language is **soft 3D + glassmorphism on pastel gradients**. Ours i
 
 **Recipe for us:**
 - Ambient pad ducked to about −20 dB under the voice in the body, and −10 to −12 dB in the hook.
-- A whoosh on each hook cut, and a soft riser into each chapter map.
-- A subtle click/pop on each framework item appearing (pills, icons, CARE letters).
+- **No whoosh, swipe or "shhh" noise sounds on cuts or transitions.** This is an ABAKA SIKA channel rule that overrides the monk1 source. Cuts are clean, and the music bed carries them.
+- Allowed: at most a soft, tonal low hit (pure sine, no noise burst) under one big reveal, plus a subtle click/pop as a framework item appears.
 - Let the close breathe, with no SFX.
 
 ---
@@ -273,3 +273,43 @@ His graphics language is **soft 3D + glassmorphism on pastel gradients**. Ours i
   - throughout: a tiny recorder timecode bubble, bottom-centre
 - Audio is mono AAC from the capture. Music and SFX were identified from spectrograms, not stems, so track names and exact levels are unknown.
 - Stock vs own vs brand-ad attribution is a visual judgement (`clips/index.csv` → "stock or own filming"). None of the third-party footage should be reused in our videos. Use the library as a **reference for shot types**, not as assets.
+
+---
+
+## 10) ABAKA SIKA house rules (owner's notes, override everything above)
+
+These come from the channel owner's notes on real edits ("Five Rules of Money", "The River"). Where they conflict with the monk1 study, **these win**.
+
+**Typography and brand**
+- Use **Inter** only: Bold/ExtraBold for captions, **Inter Black, all caps** for shocking or must-see moments.
+- Keep the red **Subscribe** button top-right and the white **ABAKA SIKA** wordmark (stacked) bottom-right on **every frame**.
+- The chapter/title pill stays **top-left**.
+
+**Captions**
+- Each word **rises slowly from below** and settles beside the previous one.
+- On the presenter, captions are **centred across his chest**, not to one side. Over stock they are centred low.
+- Use one yellow key word per line.
+- A caption must fully fade out **before** the next line rises, so lines never overlap.
+
+**Presenter framing**
+- **No overlay may ever touch or cover his face.**
+- Show his **full torso** in every presenter shot.
+- **No sharp zoom/punch-in cuts.** Use only a gentle slow push-in (about 3%, anchored bottom-centre), and use it sparingly.
+- **Definition moments:** slide him to the side at full framing, with the heading and explanation on the right. No part of his body (no stray hand) may show on the emptied side.
+- Cut presenter shots **exactly on his words**, so there is no silent mouthing at joins.
+- **Remove jewellery such as rings** from his fingers. Check every presenter frame and paint the ring out frame by frame. The watch can stay.
+
+**Footage**
+- Story sections are about **80% stock video, 20% graphs/financial explanation**.
+- Every person mentioned gets a **real photo or clip** of that person.
+- Match the **age** of anyone in a story (teen story = teenagers with visible faces). Use **no smoking** and nothing off-brand.
+- For old/archival photos, use a split screen: photo on one half, matching stock clip on the other.
+- Stock comes from licence-safe sources only (e.g. Mixkit: free, commercial use).
+
+**Sound**
+- **No whoosh / swipe / "shhh" noise SFX on transitions.**
+- Use a soft ambient pad about 20 dB under the voice, and master to −14 LUFS.
+
+**Delivery**
+- **4K (3840×2160)** master, with graphics rendered natively at 4K, plus a **1080p** copy.
+- Keep any file sent through the app comfortably under its upload limit (about 300 MB worked; 480 MB did not).

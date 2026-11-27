@@ -1,5 +1,5 @@
 """Sound: soft ambient pad (louder on the stock-footage hook and the end card, ~20 dB under the voice while he talks),
-whooshes on the stock cuts, a low hit on the canyon reveal. Voice + bed -> work/mix.wav (48 kHz stereo)."""
+no whooshes or noise SFX (channel rule), a soft low tone under the canyon reveal. Voice + bed -> work/mix.wav (48 kHz stereo)."""
 import json, os, numpy as np
 from scipy.signal import butter, sosfilt
 from scipy.ndimage import uniform_filter1d
@@ -23,12 +23,12 @@ def whoosh(d=.5):
     for i in range(0,n,1024): f=300+2800*np.sin(np.pi*i/n)**2; y[i:i+1024]=bp(x[max(0,i-2048):i+1024],f*.6,f*1.7)[-len(y[i:i+1024]):]
     return y*np.sin(np.pi*np.arange(n)/SR/d)**2
 def hit():
-    n=int(2.5*SR); tt=np.arange(n)/SR; return np.sin(2*np.pi*48*tt)*np.exp(-tt/0.7)+lp(rng.standard_normal(n),700)*np.exp(-tt/0.12)*0.5
+    n=int(2.5*SR); tt=np.arange(n)/SR; return np.sin(2*np.pi*48*tt)*np.exp(-tt/0.7)
 sfx=np.zeros(N)
 def put(x,at,gn):
     s=int(at*SR); e=min(N,s+len(x)); sfx[s:e]+=x[:e-s]*gn
-for at in (2.80,4.02,7.47,11.10): put(whoosh(),at-0.25,0.30)
-put(hit(),12.75,0.55); put(whoosh(.8),15.6,0.25)
+# channel rule: no whoosh / swipe / noise SFX on transitions -- cuts are clean, music carries them
+put(hit(),12.75,0.55)   # soft low tone under the canyon reveal (pure sine, no noise)
 sr,d=wavfile.read(f'{ROOT}/work/dialog.wav'); d=d.astype(float)/32768; d=np.pad(d,(0,max(0,N-len(d))))[:N]
 act=mavg((np.sqrt(mavg(d**2,0.05*SR))>0.01).astype(float),0.4*SR)
 db=lambda x:10**(x/20)
