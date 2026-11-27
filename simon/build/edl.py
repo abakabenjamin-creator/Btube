@@ -7,7 +7,7 @@ def toks(s):
     s=s.replace('[pause]',' ').replace('-',' ').replace('%',' percent ')
     return [norm(x) for x in s.split() if norm(x)]
 SRC={'P':json.load(open(f'{ROOT}/src/p2_words.json')),'S':json.load(open(f'{ROOT}/src/p1_words.json')),
-     'V':[dict(w=w['text'],s=w['start_time'],e=w['end_time']) for w in json.load(open(f'{ROOT}/src/vo_words.json'))]}
+     'V':[dict(w=w['text'],s=w['start_time'],e=w['end_time']) for w in json.load(open(f'{ROOT}/src/vo_words_slow.json'))]}
 for k,W in SRC.items():
     for w in W: w['n']=norm(w['w'].replace('%','percent'))
 NUM={'fortyfive':'4','hundred':'','thousand':'','twenty':'20','percent':'percent'}
@@ -76,8 +76,10 @@ for k,L in enumerate(out):
     prev=pieces[-1] if pieces else None
     gap=0 if not prev else (0.30 if prev['src']==L['src'] else 0.40)
     if pause_before: gap+=0.9
-    t+=gap
     a=max(0,L['start']-PAD); b=L['end']+PAD
+    if prev and prev['src']==L['src'] and not pause_before and 0<=a-prev['out']<=2.0:
+        a=prev['out']; gap=0          # next line straight from the same recording: play it continuously, as recorded
+    t+=gap
     pieces.append(dict(i=L['i'],src=L['src'],in_=round(a,3),out=round(b,3),start=round(t,3),text=L['text'],
                        words=[dict(w=w['w'],t=round(t+(w['s']-a),3),e=round(t+(w['e']-a),3)) for w in L['words']]))
     t+=b-a

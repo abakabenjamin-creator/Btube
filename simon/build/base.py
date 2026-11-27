@@ -8,15 +8,19 @@ E = json.load(open(f'{ROOT}/build/edl.json')); SC = json.load(open(f'{ROOT}/buil
 NF = round(SC['duration'] * FPS)
 FILE = {'P': f'{ROOT}/src/simon_main.mp4', 'S': f'{ROOT}/src/side_clean.mp4'}
 SH = 380
-shots = []; n_long = 0
+runs = []   # lines that run straight on in the same recording become ONE continuous shot (no cut, no freeze)
 for p in E['pieces']:
     if p['src'] == 'V': continue
-    a = p['start']; b = a + p['out'] - p['in_']
-    z = 0
+    a = p['start']; b = a + p['out'] - p['in_']; off = p['in_'] - a
+    if runs and runs[-1]['src'] == p['src'] and abs(runs[-1]['t1'] - a) < 1e-3 and abs(runs[-1]['off'] - off) < 1e-3: runs[-1]['t1'] = b
+    else: runs.append(dict(t0=a, t1=b, src=p['src'], off=off))
+shots = []; n_long = 0
+for r in runs:
+    a, b = r['t0'], r['t1']; z = 0
     if b - a >= 8: n_long += 1; z = 3 if n_long % 2 == 1 else 0
     sl = [s for s in B['slide'] if a - 0.05 <= s[0] < b]
     held = [s for s in B['slide'] if s[1] <= a + 0.05 and a < s[2] - 0.05]       # later line of a rule moment: stays pushed aside
-    shots.append(dict(t0=a, t1=b, src=p['src'], off=p['in_'] - a, zoom=0 if (sl or held) else z, slide=sl[0] if sl else None, held=bool(held)))
+    shots.append(dict(r, zoom=0 if (sl or held) else z, slide=sl[0] if sl else None, held=bool(held)))
 own = [None] * NF
 for k, br in enumerate(B['broll']):
     for f in range(round(br['t0'] * FPS), min(NF, round(br['t1'] * FPS))): own[f] = ('broll', k)
@@ -52,8 +56,7 @@ for i, (o, f0, f1) in enumerate(segs):
         cmd = ['-stream_loop', '-1', '-ss', f'{off:.3f}', '-i', f"{ROOT}/clips/{br['id']}.mp4"]
     else:
         sh = shots[o[1]]
-        st = (sh['t1'] - 1 / FPS) if o[0] == 'hold' else sh['t0'] if o[0] == 'hold0' else T0
-        st += sh['off']
+        st = T0 + sh['off']   # breaths between speakers: the presenter's real frames just before/after his line (no freeze frames)
         pre = ''
         if sh['slide'] and o[0] == 'shot':
             s0, s1, se = sh['slide']; a = s0 - T0; dd = s1 - s0
@@ -62,10 +65,10 @@ for i, (o, f0, f1) in enumerate(segs):
         elif (sh['slide'] and o[0] == 'hold' and T0 >= sh['slide'][1]) or (sh.get('held') and o[0] in ('shot', 'hold')):
             pre = f"[1:v]setsar=1[r];[0:v][r]hstack=shortest=1,crop=1920:1080:{SH}:0,"
         elif sh['zoom'] == 3:
-            D = sh['t1'] - sh['t0']; tin = D if o[0] == 'hold' else max(0.0, T0 - sh['t0'])
+            D = sh['t1'] - sh['t0']; tin = min(D, T0 - sh['t0'])
             Z = f"(1+0.03*max(0\\,t+{tin:.3f})/{D:.3f})"
             pre = f"scale=w='2*trunc(960*{Z})':h='2*trunc(540*{Z})':eval=frame:flags=lanczos,crop=1920:1080:'920*({Z}-1)':'1080*({Z}-1)',"
-        vf = pre + ('trim=end_frame=1,' if o[0] in ('hold', 'hold0') else '') + 'tpad=stop_mode=clone:stop_duration=30,fps=25'
+        vf = pre + 'tpad=stop_mode=clone:stop_duration=30,fps=25'
         cmd = ['-ss', f'{max(0, st):.3f}', '-i', FILE[sh['src']]]
     if vf and '[1:v]' in vf: cmd += ['-loop', '1', '-framerate', '25', '-i', f'{ROOT}/work/plate_main.png']   # clean room plate: one lamp only
     flt = [] if vf is None else (['-filter_complex', vf] if ('split' in vf or '[1:v]' in vf) else ['-vf', vf])

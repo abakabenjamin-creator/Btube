@@ -1,264 +1,264 @@
 {
-"duration": 578.83,
+"duration": 597.34,
 "broll": [
 {
-"t0": 42.4,
-"t1": 45.42,
+"t0": 42.75,
+"t1": 45.92,
 "id": 20551
 },
 {
-"t0": 45.42,
-"t1": 46.150999999999996,
+"t0": 45.92,
+"t1": 46.373999999999995,
 "id": 20736
 },
 {
-"t0": 46.150999999999996,
-"t1": 54.038,
+"t0": 46.373999999999995,
+"t1": 55.06700000000001,
 "id": 20551
 },
 {
-"t0": 65.7,
-"t1": 67.69,
+"t0": 66.77,
+"t1": 68.86,
 "id": 46994
 },
 {
-"t0": 67.69,
-"t1": 68.55,
+"t0": 68.86,
+"t1": 69.76,
 "id": 24890
 },
 {
-"t0": 68.55,
-"t1": 69.53,
+"t0": 69.76,
+"t1": 70.79,
 "id": 11658
 },
 {
-"t0": 69.53,
-"t1": 71.34,
+"t0": 70.79,
+"t1": 72.68,
 "id": 26089
 },
 {
-"t0": 73.59,
-"t1": 76.61,
+"t0": 74.93,
+"t1": 78.1,
 "id": 18263
 },
 {
-"t0": 76.61,
-"t1": 77.72,
+"t0": 78.1,
+"t1": 79.27,
 "id": 18299
 },
 {
-"t0": 77.72,
-"t1": 79.43,
+"t0": 79.27,
+"t1": 81.06,
 "id": 21911
 },
 {
-"t0": 79.43,
-"t1": 82.91,
+"t0": 81.06,
+"t1": 84.71,
 "id": 21911
 },
 {
-"t0": 87.441,
-"t1": 97.247,
+"t0": 89.238,
+"t1": 99.238,
 "id": 31969
 },
 {
-"t0": 97.247,
-"t1": 105.389,
+"t0": 99.238,
+"t1": 108.112,
 "id": 31969
 },
 {
-"t0": 105.389,
-"t1": 113.518,
+"t0": 108.112,
+"t1": 116.856,
 "id": 38481
 },
 {
-"t0": 113.518,
-"t1": 121.403,
+"t0": 116.856,
+"t1": 125.59100000000002,
 "id": 38481
 },
 {
-"t0": 164.703,
-"t1": 182.09499999999997,
+"t0": 169.05200000000002,
+"t1": 187.332,
 "id": 42627
 },
 {
-"t0": 191.115,
-"t1": 203.56399999999996,
+"t0": 196.352,
+"t1": 209.429,
 "id": 47214
 },
 {
-"t0": 244.67,
-"t1": 247.56,
+"t0": 251.73,
+"t1": 254.76,
 "id": 47627
 },
 {
-"t0": 247.56,
-"t1": 249.34,
+"t0": 254.76,
+"t1": 256.63,
 "id": 18304
 },
 {
-"t0": 249.34,
-"t1": 254.07,
+"t0": 256.63,
+"t1": 261.62,
 "id": 23476
 },
 {
-"t0": 254.07,
-"t1": 256.0,
+"t0": 261.62,
+"t1": 263.33,
 "id": 15853
 },
 {
-"t0": 256.0,
-"t1": 259.02,
+"t0": 263.33,
+"t1": 267.09,
 "id": 39841
 },
 {
-"t0": 259.02,
-"t1": 261.197,
+"t0": 267.09,
+"t1": 269.076,
 "id": 46994
 },
 {
-"t0": 261.197,
-"t1": 271.402,
+"t0": 269.076,
+"t1": 280.45000000000005,
 "id": 15914
 },
 {
-"t0": 284.5,
-"t1": 286.09,
+"t0": 293.73,
+"t1": 295.4,
 "id": 34278
 },
 {
-"t0": 286.09,
-"t1": 287.5,
+"t0": 295.4,
+"t1": 296.88,
 "id": 13260
 },
 {
-"t0": 287.5,
-"t1": 288.61,
+"t0": 296.88,
+"t1": 298.05,
 "id": 8875
 },
 {
-"t0": 288.61,
-"t1": 290.83,
+"t0": 298.05,
+"t1": 300.38,
 "id": 8875
 },
 {
-"t0": 290.83,
-"t1": 294.1,
+"t0": 300.38,
+"t1": 303.8,
 "id": 38501
 },
 {
-"t0": 301.38,
-"t1": 303.2,
+"t0": 311.45,
+"t1": 314.05,
 "id": 23989
 },
 {
-"t0": 303.2,
-"t1": 305.59,
+"t0": 314.05,
+"t1": 316.56,
 "id": 23989
 },
 {
-"t0": 305.59,
-"t1": 311.67,
+"t0": 316.56,
+"t1": 322.95,
 "id": 37051
 },
 {
-"t0": 319.745,
-"t1": 326.59099999999995,
+"t0": 331.136,
+"t1": 338.314,
 "id": 4806
 },
 {
-"t0": 343.61,
-"t1": 347.44,
+"t0": 355.34,
+"t1": 359.36,
 "id": 23524
 },
 {
-"t0": 347.44,
-"t1": 349.9,
+"t0": 359.36,
+"t1": 361.92,
 "id": 47734
 },
 {
-"t0": 379.25,
-"t1": 381.14,
+"t0": 391.65,
+"t1": 393.64,
 "id": 43851
 },
 {
-"t0": 381.14,
-"t1": 385.45,
+"t0": 393.64,
+"t1": 398.18,
 "id": 49233
 },
 {
-"t0": 385.45,
-"t1": 387.02,
+"t0": 398.18,
+"t1": 399.8,
 "id": 39790
 },
 {
-"t0": 387.77,
-"t1": 388.99,
+"t0": 400.55,
+"t1": 401.83,
 "id": 46627
 },
 {
-"t0": 388.99,
-"t1": 391.45,
+"t0": 401.83,
+"t1": 404.4,
 "id": 49247
 },
 {
-"t0": 393.12100000000004,
-"t1": 400.59599999999995,
+"t0": 406.069,
+"t1": 413.91,
 "id": 49126
 },
 {
-"t0": 422.356,
-"t1": 427.484,
+"t0": 435.73,
+"t1": 441.09999999999997,
 "id": 46627
 },
 {
-"t0": 429.104,
-"t1": 439.9919999999999,
+"t0": 442.721,
+"t1": 454.15500000000003,
 "id": 35902
 },
 {
-"t0": 444.632,
-"t1": 453.228,
+"t0": 458.79400000000004,
+"t1": 467.8150000000001,
 "id": 36780
 },
 {
-"t0": 479.96,
-"t1": 486.0,
+"t0": 494.9,
+"t1": 501.88,
 "id": 38512
 },
 {
-"t0": 486.0,
-"t1": 488.18,
+"t0": 501.88,
+"t1": 504.17,
 "id": 38512
 },
 {
-"t0": 488.18,
-"t1": 489.96,
+"t0": 504.17,
+"t1": 506.02,
 "id": 23046
 },
 {
-"t0": 491.65,
-"t1": 498.26,
+"t0": 507.71,
+"t1": 514.67,
 "id": "prince"
 },
 {
-"t0": 506.55,
-"t1": 509.74,
+"t0": 523.08,
+"t1": 527.05,
 "id": 47687
 },
 {
-"t0": 509.74,
-"t1": 511.45,
+"t0": 527.05,
+"t1": 528.84,
 "id": 16104
 },
 {
-"t0": 511.45,
-"t1": 512.45,
+"t0": 528.84,
+"t1": 529.88,
 "id": 35426
 },
 {
-"t0": 540.3629999999999,
-"t1": 553.4860000000001,
+"t0": 558.132,
+"t1": 571.918,
 "id": 23046
 }
 ],
@@ -282,14 +282,14 @@
 ],
 "cards": [
 {
-"t0": 509.69,
-"t1": 512.39,
+"t0": 527.0,
+"t1": 529.82,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/heirs_z.png",
-"at": 509.689,
+"at": 526.9970000000001,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -301,7 +301,7 @@
 {
 "type": "pill",
 "str": "Source: Star Tribune",
-"at": 509.839,
+"at": 527.147,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -310,14 +310,14 @@
 ]
 },
 {
-"t0": 504.16,
-"t1": 506.64,
+"t0": 520.87,
+"t1": 523.47,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/prince_z.png",
-"at": 504.157,
+"at": 520.872,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -329,7 +329,7 @@
 {
 "type": "pill",
 "str": "Source: NBC News",
-"at": 504.30699999999996,
+"at": 521.0219999999999,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -338,14 +338,14 @@
 ]
 },
 {
-"t0": 476.69,
-"t1": 480.05,
+"t0": 491.81,
+"t1": 495.29,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/probate_z.png",
-"at": 476.692,
+"at": 491.811,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -357,7 +357,7 @@
 {
 "type": "pill",
 "str": "Source: LegalZoom",
-"at": 476.842,
+"at": 491.96099999999996,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -366,14 +366,14 @@
 ]
 },
 {
-"t0": 433.4,
-"t1": 435.71,
+"t0": 447.23,
+"t1": 449.66,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/freeze_z.png",
-"at": 433.396,
+"at": 447.233,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -385,7 +385,7 @@
 {
 "type": "pill",
 "str": "Source: Consumer Financial Protection Bureau",
-"at": 433.546,
+"at": 447.383,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -394,14 +394,14 @@
 ]
 },
 {
-"t0": 422.17,
-"t1": 423.93,
+"t0": 435.54,
+"t1": 437.38,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/fbi_news_z.png",
-"at": 422.166,
+"at": 435.54,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -413,7 +413,7 @@
 {
 "type": "pill",
 "str": "Source: Malwarebytes, citing the FBI",
-"at": 422.316,
+"at": 435.69,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -422,14 +422,14 @@
 ]
 },
 {
-"t0": 393.03,
-"t1": 395.63,
+"t0": 405.98,
+"t1": 408.7,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/ftc2_z.png",
-"at": 393.03099999999995,
+"at": 405.979,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -441,7 +441,7 @@
 {
 "type": "pill",
 "str": "Source: CFP Board, citing FTC data",
-"at": 393.1809999999999,
+"at": 406.12899999999996,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -450,14 +450,14 @@
 ]
 },
 {
-"t0": 388.94,
-"t1": 391.39,
+"t0": 401.78,
+"t1": 404.34,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/voiceclone_z.png",
-"at": 388.94300000000004,
+"at": 401.783,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -469,7 +469,7 @@
 {
 "type": "pill",
 "str": "Source: Hawaii News Now",
-"at": 389.093,
+"at": 401.933,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -478,14 +478,14 @@
 ]
 },
 {
-"t0": 293.86,
-"t1": 296.37,
+"t0": 303.86,
+"t1": 306.49,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/lt_bnpl_z.png",
-"at": 293.85999999999996,
+"at": 303.86199999999997,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -497,7 +497,7 @@
 {
 "type": "pill",
 "str": "Source: LendingTree BNPL survey",
-"at": 294.00999999999993,
+"at": 304.01199999999994,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -506,14 +506,14 @@
 ]
 },
 {
-"t0": 287.45,
-"t1": 290.83,
+"t0": 296.83,
+"t1": 300.38,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/bnpl_groceries_z.png",
-"at": 287.45300000000003,
+"at": 296.831,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -525,7 +525,7 @@
 {
 "type": "pill",
 "str": "Source: News4Jax",
-"at": 287.603,
+"at": 296.981,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -534,14 +534,14 @@
 ]
 },
 {
-"t0": 261.11,
-"t1": 263.11,
+"t0": 269.64,
+"t1": 271.74,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/lt_apr_z.png",
-"at": 261.10699999999997,
+"at": 269.645,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -553,7 +553,7 @@
 {
 "type": "pill",
 "str": "Source: LendingTree",
-"at": 261.25699999999995,
+"at": 269.79499999999996,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -562,14 +562,14 @@
 ]
 },
 {
-"t0": 210.25,
-"t1": 212.9,
+"t0": 216.72,
+"t1": 219.5,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/market_z.png",
-"at": 210.24599999999998,
+"at": 216.715,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -581,7 +581,7 @@
 {
 "type": "pill",
 "str": "Source: SoFi: S&P 500 long-run average ~10% (8% is the cautious case)",
-"at": 210.396,
+"at": 216.865,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -590,14 +590,14 @@
 ]
 },
 {
-"t0": 200.9,
-"t1": 203.55,
+"t0": 206.77,
+"t1": 209.42,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/irs_z.png",
-"at": 200.904,
+"at": 206.769,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -609,7 +609,7 @@
 {
 "type": "pill",
 "str": "Source: IRS.gov",
-"at": 201.054,
+"at": 206.919,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -618,14 +618,14 @@
 ]
 },
 {
-"t0": 174.18,
-"t1": 177.09,
+"t0": 179.02,
+"t1": 182.08,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/hysa_z.png",
-"at": 174.176,
+"at": 179.017,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -637,7 +637,7 @@
 {
 "type": "pill",
 "str": "Source: Bankrate, best savings rates Nov 2026",
-"at": 174.326,
+"at": 179.167,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -646,14 +646,14 @@
 ]
 },
 {
-"t0": 97.01,
-"t1": 99.56,
+"t0": 99.28,
+"t1": 101.83,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/bls2_z.png",
-"at": 97.011,
+"at": 99.28,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -665,7 +665,7 @@
 {
 "type": "pill",
 "str": "Source: Kiplinger, citing BLS",
-"at": 97.161,
+"at": 99.43,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -674,14 +674,14 @@
 ]
 },
 {
-"t0": 91.22,
-"t1": 93.67,
+"t0": 93.21,
+"t1": 95.66,
 "nopill": true,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/receipts/fdic_z.png",
-"at": 91.22,
+"at": 93.21,
 "x": 0,
 "y": 0,
 "w": 1920,
@@ -693,7 +693,7 @@
 {
 "type": "pill",
 "str": "Source: FDIC national rates",
-"at": 91.37,
+"at": 93.36,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -703,7 +703,7 @@
 },
 {
 "t0": 18.58,
-"t1": 25.59,
+"t1": 25.94,
 "els": [
 {
 "type": "text",
@@ -728,7 +728,7 @@
 "rows": [
 {
 "label": "Simon",
-"at": 19.839,
+"at": 19.897,
 "segs": [
 {
 "v": 1800,
@@ -740,7 +740,7 @@
 },
 {
 "label": "Solomon",
-"at": 22.527,
+"at": 22.727,
 "segs": [
 {
 "v": 165000,
@@ -755,13 +755,13 @@
 ]
 },
 {
-"t0": 46.26,
-"t1": 54.03,
+"t0": 46.9,
+"t1": 55.06,
 "els": [
 {
 "type": "text",
 "str": "Three drains",
-"at": 46.311,
+"at": 46.952999999999996,
 "x": 960,
 "y": 260,
 "size": 70,
@@ -772,7 +772,7 @@
 {
 "type": "pill",
 "str": "1  Prices that won't settle down",
-"at": 46.411,
+"at": 47.053,
 "x": 960,
 "y": 430,
 "w": 980,
@@ -782,7 +782,7 @@
 {
 "type": "pill",
 "str": "2  Debt at 20-24%",
-"at": 47.976,
+"at": 48.7,
 "x": 960,
 "y": 560,
 "w": 980,
@@ -792,7 +792,7 @@
 {
 "type": "pill",
 "str": "3  Scams that sound like family",
-"at": 51.474,
+"at": 52.382,
 "x": 960,
 "y": 690,
 "w": 980,
@@ -803,13 +803,13 @@
 "dim": true
 },
 {
-"t0": 87.55,
-"t1": 105.48,
+"t0": 89.35,
+"t1": 108.5,
 "els": [
 {
 "type": "text",
 "str": "Checking account pays",
-"at": 87.701,
+"at": 89.498,
 "x": 560,
 "y": 330,
 "size": 44,
@@ -820,7 +820,7 @@
 {
 "type": "text",
 "str": "{< 0.1%}",
-"at": 90.005,
+"at": 91.923,
 "x": 560,
 "y": 470,
 "size": 120,
@@ -831,7 +831,7 @@
 {
 "type": "text",
 "str": "Inflation (Sept)",
-"at": 93.93,
+"at": 96.055,
 "x": 1360,
 "y": 330,
 "size": 44,
@@ -842,7 +842,7 @@
 {
 "type": "text",
 "str": "{3.7%}",
-"at": 96.661,
+"at": 98.93,
 "x": 1360,
 "y": 470,
 "size": 120,
@@ -853,7 +853,7 @@
 {
 "type": "text",
 "str": "On $10,000 you lose about",
-"at": 97.507,
+"at": 100.123,
 "x": 960,
 "y": 680,
 "size": 50,
@@ -864,7 +864,7 @@
 {
 "type": "text",
 "str": "{$400} of buying power a year",
-"at": 99.555,
+"at": 102.279,
 "x": 960,
 "y": 790,
 "size": 64,
@@ -875,7 +875,7 @@
 {
 "type": "text",
 "str": "Source: BLS CPI, September 2026",
-"at": 97.507,
+"at": 100.123,
 "x": 960,
 "y": 930,
 "size": 26,
@@ -888,13 +888,13 @@
 "dim": true
 },
 {
-"t0": 105.5,
-"t1": 121.39,
+"t0": 108.73,
+"t1": 125.58,
 "els": [
 {
 "type": "text",
 "str": "Payday: $4,500",
-"at": 105.649,
+"at": 108.881,
 "x": 960,
 "y": 250,
 "size": 64,
@@ -913,7 +913,7 @@
 "rows": [
 {
 "label": "Leaves first, automatically",
-"at": 108.92,
+"at": 112.325,
 "segs": [
 {
 "v": 900,
@@ -925,7 +925,7 @@
 },
 {
 "label": "Everything else has to fit here",
-"at": 115.741,
+"at": 119.645,
 "segs": [
 {
 "v": 3600,
@@ -939,7 +939,7 @@
 {
 "type": "text",
 "str": "The future gets paid *first*",
-"at": 118.839,
+"at": 122.906,
 "x": 960,
 "y": 950,
 "size": 52,
@@ -951,13 +951,13 @@
 "dim": true
 },
 {
-"t0": 164.81,
-"t1": 182.09,
+"t0": 169.16,
+"t1": 187.32,
 "els": [
 {
 "type": "text",
 "str": "Emergency fund: 3-6 months of basics",
-"at": 164.963,
+"at": 169.312,
 "x": 960,
 "y": 250,
 "size": 54,
@@ -968,7 +968,7 @@
 {
 "type": "pill",
 "str": "High-yield savings",
-"at": 168.803,
+"at": 173.354,
 "x": 500,
 "y": 380,
 "w": 440,
@@ -978,7 +978,7 @@
 {
 "type": "pill",
 "str": "Money market fund",
-"at": 171.235,
+"at": 175.914,
 "x": 960,
 "y": 380,
 "w": 440,
@@ -988,7 +988,7 @@
 {
 "type": "pill",
 "str": "Short-term Treasuries",
-"at": 173.325,
+"at": 178.114,
 "x": 1420,
 "y": 380,
 "w": 440,
@@ -1006,7 +1006,7 @@
 "rows": [
 {
 "label": "$10,000 at about 4%",
-"at": 176.118,
+"at": 181.054,
 "segs": [
 {
 "v": 400,
@@ -1018,7 +1018,7 @@
 },
 {
 "label": "$10,000 in checking",
-"at": 181.238,
+"at": 186.443,
 "segs": [
 {
 "v": 7,
@@ -1034,13 +1034,13 @@
 "dim": true
 },
 {
-"t0": 191.22,
-"t1": 203.55,
+"t0": 196.46,
+"t1": 209.42,
 "els": [
 {
 "type": "text",
 "str": "The long game",
-"at": 191.375,
+"at": 196.612,
 "x": 960,
 "y": 250,
 "size": 70,
@@ -1051,7 +1051,7 @@
 {
 "type": "pill",
 "str": "Index funds",
-"at": 192.655,
+"at": 197.959,
 "x": 700,
 "y": 400,
 "w": 480,
@@ -1061,7 +1061,7 @@
 {
 "type": "pill",
 "str": "Retirement accounts",
-"at": 193.679,
+"at": 199.037,
 "x": 1220,
 "y": 400,
 "w": 520,
@@ -1071,7 +1071,7 @@
 {
 "type": "text",
 "str": "2026 limits",
-"at": 195.496,
+"at": 200.95,
 "x": 960,
 "y": 580,
 "size": 42,
@@ -1083,7 +1083,7 @@
 {
 "type": "text",
 "str": "IRA  [$7,500]",
-"at": 198.396,
+"at": 204.018,
 "x": 960,
 "y": 690,
 "size": 72,
@@ -1094,7 +1094,7 @@
 {
 "type": "text",
 "str": "401(k)  [$24,500]",
-"at": 199.933,
+"at": 205.62,
 "x": 960,
 "y": 800,
 "size": 72,
@@ -1105,7 +1105,7 @@
 {
 "type": "text",
 "str": "Source: IRS",
-"at": 199.933,
+"at": 205.62,
 "x": 960,
 "y": 930,
 "size": 26,
@@ -1118,13 +1118,13 @@
 "dim": true
 },
 {
-"t0": 203.57,
-"t1": 216.15,
+"t0": 209.69,
+"t1": 222.91,
 "els": [
 {
 "type": "text",
 "str": "$900 a month at about 8%",
-"at": 203.724,
+"at": 209.842,
 "x": 960,
 "y": 200,
 "size": 56,
@@ -1134,7 +1134,7 @@
 },
 {
 "type": "chart",
-"at": 207.708,
+"at": 214.036,
 "dur": 5.5,
 "x": 300,
 "y": 300,
@@ -1204,7 +1204,7 @@
 {
 "type": "text",
 "str": "An average. Some years are ugly.",
-"at": 208.902,
+"at": 215.292,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -1216,13 +1216,13 @@
 ]
 },
 {
-"t0": 216.17,
-"t1": 223.92,
+"t0": 222.96,
+"t1": 231.1,
 "els": [
 {
 "type": "text",
 "str": "Simon's ten years",
-"at": 216.319,
+"at": 223.107,
 "x": 960,
 "y": 260,
 "size": 66,
@@ -1232,7 +1232,7 @@
 },
 {
 "type": "num",
-"at": 218.255,
+"at": 225.145,
 "to": 23000,
 "x": 960,
 "y": 440,
@@ -1242,7 +1242,7 @@
 },
 {
 "type": "num",
-"at": 220.517,
+"at": 227.526,
 "to": 540000,
 "x": 960,
 "y": 620,
@@ -1253,7 +1253,7 @@
 {
 "type": "text",
 "str": "in paychecks",
-"at": 221.754,
+"at": 228.828,
 "x": 960,
 "y": 700,
 "size": 44,
@@ -1264,7 +1264,7 @@
 {
 "type": "text",
 "str": "{Under $2,000 left}",
-"at": 222.607,
+"at": 229.726,
 "x": 960,
 "y": 880,
 "size": 84,
@@ -1275,13 +1275,13 @@
 ]
 },
 {
-"t0": 261.31,
-"t1": 271.39,
+"t0": 269.85,
+"t1": 280.44,
 "els": [
 {
 "type": "text",
 "str": "New card offers average",
-"at": 261.457,
+"at": 269.995,
 "x": 960,
 "y": 300,
 "size": 50,
@@ -1292,7 +1292,7 @@
 {
 "type": "text",
 "str": "{~24%}",
-"at": 264.657,
+"at": 273.364,
 "x": 960,
 "y": 450,
 "size": 140,
@@ -1303,7 +1303,7 @@
 {
 "type": "text",
 "str": "Carry [$5,000] at that rate",
-"at": 266.791,
+"at": 275.61,
 "x": 960,
 "y": 640,
 "size": 60,
@@ -1314,7 +1314,7 @@
 {
 "type": "text",
 "str": "= {$1,200} a year just to owe it",
-"at": 269.052,
+"at": 277.99,
 "x": 960,
 "y": 760,
 "size": 64,
@@ -1325,7 +1325,7 @@
 {
 "type": "text",
 "str": "Source: LendingTree",
-"at": 261.457,
+"at": 269.995,
 "x": 960,
 "y": 930,
 "size": 26,
@@ -1338,13 +1338,13 @@
 "dim": true
 },
 {
-"t0": 294.06,
-"t1": 301.47,
+"t0": 304.06,
+"t1": 311.84,
 "els": [
 {
 "type": "text",
 "str": "Buy now, pay later users who paid late",
-"at": 294.21,
+"at": 304.212,
 "x": 960,
 "y": 300,
 "size": 52,
@@ -1354,7 +1354,7 @@
 },
 {
 "type": "num",
-"at": 296.471,
+"at": 306.592,
 "to": 47,
 "x": 960,
 "y": 600,
@@ -1365,7 +1365,7 @@
 {
 "type": "text",
 "str": "Almost *half*",
-"at": 300.535,
+"at": 310.87,
 "x": 960,
 "y": 780,
 "size": 70,
@@ -1376,7 +1376,7 @@
 {
 "type": "text",
 "str": "Source: LendingTree BNPL survey, 2026",
-"at": 294.21,
+"at": 304.212,
 "x": 960,
 "y": 930,
 "size": 26,
@@ -1388,13 +1388,13 @@
 ]
 },
 {
-"t0": 319.86,
-"t1": 326.58,
+"t0": 331.25,
+"t1": 338.31,
 "els": [
 {
 "type": "text",
 "str": "This weekend, on paper",
-"at": 319.905,
+"at": 331.296,
 "x": 960,
 "y": 230,
 "size": 62,
@@ -1405,7 +1405,7 @@
 {
 "type": "text",
 "str": "1. Each card",
-"at": 320.687,
+"at": 332.114,
 "x": 560,
 "y": 400,
 "size": 52,
@@ -1416,7 +1416,7 @@
 {
 "type": "text",
 "str": "What you owe",
-"at": 321.924,
+"at": 333.416,
 "x": 1000,
 "y": 400,
 "size": 52,
@@ -1428,7 +1428,7 @@
 {
 "type": "text",
 "str": "The rate",
-"at": 322.576,
+"at": 334.103,
 "x": 1400,
 "y": 400,
 "size": 52,
@@ -1440,7 +1440,7 @@
 {
 "type": "text",
 "str": "2. Each pay-in-4 plan",
-"at": 323.344,
+"at": 334.911,
 "x": 560,
 "y": 540,
 "size": 52,
@@ -1451,7 +1451,7 @@
 {
 "type": "text",
 "str": "The due date",
-"at": 325.307,
+"at": 336.978,
 "x": 1150,
 "y": 540,
 "size": 52,
@@ -1464,13 +1464,13 @@
 "dim": true
 },
 {
-"t0": 393.23,
-"t1": 400.59,
+"t0": 406.18,
+"t1": 413.9,
 "els": [
 {
 "type": "text",
 "str": "Imposter scams, reported losses (2025)",
-"at": 393.381,
+"at": 406.329,
 "x": 960,
 "y": 300,
 "size": 50,
@@ -1480,7 +1480,7 @@
 },
 {
 "type": "num",
-"at": 395.728,
+"at": 408.8,
 "to": 3.5,
 "dec": 1,
 "prefix": "$",
@@ -1493,7 +1493,7 @@
 {
 "type": "text",
 "str": "Source: FTC",
-"at": 393.381,
+"at": 406.329,
 "x": 960,
 "y": 930,
 "size": 26,
@@ -1506,13 +1506,13 @@
 "dim": true
 },
 {
-"t0": 422.47,
-"t1": 427.47,
+"t0": 435.84,
+"t1": 441.09,
 "els": [
 {
 "type": "text",
 "str": "Losses to AI scams alone",
-"at": 422.616,
+"at": 435.99,
 "x": 960,
 "y": 300,
 "size": 50,
@@ -1522,7 +1522,7 @@
 },
 {
 "type": "num",
-"at": 423.981,
+"at": 437.427,
 "to": 900,
 "prefix": "~$",
 "suffix": " million",
@@ -1534,7 +1534,7 @@
 {
 "type": "text",
 "str": "Source: FBI IC3 2025 report",
-"at": 422.616,
+"at": 435.99,
 "x": 960,
 "y": 930,
 "size": 26,
@@ -1547,13 +1547,13 @@
 "dim": true
 },
 {
-"t0": 429.21,
-"t1": 439.98,
+"t0": 442.83,
+"t1": 454.14,
 "els": [
 {
 "type": "text",
 "str": "Freeze your credit: free, minutes each",
-"at": 429.364,
+"at": 442.981,
 "x": 960,
 "y": 250,
 "size": 54,
@@ -1564,7 +1564,7 @@
 {
 "type": "pill",
 "str": "Equifax",
-"at": 430.815,
+"at": 444.508,
 "x": 500,
 "y": 420,
 "w": 420,
@@ -1574,7 +1574,7 @@
 {
 "type": "pill",
 "str": "Experian",
-"at": 431.583,
+"at": 445.316,
 "x": 960,
 "y": 420,
 "w": 420,
@@ -1584,7 +1584,7 @@
 {
 "type": "pill",
 "str": "TransUnion",
-"at": 432.564,
+"at": 446.349,
 "x": 1420,
 "y": 420,
 "w": 420,
@@ -1594,7 +1594,7 @@
 {
 "type": "text",
 "str": "Authenticator app *instead of* text codes",
-"at": 436.191,
+"at": 450.167,
 "x": 960,
 "y": 650,
 "size": 56,
@@ -1606,13 +1606,13 @@
 "dim": true
 },
 {
-"t0": 444.74,
-"t1": 453.22,
+"t0": 458.9,
+"t1": 467.81,
 "els": [
 {
 "type": "text",
 "str": "If you couldn't work for six months",
-"at": 444.792,
+"at": 458.95399999999995,
 "x": 960,
 "y": 260,
 "size": 52,
@@ -1623,7 +1623,7 @@
 {
 "type": "pill",
 "str": "Term life",
-"at": 444.892,
+"at": 459.054,
 "x": 500,
 "y": 440,
 "w": 420,
@@ -1633,7 +1633,7 @@
 {
 "type": "pill",
 "str": "Disability",
-"at": 445.788,
+"at": 459.998,
 "x": 960,
 "y": 440,
 "w": 420,
@@ -1643,7 +1643,7 @@
 {
 "type": "pill",
 "str": "Umbrella policy",
-"at": 446.94,
+"at": 461.21,
 "x": 1430,
 "y": 440,
 "w": 460,
@@ -1653,7 +1653,7 @@
 {
 "type": "text",
 "str": "One bad year shouldn't force a fire sale",
-"at": 448.658,
+"at": 463.019,
 "x": 960,
 "y": 660,
 "size": 54,
@@ -1665,13 +1665,13 @@
 "dim": true
 },
 {
-"t0": 465.72,
-"t1": 480.05,
+"t0": 480.23,
+"t1": 495.29,
 "els": [
 {
 "type": "text",
 "str": "Estate: about $500,000",
-"at": 465.868,
+"at": 480.375,
 "x": 960,
 "y": 230,
 "size": 62,
@@ -1682,7 +1682,7 @@
 {
 "type": "text",
 "str": "Family 1: a will, nothing else",
-"at": 469.495,
+"at": 484.193,
 "x": 960,
 "y": 390,
 "size": 54,
@@ -1693,7 +1693,7 @@
 {
 "type": "text",
 "str": "Probate commonly eats  {3-7%}",
-"at": 471.817,
+"at": 486.638,
 "x": 960,
 "y": 520,
 "size": 64,
@@ -1704,7 +1704,7 @@
 {
 "type": "text",
 "str": "= {$15,000 - $35,000}",
-"at": 475.06,
+"at": 490.051,
 "x": 960,
 "y": 650,
 "size": 84,
@@ -1715,7 +1715,7 @@
 {
 "type": "text",
 "str": "Months, sometimes a couple of years",
-"at": 477.492,
+"at": 492.611,
 "x": 960,
 "y": 790,
 "size": 50,
@@ -1727,13 +1727,13 @@
 ]
 },
 {
-"t0": 498.26,
-"t1": 506.64,
+"t0": 514.67,
+"t1": 523.47,
 "els": [
 {
 "type": "photo",
 "src": "file:///home/user/Btube/simon/assets/people/prince_1986.jpg",
-"at": 491.905,
+"at": 507.97,
 "x": 1060,
 "y": 0,
 "w": 860,
@@ -1746,7 +1746,7 @@
 {
 "type": "text",
 "str": "Prince",
-"at": 491.905,
+"at": 507.97,
 "x": 140,
 "y": 330,
 "size": 110,
@@ -1757,7 +1757,7 @@
 {
 "type": "text",
 "str": "Died 2016. *No will.*",
-"at": 496.876,
+"at": 513.203,
 "x": 140,
 "y": 450,
 "size": 56,
@@ -1768,7 +1768,7 @@
 {
 "type": "text",
 "str": "Over a year to name his heirs",
-"at": 498.668,
+"at": 515.089,
 "x": 140,
 "y": 560,
 "size": 46,
@@ -1779,7 +1779,7 @@
 {
 "type": "text",
 "str": "6 years in court",
-"at": 502.252,
+"at": 518.862,
 "x": 140,
 "y": 660,
 "size": 56,
@@ -1790,7 +1790,7 @@
 {
 "type": "text",
 "str": "Estate: [~$156 million]",
-"at": 504.257,
+"at": 520.972,
 "x": 140,
 "y": 770,
 "size": 56,
@@ -1801,13 +1801,13 @@
 ]
 },
 {
-"t0": 540.47,
-"t1": 553.48,
+"t0": 558.24,
+"t1": 571.91,
 "els": [
 {
 "type": "text",
 "str": "Three drains. Three rules.",
-"at": 540.623,
+"at": 558.392,
 "x": 960,
 "y": 240,
 "size": 68,
@@ -1818,7 +1818,7 @@
 {
 "type": "pill",
 "str": "1  Pay the future first",
-"at": 542.329,
+"at": 560.188,
 "x": 960,
 "y": 420,
 "w": 900,
@@ -1828,7 +1828,7 @@
 {
 "type": "pill",
 "str": "2  Debt has to earn its keep",
-"at": 545.359,
+"at": 563.377,
 "x": 960,
 "y": 560,
 "w": 900,
@@ -1838,7 +1838,7 @@
 {
 "type": "pill",
 "str": "3  Protect it all",
-"at": 548.746,
+"at": 566.942,
 "x": 960,
 "y": 700,
 "w": 900,
@@ -1848,7 +1848,7 @@
 {
 "type": "text",
 "str": "Safeword \u00b7 freeze \u00b7 coverage \u00b7 beneficiaries",
-"at": 549.812,
+"at": 568.065,
 "x": 960,
 "y": 860,
 "size": 44,
@@ -1862,8 +1862,8 @@
 ],
 "overlays": [
 {
-"t0": 491.9,
-"t1": 498.16,
+"t0": 507.97,
+"t1": 514.57,
 "panel": [
 40,
 180,
@@ -1874,7 +1874,7 @@
 {
 "type": "text",
 "str": "Prince  (1958-2016)",
-"at": 492.005,
+"at": 508.07000000000005,
 "x": 90,
 "y": 255,
 "size": 50,
@@ -1885,7 +1885,7 @@
 {
 "type": "text",
 "str": "Video: The Arsenio Hall Show, CC BY 3.0",
-"at": 492.205,
+"at": 508.27000000000004,
 "x": 90,
 "y": 300,
 "size": 22,
@@ -1897,8 +1897,8 @@
 ]
 },
 {
-"t0": 57.14,
-"t1": 62.26,
+"t0": 58.17,
+"t1": 63.29,
 "panel": [
 875,
 740,
@@ -1910,7 +1910,7 @@
 {
 "type": "text",
 "str": "Education, not financial advice",
-"at": 57.288,
+"at": 58.318,
 "x": 925,
 "y": 812,
 "size": 52,
@@ -1921,7 +1921,7 @@
 {
 "type": "text",
 "str": "Talk to a licensed pro before you move real money.",
-"at": 57.738,
+"at": 58.768,
 "x": 925,
 "y": 872,
 "size": 32,
@@ -1999,32 +1999,32 @@
 ]
 },
 {
-"t0": 26.76,
-"t1": 28.41,
+"t0": 27.11,
+"t1": 28.76,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Off",
-"t": 26.76,
+"t": 27.11,
 "key": false,
 "gkey": false
 },
 {
 "w": "the",
-"t": 27.32,
+"t": 27.67,
 "key": false,
 "gkey": false
 },
 {
 "w": "same",
-"t": 27.54,
+"t": 27.89,
 "key": false,
 "gkey": false
 },
 {
 "w": "paycheck.",
-"t": 27.84,
+"t": 28.19,
 "key": false,
 "gkey": false
 }
@@ -2033,44 +2033,44 @@
 "impact": true
 },
 {
-"t0": 28.88,
-"t1": 30.23,
+"t0": 29.23,
+"t1": 30.58,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Think",
-"t": 28.88,
+"t": 29.23,
 "key": false,
 "gkey": false
 },
 {
 "w": "about",
-"t": 29.06,
+"t": 29.41,
 "key": false,
 "gkey": false
 },
 {
 "w": "that",
-"t": 29.32,
+"t": 29.67,
 "key": false,
 "gkey": false
 },
 {
 "w": "for",
-"t": 29.52,
+"t": 29.87,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 29.7,
+"t": 30.05,
 "key": false,
 "gkey": false
 },
 {
 "w": "second.",
-"t": 29.84,
+"t": 30.19,
 "key": false,
 "gkey": false
 }
@@ -2079,234 +2079,234 @@
 "impact": true
 },
 {
-"t0": 30.6,
-"t1": 32.46,
+"t0": 30.95,
+"t1": 32.81,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "What",
-"t": 30.6,
+"t": 30.95,
 "key": false,
 "gkey": false
 },
 {
 "w": "happened?",
-"t": 30.76,
+"t": 31.11,
 "key": false,
 "gkey": false
 },
 {
 "w": "Simon",
-"t": 31.82,
+"t": 32.17,
 "key": false,
 "gkey": false
 },
 {
 "w": "didn't",
-"t": 32.06,
+"t": 32.41,
 "key": false,
 "gkey": false
 },
 {
 "w": "get",
-"t": 32.42,
+"t": 32.77,
 "key": false,
 "gkey": false
 },
 {
 "w": "hit",
-"t": 32.54,
+"t": 32.89,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 32.76,
-"t1": 34.05,
+"t0": 33.11,
+"t1": 34.4,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "by",
-"t": 32.76,
+"t": 33.11,
 "key": false,
 "gkey": false
 },
 {
 "w": "one",
-"t": 32.98,
+"t": 33.33,
 "key": false,
 "gkey": false
 },
 {
 "w": "big",
-"t": 33.26,
+"t": 33.61,
 "key": false,
 "gkey": false
 },
 {
 "w": "disaster.",
-"t": 33.52,
+"t": 33.87,
 "key": true,
 "gkey": false
 }
 ]
 },
 {
-"t0": 34.5,
-"t1": 35.5,
+"t0": 34.85,
+"t1": 35.85,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "It",
-"t": 34.5,
+"t": 34.85,
 "key": false,
 "gkey": false
 },
 {
 "w": "was",
-"t": 34.68,
+"t": 35.03,
 "key": false,
 "gkey": false
 },
 {
 "w": "more",
-"t": 34.78,
+"t": 35.13,
 "key": false,
 "gkey": false
 },
 {
 "w": "like",
-"t": 34.96,
+"t": 35.31,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 35.14,
+"t": 35.49,
 "key": false,
 "gkey": false
 },
 {
 "w": "bathtub",
-"t": 35.32,
+"t": 35.67,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 35.8,
-"t1": 37.300000000000004,
+"t0": 36.15,
+"t1": 37.650000000000006,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "with",
-"t": 35.8,
+"t": 36.15,
 "key": false,
 "gkey": false
 },
 {
 "w": "the",
-"t": 36.02,
+"t": 36.37,
 "key": false,
 "gkey": false
 },
 {
 "w": "drain",
-"t": 36.2,
+"t": 36.55,
 "key": true,
 "gkey": false
 },
 {
 "w": "half",
-"t": 36.46,
+"t": 36.81,
 "key": false,
 "gkey": false
 },
 {
 "w": "open.",
-"t": 36.76,
+"t": 37.11,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 38.96,
-"t1": 40.480000000000004,
+"t0": 39.31,
+"t1": 40.830000000000005,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Worked",
-"t": 38.96,
+"t": 39.31,
 "key": false,
 "gkey": false
 },
 {
 "w": "harder",
-"t": 39.24,
+"t": 39.59,
 "key": false,
 "gkey": false
 },
 {
 "w": "every",
-"t": 39.68,
+"t": 40.03,
 "key": false,
 "gkey": false
 },
 {
 "w": "year.",
-"t": 40.12,
+"t": 40.47,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 42.66,
-"t1": 44.45,
+"t0": 43.01,
+"t1": 44.910000000000004,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Most",
-"t": 42.66,
+"t": 43.01,
 "key": false,
 "gkey": false
 },
 {
 "w": "households",
-"t": 43.05,
+"t": 43.41,
 "key": false,
 "gkey": false
 },
 {
 "w": "have",
-"t": 43.6,
+"t": 44.0,
 "key": false,
 "gkey": false
 },
 {
 "w": "three",
-"t": 43.77,
+"t": 44.18,
 "key": false,
 "gkey": false
 },
 {
 "w": "drains",
-"t": 44.11,
+"t": 44.54,
 "key": true,
 "gkey": false
 },
 {
 "w": "open",
-"t": 44.45,
+"t": 44.9,
 "key": false,
 "gkey": false
 }
@@ -2315,38 +2315,38 @@
 "size": 66
 },
 {
-"t0": 44.75,
-"t1": 46.14,
+"t0": 45.21,
+"t1": 46.66,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "right",
-"t": 44.75,
+"t": 45.21,
 "key": false,
 "gkey": false
 },
 {
 "w": "now.",
-"t": 44.97,
+"t": 45.44,
 "key": false,
 "gkey": false
 },
 {
 "w": "All",
-"t": 45.52,
+"t": 46.02,
 "key": false,
 "gkey": false
 },
 {
 "w": "at",
-"t": 45.69,
+"t": 46.2,
 "key": false,
 "gkey": false
 },
 {
 "w": "once.",
-"t": 45.82,
+"t": 46.34,
 "key": false,
 "gkey": false
 }
@@ -2355,122 +2355,122 @@
 "size": 66
 },
 {
-"t0": 55.98,
-"t1": 57.56,
+"t0": 57.01,
+"t1": 58.59,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "One",
-"t": 55.98,
+"t": 57.01,
 "key": false,
 "gkey": false
 },
 {
 "w": "weekend.",
-"t": 56.12,
+"t": 57.15,
 "key": true,
 "gkey": false
 },
 {
 "w": "Quick",
-"t": 57.24,
+"t": 58.27,
 "key": false,
 "gkey": false
 },
 {
 "w": "thing",
-"t": 57.38,
+"t": 58.41,
 "key": false,
 "gkey": false
 },
 {
 "w": "first,",
-"t": 57.64,
+"t": 58.67,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 63.54,
-"t1": 64.28,
+"t0": 64.61,
+"t1": 65.35000000000001,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "The",
-"t": 63.54,
+"t": 64.61,
 "key": false,
 "gkey": false
 },
 {
 "w": "money",
-"t": 63.66,
+"t": 64.73,
 "key": false,
 "gkey": false
 },
 {
 "w": "hits.",
-"t": 63.82,
+"t": 64.89,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 64.58,
-"t1": 65.59,
+"t0": 65.65,
+"t1": 66.66,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "What",
-"t": 64.58,
+"t": 65.65,
 "key": false,
 "gkey": false
 },
 {
 "w": "happens",
-"t": 64.72,
+"t": 65.79,
 "key": false,
 "gkey": false
 },
 {
 "w": "next?",
-"t": 65.0,
+"t": 66.07,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 67.79,
-"t1": 69.33,
+"t0": 68.96,
+"t1": 70.59,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Groceries.",
-"t": 67.79,
+"t": 68.96,
 "key": false,
 "gkey": false
 },
 {
 "w": "A",
-"t": 68.65,
+"t": 69.86,
 "key": false,
 "gkey": false
 },
 {
 "w": "phone",
-"t": 68.73,
+"t": 69.95,
 "key": false,
 "gkey": false
 },
 {
 "w": "upgrade.",
-"t": 68.99,
+"t": 70.22,
 "key": false,
 "gkey": false
 }
@@ -2479,26 +2479,26 @@
 "size": 66
 },
 {
-"t0": 71.56,
-"t1": 72.19,
+"t0": 72.89,
+"t1": 73.52,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "And",
-"t": 71.56,
+"t": 72.89,
 "key": false,
 "gkey": false
 },
 {
 "w": "he",
-"t": 71.72,
+"t": 73.05,
 "key": false,
 "gkey": false
 },
 {
 "w": "did.",
-"t": 71.83,
+"t": 73.17,
 "key": false,
 "gkey": false
 }
@@ -2506,26 +2506,26 @@
 "side": "r"
 },
 {
-"t0": 72.52,
-"t1": 73.48,
+"t0": 73.85,
+"t1": 74.82,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "The",
-"t": 72.52,
+"t": 73.85,
 "key": false,
 "gkey": false
 },
 {
 "w": "guy's",
-"t": 72.66,
+"t": 73.99,
 "key": false,
 "gkey": false
 },
 {
 "w": "tired.",
-"t": 72.97,
+"t": 74.31,
 "key": true,
 "gkey": false
 }
@@ -2533,44 +2533,44 @@
 "side": "r"
 },
 {
-"t0": 76.71,
-"t1": 78.44,
+"t0": 78.2,
+"t1": 80.01,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Forty",
-"t": 76.71,
+"t": 78.2,
 "key": false,
 "gkey": false
 },
 {
 "w": "bucks.",
-"t": 77.06,
+"t": 78.56,
 "key": false,
 "gkey": false
 },
 {
 "w": "A",
-"t": 77.82,
+"t": 79.37,
 "key": false,
 "gkey": false
 },
 {
 "w": "lot",
-"t": 77.91,
+"t": 79.46,
 "key": false,
 "gkey": false
 },
 {
 "w": "of",
-"t": 78.08,
+"t": 79.64,
 "key": false,
 "gkey": false
 },
 {
 "w": "months,",
-"t": 78.16,
+"t": 79.73,
 "key": false,
 "gkey": false
 }
@@ -2579,44 +2579,44 @@
 "size": 66
 },
 {
-"t0": 78.76,
-"t1": 80.21000000000001,
+"t0": 80.36,
+"t1": 81.9,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "nothing.",
-"t": 78.76,
+"t": 80.36,
 "key": false,
 "gkey": false
 },
 {
 "w": "And",
-"t": 79.53,
+"t": 81.16,
 "key": false,
 "gkey": false
 },
 {
 "w": "when",
-"t": 79.78,
+"t": 81.43,
 "key": false,
 "gkey": false
 },
 {
 "w": "he",
-"t": 79.91,
+"t": 81.57,
 "key": false,
 "gkey": false
 },
 {
 "w": "does",
-"t": 80.0,
+"t": 81.66,
 "key": false,
 "gkey": false
 },
 {
 "w": "scrape",
-"t": 80.25,
+"t": 81.93,
 "key": false,
 "gkey": false
 }
@@ -2625,26 +2625,26 @@
 "size": 66
 },
 {
-"t0": 80.51,
-"t1": 81.53,
+"t0": 82.2,
+"t1": 83.29,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "together",
-"t": 80.51,
+"t": 82.2,
 "key": false,
 "gkey": false
 },
 {
 "w": "fifteen",
-"t": 80.85,
+"t": 82.56,
 "key": false,
 "gkey": false
 },
 {
 "w": "hundred,",
-"t": 81.24,
+"t": 82.96,
 "key": false,
 "gkey": false
 }
@@ -2653,32 +2653,32 @@
 "size": 66
 },
 {
-"t0": 81.83,
-"t1": 82.75,
+"t0": 83.59,
+"t1": 84.55,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "it",
-"t": 81.83,
+"t": 83.59,
 "key": false,
 "gkey": false
 },
 {
 "w": "sits",
-"t": 82.0,
+"t": 83.77,
 "key": false,
 "gkey": false
 },
 {
 "w": "in",
-"t": 82.3,
+"t": 84.08,
 "key": false,
 "gkey": false
 },
 {
 "w": "checking.",
-"t": 82.39,
+"t": 84.17,
 "key": true,
 "gkey": false
 }
@@ -2687,26 +2687,26 @@
 "size": 66
 },
 {
-"t0": 83.12,
-"t1": 83.76,
+"t0": 84.92,
+"t1": 85.56,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Which,",
-"t": 83.12,
+"t": 84.92,
 "key": false,
 "gkey": false
 },
 {
 "w": "I",
-"t": 83.6,
+"t": 85.4,
 "key": false,
 "gkey": false
 },
 {
 "w": "mean,",
-"t": 83.74,
+"t": 85.54,
 "key": false,
 "gkey": false
 }
@@ -2714,38 +2714,38 @@
 "side": "r"
 },
 {
-"t0": 84.06,
-"t1": 86.04,
+"t0": 85.86,
+"t1": 87.84,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "feels",
-"t": 84.06,
+"t": 85.86,
 "key": false,
 "gkey": false
 },
 {
 "w": "responsible.",
-"t": 84.28,
+"t": 86.08,
 "key": true,
 "gkey": false
 },
 {
 "w": "It's",
-"t": 85.36,
+"t": 87.16,
 "key": false,
 "gkey": false
 },
 {
 "w": "not",
-"t": 85.54,
+"t": 87.34,
 "key": false,
 "gkey": false
 },
 {
 "w": "gone.",
-"t": 85.7,
+"t": 87.5,
 "key": false,
 "gkey": false
 }
@@ -2753,32 +2753,32 @@
 "side": "r"
 },
 {
-"t0": 86.34,
-"t1": 87.33,
+"t0": 88.14,
+"t1": 89.13,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "He",
-"t": 86.34,
+"t": 88.14,
 "key": false,
 "gkey": false
 },
 {
 "w": "can",
-"t": 86.44,
+"t": 88.24,
 "key": false,
 "gkey": false
 },
 {
 "w": "see",
-"t": 86.62,
+"t": 88.42,
 "key": false,
 "gkey": false
 },
 {
 "w": "it.",
-"t": 86.9,
+"t": 88.7,
 "key": false,
 "gkey": false
 }
@@ -2786,394 +2786,394 @@
 "side": "r"
 },
 {
-"t0": 121.66,
-"t1": 122.67,
+"t0": 125.85,
+"t1": 126.86,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "That's",
-"t": 121.66,
+"t": 125.85,
 "key": false,
 "gkey": false
 },
 {
 "w": "the",
-"t": 121.86,
+"t": 126.05,
 "key": false,
 "gkey": false
 },
 {
 "w": "first",
-"t": 121.96,
+"t": 126.15,
 "key": false,
 "gkey": false
 },
 {
 "w": "rule.",
-"t": 122.16,
+"t": 126.35,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 138.92,
-"t1": 139.7,
+"t0": 143.33,
+"t1": 144.10999999999999,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Better",
-"t": 138.92,
+"t": 143.33,
 "key": false,
 "gkey": false
 },
 {
 "w": "than",
-"t": 138.96,
+"t": 143.37,
 "key": false,
 "gkey": false
 },
 {
 "w": "fine,",
-"t": 139.24,
+"t": 143.65,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 140.0,
-"t1": 140.66,
+"t0": 144.41,
+"t1": 145.1,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "it's",
-"t": 140.0,
+"t": 144.41,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 140.12,
+"t": 144.53,
 "key": false,
 "gkey": false
 },
 {
 "w": "start.",
-"t": 140.24,
+"t": 144.65,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 144.48,
-"t1": 146.07999999999998,
+"t0": 149.09,
+"t1": 150.69,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Emergency",
-"t": 144.48,
+"t": 149.09,
 "key": false,
 "gkey": false
 },
 {
 "w": "money",
-"t": 144.96,
+"t": 149.57,
 "key": false,
 "gkey": false
 },
 {
 "w": "goes",
-"t": 145.28,
+"t": 149.89,
 "key": false,
 "gkey": false
 },
 {
 "w": "here.",
-"t": 145.56,
+"t": 150.17,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 146.38,
-"t1": 147.53,
+"t0": 150.99,
+"t1": 152.14,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "House",
-"t": 146.38,
+"t": 150.99,
 "key": false,
 "gkey": false
 },
 {
 "w": "money",
-"t": 146.48,
+"t": 151.09,
 "key": false,
 "gkey": false
 },
 {
 "w": "goes",
-"t": 146.7,
+"t": 151.31,
 "key": false,
 "gkey": false
 },
 {
 "w": "there.",
-"t": 147.02,
+"t": 151.63,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 147.88,
-"t1": 148.92,
+"t0": 152.49,
+"t1": 153.53,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Car",
-"t": 147.88,
+"t": 152.49,
 "key": false,
 "gkey": false
 },
 {
 "w": "money",
-"t": 147.88,
+"t": 152.49,
 "key": false,
 "gkey": false
 },
 {
 "w": "over",
-"t": 148.14,
+"t": 152.75,
 "key": false,
 "gkey": false
 },
 {
 "w": "there.",
-"t": 148.44,
+"t": 153.05,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 149.22,
-"t1": 150.38,
+"t0": 153.83,
+"t1": 154.98999999999998,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "When",
-"t": 149.22,
+"t": 153.83,
 "key": false,
 "gkey": false
 },
 {
 "w": "every",
-"t": 149.38,
+"t": 153.99,
 "key": false,
 "gkey": false
 },
 {
 "w": "dollar",
-"t": 149.74,
+"t": 154.35,
 "key": false,
 "gkey": false
 },
 {
 "w": "has",
-"t": 149.98,
+"t": 154.59,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 150.26,
+"t": 154.87,
 "key": false,
 "gkey": false
 },
 {
 "w": "job",
-"t": 150.44,
+"t": 155.05,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 150.68,
-"t1": 151.38,
+"t0": 155.29,
+"t1": 155.98999999999998,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "and",
-"t": 150.68,
+"t": 155.29,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 150.88,
+"t": 155.49,
 "key": false,
 "gkey": false
 },
 {
 "w": "home,",
-"t": 151.0,
+"t": 155.61,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 151.68,
-"t1": 153.76,
+"t0": 156.29,
+"t1": 158.29,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "you're",
-"t": 151.68,
+"t": 156.29,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 151.98,
+"t": 156.59,
 "key": false,
 "gkey": false
 },
 {
 "w": "lot",
-"t": 152.08,
+"t": 156.69,
 "key": false,
 "gkey": false
 },
 {
 "w": "less",
-"t": 152.26,
+"t": 156.87,
 "key": false,
 "gkey": false
 },
 {
 "w": "likely",
-"t": 152.52,
+"t": 157.13,
 "key": false,
 "gkey": false
 },
 {
 "w": "to",
-"t": 152.9,
+"t": 157.51,
 "key": false,
 "gkey": false
 },
 {
 "w": "raid",
-"t": 153.12,
+"t": 157.73,
 "key": true,
 "gkey": false
 },
 {
 "w": "it.",
-"t": 153.34,
+"t": 157.95,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 159.32,
-"t1": 160.83,
+"t0": 163.67,
+"t1": 165.18,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Where",
-"t": 159.32,
+"t": 163.67,
 "key": false,
 "gkey": false
 },
 {
 "w": "does",
-"t": 159.5,
+"t": 163.85,
 "key": false,
 "gkey": false
 },
 {
 "w": "the",
-"t": 159.66,
+"t": 164.01,
 "key": false,
 "gkey": false
 },
 {
 "w": "nine",
-"t": 159.8,
+"t": 164.15,
 "key": false,
 "gkey": false
 },
 {
 "w": "hundred",
-"t": 160.01,
+"t": 164.36,
 "key": false,
 "gkey": false
 },
 {
 "w": "go?",
-"t": 160.22,
+"t": 164.57,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 224.19,
-"t1": 225.96,
+"t0": 231.37,
+"t1": 233.14,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Half",
-"t": 224.19,
+"t": 231.37,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 224.39,
+"t": 231.57,
 "key": false,
 "gkey": false
 },
 {
 "w": "million",
-"t": 224.59,
+"t": 231.77,
 "key": false,
 "gkey": false
 },
 {
 "w": "through",
-"t": 224.81,
+"t": 231.99,
 "key": false,
 "gkey": false
 },
 {
 "w": "his",
-"t": 225.25,
+"t": 232.43,
 "key": false,
 "gkey": false
 },
 {
 "w": "hands.",
-"t": 225.47,
+"t": 232.65,
 "key": false,
 "gkey": false
 }
@@ -3181,44 +3181,44 @@
 "side": "r"
 },
 {
-"t0": 226.41,
-"t1": 228.17,
+"t0": 233.59,
+"t1": 235.35,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "And",
-"t": 226.41,
+"t": 233.59,
 "key": false,
 "gkey": false
 },
 {
 "w": "he",
-"t": 226.65,
+"t": 233.83,
 "key": false,
 "gkey": false
 },
 {
 "w": "can't",
-"t": 226.81,
+"t": 233.99,
 "key": false,
 "gkey": false
 },
 {
 "w": "cover",
-"t": 227.15,
+"t": 234.33,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 227.43,
+"t": 234.61,
 "key": false,
 "gkey": false
 },
 {
 "w": "transmission.",
-"t": 227.69,
+"t": 234.87,
 "key": true,
 "gkey": false
 }
@@ -3226,44 +3226,44 @@
 "side": "r"
 },
 {
-"t0": 228.47,
-"t1": 229.76999999999998,
+"t0": 235.65,
+"t1": 236.95,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "And",
-"t": 228.47,
+"t": 235.65,
 "key": false,
 "gkey": false
 },
 {
 "w": "it's",
-"t": 229.19,
+"t": 236.37,
 "key": false,
 "gkey": false
 },
 {
 "w": "not",
-"t": 229.39,
+"t": 236.57,
 "key": false,
 "gkey": false
 },
 {
 "w": "like",
-"t": 229.53,
+"t": 236.71,
 "key": false,
 "gkey": false
 },
 {
 "w": "he",
-"t": 229.75,
+"t": 236.93,
 "key": false,
 "gkey": false
 },
 {
 "w": "was",
-"t": 229.93,
+"t": 237.11,
 "key": false,
 "gkey": false
 }
@@ -3271,50 +3271,50 @@
 "side": "r"
 },
 {
-"t0": 230.07,
-"t1": 232.42,
+"t0": 237.25,
+"t1": 239.6,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "lazy.",
-"t": 230.07,
+"t": 237.25,
 "key": true,
 "gkey": false
 },
 {
 "w": "The",
-"t": 230.83,
+"t": 238.01,
 "key": false,
 "gkey": false
 },
 {
 "w": "guy",
-"t": 230.97,
+"t": 238.15,
 "key": false,
 "gkey": false
 },
 {
 "w": "was",
-"t": 231.13,
+"t": 238.31,
 "key": false,
 "gkey": false
 },
 {
 "w": "just",
-"t": 231.31,
+"t": 238.49,
 "key": false,
 "gkey": false
 },
 {
 "w": "worn",
-"t": 231.55,
+"t": 238.73,
 "key": false,
 "gkey": false
 },
 {
 "w": "out.",
-"t": 231.87,
+"t": 239.05,
 "key": false,
 "gkey": false
 }
@@ -3322,158 +3322,158 @@
 "side": "r"
 },
 {
-"t0": 238.81,
-"t1": 240.32999999999998,
+"t0": 245.87,
+"t1": 247.39,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "The",
-"t": 238.81,
+"t": 245.87,
 "key": false,
 "gkey": false
 },
 {
 "w": "first",
-"t": 238.97,
+"t": 246.03,
 "key": false,
 "gkey": false
 },
 {
 "w": "drain",
-"t": 239.25,
+"t": 246.31,
 "key": true,
 "gkey": false
 },
 {
 "w": "was",
-"t": 239.65,
+"t": 246.71,
 "key": false,
 "gkey": false
 },
 {
 "w": "money",
-"t": 240.01,
+"t": 247.07,
 "key": false,
 "gkey": false
 },
 {
 "w": "sitting",
-"t": 240.29,
+"t": 247.35,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 240.63,
-"t1": 242.44,
+"t0": 247.69,
+"t1": 249.5,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "still.",
-"t": 240.63,
+"t": 247.69,
 "key": false,
 "gkey": false
 },
 {
 "w": "This",
-"t": 241.45,
+"t": 248.51,
 "key": false,
 "gkey": false
 },
 {
 "w": "one's",
-"t": 241.63,
+"t": 248.69,
 "key": false,
 "gkey": false
 },
 {
 "w": "worse.",
-"t": 242.07,
+"t": 249.13,
 "key": true,
 "gkey": false
 }
 ]
 },
 {
-"t0": 242.97,
-"t1": 244.56,
+"t0": 250.03,
+"t1": 251.62,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "This",
-"t": 242.97,
+"t": 250.03,
 "key": false,
 "gkey": false
 },
 {
 "w": "is",
-"t": 243.13,
+"t": 250.19,
 "key": false,
 "gkey": false
 },
 {
 "w": "money",
-"t": 243.31,
+"t": 250.37,
 "key": false,
 "gkey": false
 },
 {
 "w": "running",
-"t": 243.57,
+"t": 250.63,
 "key": false,
 "gkey": false
 },
 {
 "w": "backwards.",
-"t": 243.95,
+"t": 251.01,
 "key": true,
 "gkey": false
 }
 ]
 },
 {
-"t0": 244.93,
-"t1": 247.35999999999999,
+"t0": 251.99,
+"t1": 254.56,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Simon",
-"t": 244.93,
+"t": 251.99,
 "key": false,
 "gkey": false
 },
 {
 "w": "gets",
-"t": 245.45,
+"t": 252.53,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 245.66,
+"t": 252.75,
 "key": false,
 "gkey": false
 },
 {
 "w": "two-thousand-dollar",
-"t": 245.79,
+"t": 252.89,
 "key": false,
 "gkey": false
 },
 {
 "w": "tax",
-"t": 246.64,
+"t": 253.79,
 "key": false,
 "gkey": false
 },
 {
 "w": "refund.",
-"t": 246.94,
+"t": 254.1,
 "key": false,
 "gkey": false
 }
@@ -3482,32 +3482,32 @@
 "size": 66
 },
 {
-"t0": 247.66,
-"t1": 249.05,
+"t0": 254.86,
+"t1": 256.32,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Free",
-"t": 247.66,
+"t": 254.86,
 "key": false,
 "gkey": false
 },
 {
 "w": "money,",
-"t": 248.01,
+"t": 255.22,
 "key": false,
 "gkey": false
 },
 {
 "w": "he",
-"t": 248.47,
+"t": 255.72,
 "key": false,
 "gkey": false
 },
 {
 "w": "figures.",
-"t": 248.65,
+"t": 255.9,
 "key": false,
 "gkey": false
 }
@@ -3516,44 +3516,44 @@
 "size": 66
 },
 {
-"t0": 271.66,
-"t1": 273.56,
+"t0": 280.71,
+"t1": 282.61,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Twelve",
-"t": 271.66,
+"t": 280.71,
 "key": false,
 "gkey": false
 },
 {
 "w": "hundred.",
-"t": 272.06,
+"t": 281.11,
 "key": false,
 "gkey": false
 },
 {
 "w": "And",
-"t": 272.7,
+"t": 281.75,
 "key": false,
 "gkey": false
 },
 {
 "w": "the",
-"t": 272.92,
+"t": 281.97,
 "key": false,
 "gkey": false
 },
 {
 "w": "balance",
-"t": 273.06,
+"t": 282.11,
 "key": false,
 "gkey": false
 },
 {
 "w": "isn't",
-"t": 273.4,
+"t": 282.45,
 "key": false,
 "gkey": false
 }
@@ -3561,26 +3561,26 @@
 "side": "r"
 },
 {
-"t0": 273.86,
-"t1": 275.05,
+"t0": 282.91,
+"t1": 284.1,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "getting",
-"t": 273.86,
+"t": 282.91,
 "key": false,
 "gkey": false
 },
 {
 "w": "any",
-"t": 274.02,
+"t": 283.07,
 "key": false,
 "gkey": false
 },
 {
 "w": "smaller.",
-"t": 274.5,
+"t": 283.55,
 "key": true,
 "gkey": false
 }
@@ -3588,172 +3588,172 @@
 "side": "r"
 },
 {
-"t0": 275.42,
-"t1": 276.46,
+"t0": 284.47,
+"t1": 285.51,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "And",
-"t": 275.42,
+"t": 284.47,
 "key": false,
 "gkey": false
 },
 {
 "w": "it",
-"t": 275.54,
+"t": 284.59,
 "key": false,
 "gkey": false
 },
 {
 "w": "gets",
-"t": 275.66,
+"t": 284.71,
 "key": false,
 "gkey": false
 },
 {
 "w": "sneakier.",
-"t": 275.9,
+"t": 284.95,
 "key": true,
 "gkey": false
 }
 ]
 },
 {
-"t0": 276.76,
-"t1": 277.49,
+"t0": 285.81,
+"t1": 286.54,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Pay",
-"t": 276.76,
+"t": 285.81,
 "key": false,
 "gkey": false
 },
 {
 "w": "in",
-"t": 276.9,
+"t": 285.95,
 "key": false,
 "gkey": false
 },
 {
 "w": "four.",
-"t": 277.06,
+"t": 286.11,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 277.86,
-"t1": 280.5,
+"t0": 286.91,
+"t1": 289.58,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Zero",
-"t": 277.86,
+"t": 286.91,
 "key": false,
 "gkey": false
 },
 {
 "w": "percent.",
-"t": 278.28,
+"t": 287.33,
 "key": false,
 "gkey": false
 },
 {
 "w": "Buy",
-"t": 279.12,
+"t": 288.17,
 "key": false,
 "gkey": false
 },
 {
 "w": "now,",
-"t": 279.28,
+"t": 288.33,
 "key": false,
 "gkey": false
 },
 {
 "w": "pay",
-"t": 279.94,
+"t": 288.99,
 "key": false,
 "gkey": false
 },
 {
 "w": "later.",
-"t": 280.06,
+"t": 289.11,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 283.26,
-"t1": 284.39,
+"t0": 292.49,
+"t1": 293.62,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "But",
-"t": 283.26,
+"t": 292.49,
 "key": false,
 "gkey": false
 },
 {
 "w": "who",
-"t": 283.42,
+"t": 292.65,
 "key": false,
 "gkey": false
 },
 {
 "w": "stops",
-"t": 283.58,
+"t": 292.81,
 "key": false,
 "gkey": false
 },
 {
 "w": "at",
-"t": 283.82,
+"t": 293.05,
 "key": false,
 "gkey": false
 },
 {
 "w": "one?",
-"t": 284.04,
+"t": 293.27,
 "key": true,
 "gkey": false
 }
 ]
 },
 {
-"t0": 284.76,
-"t1": 285.76,
+"t0": 293.99,
+"t1": 295.04,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Shoes",
-"t": 284.76,
+"t": 293.99,
 "key": false,
 "gkey": false
 },
 {
 "w": "on",
-"t": 285.15,
+"t": 294.39,
 "key": false,
 "gkey": false
 },
 {
 "w": "this",
-"t": 285.27,
+"t": 294.53,
 "key": false,
 "gkey": false
 },
 {
 "w": "app.",
-"t": 285.44,
+"t": 294.71,
 "key": false,
 "gkey": false
 }
@@ -3762,38 +3762,38 @@
 "size": 66
 },
 {
-"t0": 286.19,
-"t1": 287.3,
+"t0": 295.5,
+"t1": 296.68,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "A",
-"t": 286.19,
+"t": 295.5,
 "key": false,
 "gkey": false
 },
 {
 "w": "tire",
-"t": 286.32,
+"t": 295.63,
 "key": false,
 "gkey": false
 },
 {
 "w": "on",
-"t": 286.79,
+"t": 296.13,
 "key": false,
 "gkey": false
 },
 {
 "w": "that",
-"t": 286.92,
+"t": 296.26,
 "key": false,
 "gkey": false
 },
 {
 "w": "one.",
-"t": 287.09,
+"t": 296.44,
 "key": true,
 "gkey": false
 }
@@ -3802,26 +3802,26 @@
 "size": 66
 },
 {
-"t0": 287.6,
-"t1": 289.69,
+"t0": 296.98,
+"t1": 299.2,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Groceries.",
-"t": 287.6,
+"t": 296.98,
 "key": false,
 "gkey": false
 },
 {
 "w": "Yes,",
-"t": 288.71,
+"t": 298.15,
 "key": false,
 "gkey": false
 },
 {
 "w": "groceries,",
-"t": 289.27,
+"t": 298.73,
 "key": false,
 "gkey": false
 }
@@ -3830,26 +3830,26 @@
 "size": 66
 },
 {
-"t0": 289.99,
-"t1": 290.63,
+"t0": 299.5,
+"t1": 300.18,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "on",
-"t": 289.99,
+"t": 299.5,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 290.25,
+"t": 299.77,
 "key": false,
 "gkey": false
 },
 {
 "w": "third.",
-"t": 290.33,
+"t": 299.86,
 "key": false,
 "gkey": false
 }
@@ -3858,32 +3858,32 @@
 "size": 66
 },
 {
-"t0": 301.64,
-"t1": 302.85,
+"t0": 312.4,
+"t1": 313.67,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Solomon's",
-"t": 301.64,
+"t": 312.4,
 "key": false,
 "gkey": false
 },
 {
 "w": "rule",
-"t": 302.11,
+"t": 312.89,
 "key": false,
 "gkey": false
 },
 {
 "w": "is",
-"t": 302.32,
+"t": 313.12,
 "key": false,
 "gkey": false
 },
 {
 "w": "blunt.",
-"t": 302.45,
+"t": 313.25,
 "key": false,
 "gkey": false
 }
@@ -3892,52 +3892,52 @@
 "size": 66
 },
 {
-"t0": 311.88,
-"t1": 312.57,
+"t0": 323.16,
+"t1": 323.85,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Put",
-"t": 311.88,
+"t": 323.16,
 "key": false,
 "gkey": false
 },
 {
 "w": "simply?",
-"t": 311.99,
+"t": 323.26,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 326.85,
-"t1": 327.71,
+"t0": 338.57,
+"t1": 339.44,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "It",
-"t": 326.85,
+"t": 338.57,
 "key": false,
 "gkey": false
 },
 {
 "w": "takes",
-"t": 327.09,
+"t": 338.81,
 "key": false,
 "gkey": false
 },
 {
 "w": "ten",
-"t": 327.31,
+"t": 339.04,
 "key": false,
 "gkey": false
 },
 {
 "w": "minutes,",
-"t": 327.67,
+"t": 339.39,
 "key": false,
 "gkey": false
 }
@@ -3945,50 +3945,50 @@
 "side": "r"
 },
 {
-"t0": 328.01,
-"t1": 330.4,
+"t0": 339.74,
+"t1": 342.12,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "and",
-"t": 328.01,
+"t": 339.74,
 "key": false,
 "gkey": false
 },
 {
 "w": "you're",
-"t": 328.65,
+"t": 340.38,
 "key": false,
 "gkey": false
 },
 {
 "w": "not",
-"t": 328.81,
+"t": 340.54,
 "key": false,
 "gkey": false
 },
 {
 "w": "going",
-"t": 328.99,
+"t": 340.71,
 "key": false,
 "gkey": false
 },
 {
 "w": "to",
-"t": 329.19,
+"t": 340.92,
 "key": false,
 "gkey": false
 },
 {
 "w": "enjoy",
-"t": 329.37,
+"t": 341.1,
 "key": true,
 "gkey": false
 },
 {
 "w": "it.",
-"t": 329.69,
+"t": 341.42,
 "key": false,
 "gkey": false
 }
@@ -3996,1761 +3996,1761 @@
 "side": "r"
 },
 {
-"t0": 342.07,
-"t1": 343.5,
+"t0": 353.8,
+"t1": 355.22,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "That's",
-"t": 342.07,
+"t": 353.8,
 "key": false,
 "gkey": false
 },
 {
 "w": "real",
-"t": 342.33,
+"t": 354.06,
 "key": false,
 "gkey": false
 },
 {
 "w": "breathing",
-"t": 342.61,
+"t": 354.33,
 "key": true,
 "gkey": false
 },
 {
 "w": "room.",
-"t": 342.97,
+"t": 354.69,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 350.11,
-"t1": 351.96,
+"t0": 362.13,
+"t1": 363.98,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "And",
-"t": 350.11,
+"t": 362.13,
 "key": false,
 "gkey": false
 },
 {
 "w": "make",
-"t": 350.29,
+"t": 362.31,
 "key": false,
 "gkey": false
 },
 {
 "w": "spending",
-"t": 350.49,
+"t": 362.51,
 "key": false,
 "gkey": false
 },
 {
 "w": "a",
-"t": 350.85,
+"t": 362.87,
 "key": false,
 "gkey": false
 },
 {
 "w": "little",
-"t": 351.11,
+"t": 363.13,
 "key": false,
 "gkey": false
 },
 {
 "w": "annoying.",
-"t": 351.33,
+"t": 363.35,
 "key": true,
 "gkey": false
 }
 ]
 },
 {
-"t0": 358.67,
-"t1": 359.66,
+"t0": 370.69,
+"t1": 371.68,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "Still",
-"t": 358.67,
+"t": 370.69,
 "key": false,
 "gkey": false
 },
 {
 "w": "want",
-"t": 358.95,
+"t": 370.97,
 "key": false,
 "gkey": false
 },
 {
 "w": "it",
-"t": 359.13,
-"key": false,
-"gkey": false
-},
-{
-"w": "Thursday?",
-"t": 359.25,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 360.27,
-"t1": 361.11,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Fine,",
-"t": 360.27,
-"key": false,
-"gkey": false
-},
-{
-"w": "buy",
-"t": 360.75,
-"key": false,
-"gkey": false
-},
-{
-"w": "it.",
-"t": 360.85,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 363.75,
-"t1": 364.89,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Say",
-"t": 363.75,
-"key": false,
-"gkey": false
-},
-{
-"w": "you're",
-"t": 364.01,
-"key": false,
-"gkey": false
-},
-{
-"w": "Solomon",
-"t": 364.27,
-"key": false,
-"gkey": false
-},
-{
-"w": "now.",
-"t": 364.59,
-"key": false,
-"gkey": false
-}
-],
-"side": "r"
-},
-{
-"t0": 367.93,
-"t1": 368.94,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Well...",
-"t": 367.93,
-"key": false,
-"gkey": false
-},
-{
-"w": "mostly.",
-"t": 368.41,
-"key": true,
-"gkey": false
-}
-],
-"side": "r",
-"impact": true
-},
-{
-"t0": 369.31,
-"t1": 370.53,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Okay.",
-"t": 369.31,
-"key": false,
-"gkey": false
-},
-{
-"w": "Final",
-"t": 369.93,
-"key": false,
-"gkey": false
-},
-{
-"w": "one,",
-"t": 370.17,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 370.83,
-"t1": 371.57,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "and",
-"t": 370.83,
-"key": false,
-"gkey": false
-},
-{
-"w": "it's",
-"t": 370.85,
-"key": false,
-"gkey": false
-},
-{
-"w": "the",
-"t": 371.03,
-"key": false,
-"gkey": false
-},
-{
-"w": "big",
 "t": 371.15,
 "key": false,
 "gkey": false
 },
 {
-"w": "one.",
-"t": 371.37,
-"key": true,
-"gkey": false
-}
-]
-},
-{
-"t0": 374.31,
-"t1": 375.81,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "This",
-"t": 374.31,
-"key": false,
-"gkey": false
-},
-{
-"w": "one's",
-"t": 374.45,
-"key": false,
-"gkey": false
-},
-{
-"w": "about",
-"t": 374.77,
-"key": false,
-"gkey": false
-},
-{
-"w": "losing",
-"t": 375.07,
-"key": false,
-"gkey": false
-},
-{
-"w": "all",
-"t": 375.49,
-"key": false,
-"gkey": false
-},
-{
-"w": "of",
-"t": 375.93,
+"w": "Thursday?",
+"t": 371.27,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 376.11,
-"t1": 377.27,
+"t0": 372.29,
+"t1": 373.13,
 "upper": true,
 "pos": "c",
 "words": [
 {
-"w": "it",
-"t": 376.11,
+"w": "Fine,",
+"t": 372.29,
 "key": false,
 "gkey": false
 },
 {
-"w": "in",
-"t": 376.29,
+"w": "buy",
+"t": 372.77,
 "key": false,
 "gkey": false
 },
 {
-"w": "an",
-"t": 376.53,
-"key": false,
-"gkey": false
-},
-{
-"w": "afternoon.",
-"t": 376.69,
-"key": true,
-"gkey": false
-}
-]
-},
-{
-"t0": 377.57,
-"t1": 379.14,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Picture",
-"t": 377.57,
-"key": false,
-"gkey": false
-},
-{
-"w": "your",
-"t": 377.65,
-"key": false,
-"gkey": false
-},
-{
-"w": "mom's",
-"t": 378.01,
-"key": false,
-"gkey": false
-},
-{
-"w": "phone",
-"t": 378.39,
-"key": false,
-"gkey": false
-},
-{
-"w": "ringing.",
-"t": 378.61,
-"key": true,
-"gkey": false
-}
-]
-},
-{
-"t0": 379.51,
-"t1": 380.72,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "It's",
-"t": 379.51,
-"key": false,
-"gkey": false
-},
-{
-"w": "you,",
-"t": 379.72,
-"key": false,
-"gkey": false
-},
-{
-"w": "crying.",
-"t": 380.28,
-"key": false,
-"gkey": false
-}
-],
-"broll": true,
-"size": 66
-},
-{
-"t0": 388.03,
-"t1": 388.65,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "It",
-"t": 388.03,
-"key": false,
-"gkey": false
-},
-{
-"w": "isn't",
-"t": 388.11,
-"key": false,
-"gkey": false
-},
-{
-"w": "you.",
-"t": 388.37,
-"key": false,
-"gkey": false
-}
-],
-"broll": true,
-"size": 66
-},
-{
-"t0": 391.66,
-"t1": 393.01,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "I",
-"t": 391.66,
-"key": false,
-"gkey": false
-},
-{
-"w": "wish",
-"t": 391.74,
-"key": false,
-"gkey": false
-},
-{
-"w": "I",
-"t": 391.9,
-"key": false,
-"gkey": false
-},
-{
-"w": "were",
-"t": 392.04,
-"key": false,
-"gkey": false
-},
-{
-"w": "exaggerating.",
-"t": 392.16,
-"key": true,
-"gkey": false
-}
-],
-"side": "r",
-"impact": true
-},
-{
-"t0": 404.36,
-"t1": 405.82,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Your",
-"t": 404.36,
-"key": false,
-"gkey": false
-},
-{
-"w": "mom",
-"t": 404.52,
-"key": false,
-"gkey": false
-},
-{
-"w": "sends",
-"t": 404.76,
-"key": false,
-"gkey": false
-},
-{
-"w": "it",
-"t": 405.08,
-"key": false,
-"gkey": false
-},
-{
-"w": "herself.",
-"t": 405.32,
-"key": true,
-"gkey": false
-}
-]
-},
-{
-"t0": 427.74,
-"t1": 428.99,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "So",
-"t": 427.74,
-"key": false,
-"gkey": false
-},
-{
-"w": "this",
-"t": 427.98,
-"key": false,
-"gkey": false
-},
-{
-"w": "isn't",
-"t": 428.16,
-"key": false,
-"gkey": false
-},
-{
-"w": "paranoia.",
-"t": 428.5,
-"key": true,
-"gkey": false
-}
-],
-"side": "r",
-"impact": true
-},
-{
-"t0": 440.25,
-"t1": 441.46,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Next,",
-"t": 440.25,
-"key": false,
-"gkey": false
-},
-{
-"w": "your",
-"t": 440.83,
-"key": false,
-"gkey": false
-},
-{
-"w": "paycheck.",
-"t": 440.95,
+"w": "it.",
+"t": 372.87,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 441.91,
-"t1": 442.87,
+"t0": 375.77,
+"t1": 376.90999999999997,
 "upper": true,
 "pos": "c",
 "words": [
 {
-"w": "If",
-"t": 441.91,
+"w": "Say",
+"t": 375.77,
 "key": false,
 "gkey": false
 },
 {
-"w": "you",
-"t": 442.09,
-"key": false,
-"gkey": false
-},
-{
-"w": "couldn't",
-"t": 442.25,
-"key": false,
-"gkey": false
-},
-{
-"w": "work",
-"t": 442.47,
-"key": false,
-"gkey": false
-},
-{
-"w": "for",
-"t": 442.73,
-"key": false,
-"gkey": false
-},
-{
-"w": "six",
-"t": 442.97,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 443.17,
-"t1": 444.52,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "months,",
-"t": 443.17,
-"key": false,
-"gkey": false
-},
-{
-"w": "what",
-"t": 443.85,
-"key": false,
-"gkey": false
-},
-{
-"w": "happens?",
-"t": 444.05,
-"key": true,
-"gkey": false
-}
-]
-},
-{
-"t0": 456.67,
-"t1": 457.51,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "This",
-"t": 456.67,
-"key": false,
-"gkey": false
-},
-{
-"w": "is",
-"t": 456.99,
-"key": false,
-"gkey": false
-},
-{
-"w": "the",
-"t": 457.15,
-"key": false,
-"gkey": false
-},
-{
-"w": "one",
-"t": 457.29,
-"key": false,
-"gkey": false
-},
-{
-"w": "I",
-"t": 457.45,
-"key": false,
-"gkey": false
-},
-{
-"w": "really",
-"t": 457.61,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 457.81,
-"t1": 458.72999999999996,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "want",
-"t": 457.81,
-"key": false,
-"gkey": false
-},
-{
-"w": "you",
-"t": 458.07,
-"key": false,
-"gkey": false
-},
-{
-"w": "to",
-"t": 458.23,
-"key": false,
-"gkey": false
-},
-{
-"w": "hear.",
-"t": 458.37,
-"key": true,
-"gkey": false
-}
-]
-},
-{
-"t0": 459.03,
-"t1": 459.76,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "You've",
-"t": 459.03,
-"key": false,
-"gkey": false
-},
-{
-"w": "got",
-"t": 459.19,
-"key": false,
-"gkey": false
-},
-{
-"w": "a",
-"t": 459.31,
-"key": false,
-"gkey": false
-},
-{
-"w": "will.",
-"t": 459.49,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 460.15,
-"t1": 461.61,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Great.",
-"t": 460.15,
-"key": false,
-"gkey": false
-},
-{
-"w": "Covered,",
-"t": 461.03,
-"key": false,
-"gkey": false
-},
-{
-"w": "right?",
-"t": 461.19,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 461.91,
-"t1": 464.05,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Not",
-"t": 461.91,
-"key": false,
-"gkey": false
-},
-{
-"w": "exactly.",
-"t": 462.03,
-"key": false,
-"gkey": false
-},
-{
-"w": "A",
-"t": 463.11,
-"key": false,
-"gkey": false
-},
-{
-"w": "will",
-"t": 463.27,
-"key": false,
-"gkey": false
-},
-{
-"w": "still",
-"t": 463.55,
-"key": false,
-"gkey": false
-},
-{
-"w": "goes",
-"t": 464.03,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 464.35,
-"t1": 465.5,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "through",
-"t": 464.35,
-"key": false,
-"gkey": false
-},
-{
-"w": "probate",
-"t": 464.65,
-"key": true,
-"gkey": false
-},
-{
-"w": "court.",
-"t": 465.05,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 490.17,
-"t1": 491.53,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Want",
-"t": 490.17,
-"key": false,
-"gkey": false
-},
-{
-"w": "the",
-"t": 490.4,
-"key": false,
-"gkey": false
-},
-{
-"w": "extreme",
-"t": 490.58,
-"key": false,
-"gkey": false
-},
-{
-"w": "version?",
-"t": 490.93,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 501.87,
-"t1": 503.36,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "Then",
-"t": 501.87,
-"key": false,
-"gkey": false
-},
-{
-"w": "six",
-"t": 502.25,
-"key": false,
-"gkey": false
-},
-{
-"w": "years",
-"t": 502.76,
-"key": false,
-"gkey": false
-},
-{
-"w": "in",
-"t": 502.98,
-"key": false,
-"gkey": false
-},
-{
-"w": "court,",
-"t": 503.11,
-"key": false,
-"gkey": false
-}
-],
-"broll": true,
-"size": 66
-},
-{
-"t0": 503.66,
-"t1": 505.02,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "over",
-"t": 503.66,
-"key": false,
-"gkey": false
-},
-{
-"w": "an",
-"t": 504.13,
-"key": false,
-"gkey": false
-},
-{
-"w": "estate",
-"t": 504.26,
-"key": false,
-"gkey": false
-},
-{
-"w": "worth",
-"t": 504.68,
-"key": false,
-"gkey": false
-},
-{
-"w": "about",
-"t": 504.98,
-"key": false,
-"gkey": false
-},
-{
-"w": "a",
-"t": 505.2,
-"key": false,
-"gkey": false
-}
-],
-"broll": true,
-"size": 66
-},
-{
-"t0": 505.32,
-"t1": 506.51,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "hundred",
-"t": 505.32,
-"key": false,
-"gkey": false
-},
-{
-"w": "fifty-six",
-"t": 505.67,
-"key": false,
-"gkey": false
-},
-{
-"w": "million.",
-"t": 506.22,
-"key": false,
-"gkey": false
-}
-],
-"broll": true,
-"size": 66
-},
-{
-"t0": 506.81,
-"t1": 508.26,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "The",
-"t": 506.81,
-"key": false,
-"gkey": false
-},
-{
-"w": "lawyers",
-"t": 506.98,
-"key": false,
-"gkey": false
-},
-{
-"w": "and",
-"t": 507.41,
-"key": false,
-"gkey": false
-},
-{
-"w": "consultants",
-"t": 507.54,
-"key": false,
-"gkey": false
-},
-{
-"w": "got",
-"t": 508.13,
-"key": false,
-"gkey": false
-},
-{
-"w": "paid",
-"t": 508.35,
-"key": false,
-"gkey": false
-}
-],
-"broll": true,
-"size": 66
-},
-{
-"t0": 508.56,
-"t1": 509.53999999999996,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "tens",
-"t": 508.56,
-"key": false,
-"gkey": false
-},
-{
-"w": "of",
-"t": 508.94,
-"key": false,
-"gkey": false
-},
-{
-"w": "millions.",
-"t": 509.07,
-"key": false,
-"gkey": false
-}
-],
-"broll": true,
-"size": 66
-},
-{
-"t0": 509.84,
-"t1": 510.97,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "And",
-"t": 509.84,
-"key": false,
-"gkey": false
-},
-{
-"w": "two",
-"t": 510.18,
-"key": false,
-"gkey": false
-},
-{
-"w": "of",
-"t": 510.35,
-"key": false,
-"gkey": false
-},
-{
-"w": "his",
-"t": 510.48,
-"key": false,
-"gkey": false
-},
-{
-"w": "heirs?",
-"t": 510.61,
-"key": false,
-"gkey": false
-}
-],
-"broll": true,
-"size": 66
-},
-{
-"t0": 511.55,
-"t1": 512.29,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "They",
-"t": 511.55,
-"key": false,
-"gkey": false
-},
-{
-"w": "died",
-"t": 511.72,
-"key": false,
-"gkey": false
-},
-{
-"w": "waiting.",
-"t": 512.01,
-"key": false,
-"gkey": false
-}
-],
-"broll": true,
-"size": 66
-},
-{
-"t0": 513.56,
-"t1": 514.86,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "That",
-"t": 513.56,
-"key": false,
-"gkey": false
-},
-{
-"w": "one",
-"t": 513.98,
-"key": false,
-"gkey": false
-},
-{
-"w": "stays",
-"t": 514.2,
-"key": false,
-"gkey": false
-},
-{
-"w": "with",
-"t": 514.5,
-"key": false,
-"gkey": false
-},
-{
-"w": "me.",
-"t": 514.74,
-"key": true,
-"gkey": false
-}
-],
-"side": "r"
-},
-{
-"t0": 519.36,
-"t1": 520.5400000000001,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "And",
-"t": 519.36,
-"key": false,
-"gkey": false
-},
-{
-"w": "he",
-"t": 519.48,
-"key": false,
-"gkey": false
-},
-{
-"w": "could",
-"t": 519.6,
-"key": false,
-"gkey": false
-},
-{
-"w": "afford",
-"t": 519.74,
-"key": false,
-"gkey": false
-},
-{
-"w": "any",
-"t": 520.06,
-"key": false,
-"gkey": false
-},
-{
-"w": "lawyer",
-"t": 520.54,
-"key": false,
-"gkey": false
-}
-],
-"side": "r"
-},
-{
-"t0": 520.84,
-"t1": 522.7,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "on",
-"t": 520.84,
-"key": false,
-"gkey": false
-},
-{
-"w": "earth.",
-"t": 521.14,
-"key": false,
-"gkey": false
-},
-{
-"w": "Now",
-"t": 522.12,
-"key": false,
-"gkey": false
-},
-{
-"w": "think",
-"t": 522.42,
-"key": false,
-"gkey": false
-},
-{
-"w": "about",
-"t": 522.62,
-"key": false,
-"gkey": false
-},
-{
-"w": "a",
-"t": 522.86,
-"key": false,
-"gkey": false
-}
-],
-"side": "r"
-},
-{
-"t0": 523.0,
-"t1": 524.89,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "regular",
-"t": 523.0,
-"key": false,
-"gkey": false
-},
-{
-"w": "family.",
-"t": 523.3,
-"key": false,
-"gkey": false
-},
-{
-"w": "A",
-"t": 524.24,
-"key": false,
-"gkey": false
-},
-{
-"w": "house,",
-"t": 524.4,
-"key": false,
-"gkey": false
-}
-],
-"side": "r"
-},
-{
-"t0": 525.28,
-"t1": 527.1600000000001,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "a",
-"t": 525.28,
-"key": false,
-"gkey": false
-},
-{
-"w": "401(k),",
-"t": 525.32,
-"key": false,
-"gkey": false
-},
-{
-"w": "and",
-"t": 526.66,
-"key": false,
-"gkey": false
-},
-{
-"w": "a",
-"t": 526.76,
-"key": false,
-"gkey": false
-},
-{
-"w": "will",
-"t": 526.9,
-"key": false,
-"gkey": false
-},
-{
-"w": "nobody",
-"t": 527.1,
-"key": false,
-"gkey": false
-}
-],
-"side": "r"
-},
-{
-"t0": 527.46,
-"t1": 529.47,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "has",
-"t": 527.46,
-"key": false,
-"gkey": false
-},
-{
-"w": "opened",
-"t": 527.78,
-"key": false,
-"gkey": false
-},
-{
-"w": "since",
-"t": 528.18,
-"key": false,
-"gkey": false
-},
-{
-"w": "the",
-"t": 528.48,
-"key": false,
-"gkey": false
-},
-{
-"w": "kids",
-"t": 528.68,
-"key": false,
-"gkey": false
-},
-{
-"w": "were",
-"t": 528.86,
-"key": false,
-"gkey": false
-},
-{
-"w": "born.",
-"t": 529.08,
-"key": false,
-"gkey": false
-}
-],
-"side": "r"
-},
-{
-"t0": 529.84,
-"t1": 531.36,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "You",
-"t": 529.84,
-"key": false,
-"gkey": false
-},
-{
-"w": "could",
-"t": 530.02,
-"key": false,
-"gkey": false
-},
-{
-"w": "do",
-"t": 530.14,
-"key": false,
-"gkey": false
-},
-{
-"w": "everything",
-"t": 530.36,
+"w": "you're",
+"t": 376.03,
 "key": false,
 "gkey": false
 },
 {
 "w": "Solomon",
-"t": 530.9,
+"t": 376.29,
 "key": false,
 "gkey": false
 },
 {
-"w": "did,",
-"t": 531.3,
+"w": "now.",
+"t": 376.61,
 "key": false,
 "gkey": false
 }
-]
+],
+"side": "r"
 },
 {
-"t0": 531.66,
-"t1": 532.96,
+"t0": 380.11,
+"t1": 381.12,
 "upper": true,
 "pos": "c",
 "words": [
 {
-"w": "for",
-"t": 531.66,
+"w": "Well...",
+"t": 380.11,
 "key": false,
 "gkey": false
 },
 {
-"w": "thirty",
-"t": 532.04,
+"w": "mostly.",
+"t": 380.59,
+"key": true,
+"gkey": false
+}
+],
+"side": "r",
+"impact": true
+},
+{
+"t0": 381.49,
+"t1": 382.71,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Okay.",
+"t": 381.49,
 "key": false,
 "gkey": false
 },
 {
-"w": "years,",
-"t": 532.54,
+"w": "Final",
+"t": 382.11,
+"key": false,
+"gkey": false
+},
+{
+"w": "one,",
+"t": 382.35,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 533.26,
-"t1": 534.36,
+"t0": 383.01,
+"t1": 383.75,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "and",
-"t": 533.26,
+"t": 383.01,
+"key": false,
+"gkey": false
+},
+{
+"w": "it's",
+"t": 383.03,
+"key": false,
+"gkey": false
+},
+{
+"w": "the",
+"t": 383.21,
+"key": false,
+"gkey": false
+},
+{
+"w": "big",
+"t": 383.33,
+"key": false,
+"gkey": false
+},
+{
+"w": "one.",
+"t": 383.55,
+"key": true,
+"gkey": false
+}
+]
+},
+{
+"t0": 386.49,
+"t1": 387.99,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "This",
+"t": 386.49,
+"key": false,
+"gkey": false
+},
+{
+"w": "one's",
+"t": 386.63,
+"key": false,
+"gkey": false
+},
+{
+"w": "about",
+"t": 386.95,
+"key": false,
+"gkey": false
+},
+{
+"w": "losing",
+"t": 387.25,
+"key": false,
+"gkey": false
+},
+{
+"w": "all",
+"t": 387.67,
+"key": false,
+"gkey": false
+},
+{
+"w": "of",
+"t": 388.11,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 388.29,
+"t1": 389.48,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "it",
+"t": 388.29,
+"key": false,
+"gkey": false
+},
+{
+"w": "in",
+"t": 388.47,
+"key": false,
+"gkey": false
+},
+{
+"w": "an",
+"t": 388.71,
+"key": false,
+"gkey": false
+},
+{
+"w": "afternoon.",
+"t": 388.87,
+"key": true,
+"gkey": false
+}
+]
+},
+{
+"t0": 389.97,
+"t1": 391.54,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Picture",
+"t": 389.97,
 "key": false,
 "gkey": false
 },
 {
 "w": "your",
-"t": 533.38,
+"t": 390.05,
 "key": false,
 "gkey": false
 },
 {
-"w": "kids",
-"t": 533.56,
+"w": "mom's",
+"t": 390.41,
 "key": false,
 "gkey": false
 },
 {
-"w": "could",
-"t": 533.84,
+"w": "phone",
+"t": 390.79,
 "key": false,
 "gkey": false
 },
 {
-"w": "still",
-"t": 534.06,
-"key": false,
-"gkey": false
-},
-{
-"w": "spend",
-"t": 534.36,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 534.66,
-"t1": 535.94,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "two",
-"t": 534.66,
-"key": false,
-"gkey": false
-},
-{
-"w": "years",
-"t": 534.98,
-"key": false,
-"gkey": false
-},
-{
-"w": "in",
-"t": 535.26,
-"key": false,
-"gkey": false
-},
-{
-"w": "a",
-"t": 535.46,
-"key": false,
-"gkey": false
-},
-{
-"w": "courtroom",
-"t": 535.58,
-"key": false,
-"gkey": false
-},
-{
-"w": "over",
-"t": 535.88,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 536.24,
-"t1": 538.0200000000001,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "it.",
-"t": 536.24,
-"key": false,
-"gkey": false
-},
-{
-"w": "And",
-"t": 537.0,
-"key": false,
-"gkey": false
-},
-{
-"w": "the",
-"t": 537.18,
-"key": false,
-"gkey": false
-},
-{
-"w": "fix",
-"t": 537.34,
-"key": false,
-"gkey": false
-},
-{
-"w": "is",
-"t": 537.58,
-"key": false,
-"gkey": false
-},
-{
-"w": "mostly",
-"t": 537.9,
-"key": false,
-"gkey": false
-}
-]
-},
-{
-"t0": 538.32,
-"t1": 540.25,
-"upper": true,
-"pos": "c",
-"words": [
-{
-"w": "paperwork.",
-"t": 538.32,
-"key": true,
-"gkey": false
-},
-{
-"w": "Boring",
-"t": 539.56,
-"key": false,
-"gkey": false
-},
-{
-"w": "paperwork.",
-"t": 539.68,
+"w": "ringing.",
+"t": 391.01,
 "key": true,
 "gkey": false
 }
 ]
 },
 {
-"t0": 561.63,
-"t1": 563.11,
+"t0": 391.91,
+"t1": 393.19,
 "upper": true,
 "pos": "c",
 "words": [
 {
-"w": "Pick",
-"t": 561.63,
+"w": "It's",
+"t": 391.91,
 "key": false,
 "gkey": false
 },
 {
-"w": "one.",
-"t": 561.77,
-"key": true,
-"gkey": false
-},
-{
-"w": "Just",
-"t": 562.47,
+"w": "you,",
+"t": 392.14,
 "key": false,
 "gkey": false
 },
 {
-"w": "one.",
-"t": 562.69,
-"key": true,
+"w": "crying.",
+"t": 392.72,
+"key": false,
 "gkey": false
 }
-]
+],
+"broll": true,
+"size": 66
 },
 {
-"t0": 563.41,
-"t1": 564.2900000000001,
+"t0": 400.81,
+"t1": 401.45,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "It",
+"t": 400.81,
+"key": false,
+"gkey": false
+},
+{
+"w": "isn't",
+"t": 400.9,
+"key": false,
+"gkey": false
+},
+{
+"w": "you.",
+"t": 401.17,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 404.61,
+"t1": 405.96,
 "upper": true,
 "pos": "c",
 "words": [
 {
 "w": "I",
-"t": 563.41,
+"t": 404.61,
 "key": false,
 "gkey": false
 },
 {
-"w": "really",
-"t": 563.63,
+"w": "wish",
+"t": 404.69,
 "key": false,
 "gkey": false
 },
 {
-"w": "want",
-"t": 563.87,
+"w": "I",
+"t": 404.85,
 "key": false,
 "gkey": false
 },
 {
-"w": "to",
-"t": 564.11,
+"w": "were",
+"t": 404.99,
 "key": false,
 "gkey": false
 },
 {
-"w": "know",
-"t": 564.25,
+"w": "exaggerating.",
+"t": 405.11,
+"key": true,
+"gkey": false
+}
+],
+"side": "r",
+"impact": true
+},
+{
+"t0": 417.67,
+"t1": 419.16,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Your",
+"t": 417.67,
 "key": false,
 "gkey": false
 },
 {
-"w": "which",
-"t": 564.41,
+"w": "mom",
+"t": 417.83,
+"key": false,
+"gkey": false
+},
+{
+"w": "sends",
+"t": 418.07,
+"key": false,
+"gkey": false
+},
+{
+"w": "it",
+"t": 418.39,
+"key": false,
+"gkey": false
+},
+{
+"w": "herself.",
+"t": 418.63,
+"key": true,
+"gkey": false
+}
+]
+},
+{
+"t0": 441.36,
+"t1": 442.61,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "So",
+"t": 441.36,
+"key": false,
+"gkey": false
+},
+{
+"w": "this",
+"t": 441.6,
+"key": false,
+"gkey": false
+},
+{
+"w": "isn't",
+"t": 441.78,
+"key": false,
+"gkey": false
+},
+{
+"w": "paranoia.",
+"t": 442.12,
+"key": true,
+"gkey": false
+}
+],
+"side": "r",
+"impact": true
+},
+{
+"t0": 454.41,
+"t1": 455.62,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Next,",
+"t": 454.41,
+"key": false,
+"gkey": false
+},
+{
+"w": "your",
+"t": 454.99,
+"key": false,
+"gkey": false
+},
+{
+"w": "paycheck.",
+"t": 455.11,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 564.59,
-"t1": 565.49,
+"t0": 456.07,
+"t1": 457.03,
 "upper": true,
 "pos": "c",
 "words": [
 {
-"w": "one",
-"t": 564.59,
+"w": "If",
+"t": 456.07,
 "key": false,
 "gkey": false
 },
 {
-"w": "you'd",
-"t": 564.81,
+"w": "you",
+"t": 456.25,
 "key": false,
 "gkey": false
 },
 {
-"w": "start",
-"t": 565.05,
+"w": "couldn't",
+"t": 456.41,
 "key": false,
 "gkey": false
 },
 {
-"w": "with,",
-"t": 565.31,
+"w": "work",
+"t": 456.63,
+"key": false,
+"gkey": false
+},
+{
+"w": "for",
+"t": 456.89,
+"key": false,
+"gkey": false
+},
+{
+"w": "six",
+"t": 457.13,
 "key": false,
 "gkey": false
 }
 ]
 },
 {
-"t0": 565.79,
-"t1": 567.1,
+"t0": 457.33,
+"t1": 458.68,
 "upper": true,
 "pos": "c",
 "words": [
 {
-"w": "so",
-"t": 565.79,
+"w": "months,",
+"t": 457.33,
 "key": false,
 "gkey": false
 },
 {
-"w": "tell",
-"t": 565.89,
+"w": "what",
+"t": 458.01,
 "key": false,
 "gkey": false
 },
 {
-"w": "me",
-"t": 566.25,
+"w": "happens?",
+"t": 458.21,
+"key": true,
+"gkey": false
+}
+]
+},
+{
+"t0": 471.25,
+"t1": 472.09,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "This",
+"t": 471.25,
 "key": false,
 "gkey": false
 },
 {
-"w": "in",
-"t": 566.41,
+"w": "is",
+"t": 471.57,
 "key": false,
 "gkey": false
 },
 {
 "w": "the",
-"t": 566.51,
+"t": 471.74,
+"key": false,
+"gkey": false
+},
+{
+"w": "one",
+"t": 471.88,
+"key": false,
+"gkey": false
+},
+{
+"w": "I",
+"t": 472.04,
+"key": false,
+"gkey": false
+},
+{
+"w": "really",
+"t": 472.19,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 472.39,
+"t1": 473.24,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "want",
+"t": 472.39,
+"key": false,
+"gkey": false
+},
+{
+"w": "you",
+"t": 472.65,
+"key": false,
+"gkey": false
+},
+{
+"w": "to",
+"t": 472.81,
+"key": false,
+"gkey": false
+},
+{
+"w": "hear.",
+"t": 472.95,
+"key": true,
+"gkey": false
+}
+]
+},
+{
+"t0": 473.54,
+"t1": 474.26,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "You've",
+"t": 473.54,
+"key": false,
+"gkey": false
+},
+{
+"w": "got",
+"t": 473.69,
+"key": false,
+"gkey": false
+},
+{
+"w": "a",
+"t": 473.81,
+"key": false,
+"gkey": false
+},
+{
+"w": "will.",
+"t": 474.0,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 474.65,
+"t1": 476.12,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Great.",
+"t": 474.65,
+"key": false,
+"gkey": false
+},
+{
+"w": "Covered,",
+"t": 475.54,
+"key": false,
+"gkey": false
+},
+{
+"w": "right?",
+"t": 475.69,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 476.42,
+"t1": 478.56,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Not",
+"t": 476.42,
+"key": false,
+"gkey": false
+},
+{
+"w": "exactly.",
+"t": 476.54,
+"key": false,
+"gkey": false
+},
+{
+"w": "A",
+"t": 477.62,
+"key": false,
+"gkey": false
+},
+{
+"w": "will",
+"t": 477.77,
+"key": false,
+"gkey": false
+},
+{
+"w": "still",
+"t": 478.06,
+"key": false,
+"gkey": false
+},
+{
+"w": "goes",
+"t": 478.54,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 478.86,
+"t1": 480.0,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "through",
+"t": 478.86,
+"key": false,
+"gkey": false
+},
+{
+"w": "probate",
+"t": 479.15,
+"key": true,
+"gkey": false
+},
+{
+"w": "court.",
+"t": 479.56,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 506.23,
+"t1": 507.6,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Want",
+"t": 506.23,
+"key": false,
+"gkey": false
+},
+{
+"w": "the",
+"t": 506.47,
+"key": false,
+"gkey": false
+},
+{
+"w": "extreme",
+"t": 506.65,
+"key": false,
+"gkey": false
+},
+{
+"w": "version?",
+"t": 506.99,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 518.46,
+"t1": 520.0400000000001,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Then",
+"t": 518.46,
+"key": false,
+"gkey": false
+},
+{
+"w": "six",
+"t": 518.86,
+"key": false,
+"gkey": false
+},
+{
+"w": "years",
+"t": 519.4,
+"key": false,
+"gkey": false
+},
+{
+"w": "in",
+"t": 519.62,
+"key": false,
+"gkey": false
+},
+{
+"w": "court,",
+"t": 519.76,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 520.34,
+"t1": 521.8000000000001,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "over",
+"t": 520.34,
+"key": false,
+"gkey": false
+},
+{
+"w": "an",
+"t": 520.84,
+"key": false,
+"gkey": false
+},
+{
+"w": "estate",
+"t": 520.97,
+"key": false,
+"gkey": false
+},
+{
+"w": "worth",
+"t": 521.42,
+"key": false,
+"gkey": false
+},
+{
+"w": "about",
+"t": 521.74,
+"key": false,
+"gkey": false
+},
+{
+"w": "a",
+"t": 521.96,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 522.1,
+"t1": 523.37,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "hundred",
+"t": 522.1,
+"key": false,
+"gkey": false
+},
+{
+"w": "fifty-six",
+"t": 522.45,
+"key": false,
+"gkey": false
+},
+{
+"w": "million.",
+"t": 523.04,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 523.96,
+"t1": 525.5,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "The",
+"t": 523.96,
+"key": false,
+"gkey": false
+},
+{
+"w": "lawyers",
+"t": 524.14,
+"key": false,
+"gkey": false
+},
+{
+"w": "and",
+"t": 524.59,
+"key": false,
+"gkey": false
+},
+{
+"w": "consultants",
+"t": 524.72,
+"key": false,
+"gkey": false
+},
+{
+"w": "got",
+"t": 525.35,
+"key": false,
+"gkey": false
+},
+{
+"w": "paid",
+"t": 525.58,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 525.8,
+"t1": 526.85,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "tens",
+"t": 525.8,
+"key": false,
+"gkey": false
+},
+{
+"w": "of",
+"t": 526.2,
+"key": false,
+"gkey": false
+},
+{
+"w": "millions.",
+"t": 526.34,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 527.15,
+"t1": 528.33,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "And",
+"t": 527.15,
+"key": false,
+"gkey": false
+},
+{
+"w": "two",
+"t": 527.51,
+"key": false,
+"gkey": false
+},
+{
+"w": "of",
+"t": 527.69,
+"key": false,
+"gkey": false
+},
+{
+"w": "his",
+"t": 527.82,
+"key": false,
+"gkey": false
+},
+{
+"w": "heirs?",
+"t": 527.96,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 528.94,
+"t1": 529.72,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "They",
+"t": 528.94,
+"key": false,
+"gkey": false
+},
+{
+"w": "died",
+"t": 529.12,
+"key": false,
+"gkey": false
+},
+{
+"w": "waiting.",
+"t": 529.44,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 530.99,
+"t1": 532.2900000000001,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "That",
+"t": 530.99,
+"key": false,
+"gkey": false
+},
+{
+"w": "one",
+"t": 531.41,
+"key": false,
+"gkey": false
+},
+{
+"w": "stays",
+"t": 531.63,
+"key": false,
+"gkey": false
+},
+{
+"w": "with",
+"t": 531.93,
+"key": false,
+"gkey": false
+},
+{
+"w": "me.",
+"t": 532.17,
+"key": true,
+"gkey": false
+}
+],
+"side": "r"
+},
+{
+"t0": 537.13,
+"t1": 538.3100000000001,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "And",
+"t": 537.13,
+"key": false,
+"gkey": false
+},
+{
+"w": "he",
+"t": 537.25,
+"key": false,
+"gkey": false
+},
+{
+"w": "could",
+"t": 537.37,
+"key": false,
+"gkey": false
+},
+{
+"w": "afford",
+"t": 537.51,
+"key": false,
+"gkey": false
+},
+{
+"w": "any",
+"t": 537.83,
+"key": false,
+"gkey": false
+},
+{
+"w": "lawyer",
+"t": 538.31,
+"key": false,
+"gkey": false
+}
+],
+"side": "r"
+},
+{
+"t0": 538.61,
+"t1": 540.47,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "on",
+"t": 538.61,
+"key": false,
+"gkey": false
+},
+{
+"w": "earth.",
+"t": 538.91,
+"key": false,
+"gkey": false
+},
+{
+"w": "Now",
+"t": 539.89,
+"key": false,
+"gkey": false
+},
+{
+"w": "think",
+"t": 540.19,
+"key": false,
+"gkey": false
+},
+{
+"w": "about",
+"t": 540.39,
+"key": false,
+"gkey": false
+},
+{
+"w": "a",
+"t": 540.63,
+"key": false,
+"gkey": false
+}
+],
+"side": "r"
+},
+{
+"t0": 540.77,
+"t1": 542.66,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "regular",
+"t": 540.77,
+"key": false,
+"gkey": false
+},
+{
+"w": "family.",
+"t": 541.07,
+"key": false,
+"gkey": false
+},
+{
+"w": "A",
+"t": 542.01,
+"key": false,
+"gkey": false
+},
+{
+"w": "house,",
+"t": 542.17,
+"key": false,
+"gkey": false
+}
+],
+"side": "r"
+},
+{
+"t0": 543.05,
+"t1": 544.9300000000001,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "a",
+"t": 543.05,
+"key": false,
+"gkey": false
+},
+{
+"w": "401(k),",
+"t": 543.09,
+"key": false,
+"gkey": false
+},
+{
+"w": "and",
+"t": 544.43,
+"key": false,
+"gkey": false
+},
+{
+"w": "a",
+"t": 544.53,
+"key": false,
+"gkey": false
+},
+{
+"w": "will",
+"t": 544.67,
+"key": false,
+"gkey": false
+},
+{
+"w": "nobody",
+"t": 544.87,
+"key": false,
+"gkey": false
+}
+],
+"side": "r"
+},
+{
+"t0": 545.23,
+"t1": 547.24,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "has",
+"t": 545.23,
+"key": false,
+"gkey": false
+},
+{
+"w": "opened",
+"t": 545.55,
+"key": false,
+"gkey": false
+},
+{
+"w": "since",
+"t": 545.95,
+"key": false,
+"gkey": false
+},
+{
+"w": "the",
+"t": 546.25,
+"key": false,
+"gkey": false
+},
+{
+"w": "kids",
+"t": 546.45,
+"key": false,
+"gkey": false
+},
+{
+"w": "were",
+"t": 546.63,
+"key": false,
+"gkey": false
+},
+{
+"w": "born.",
+"t": 546.85,
+"key": false,
+"gkey": false
+}
+],
+"side": "r"
+},
+{
+"t0": 547.61,
+"t1": 549.13,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "You",
+"t": 547.61,
+"key": false,
+"gkey": false
+},
+{
+"w": "could",
+"t": 547.79,
+"key": false,
+"gkey": false
+},
+{
+"w": "do",
+"t": 547.91,
+"key": false,
+"gkey": false
+},
+{
+"w": "everything",
+"t": 548.13,
+"key": false,
+"gkey": false
+},
+{
+"w": "Solomon",
+"t": 548.67,
+"key": false,
+"gkey": false
+},
+{
+"w": "did,",
+"t": 549.07,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 549.43,
+"t1": 550.73,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "for",
+"t": 549.43,
+"key": false,
+"gkey": false
+},
+{
+"w": "thirty",
+"t": 549.81,
+"key": false,
+"gkey": false
+},
+{
+"w": "years,",
+"t": 550.31,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 551.03,
+"t1": 552.13,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "and",
+"t": 551.03,
+"key": false,
+"gkey": false
+},
+{
+"w": "your",
+"t": 551.15,
+"key": false,
+"gkey": false
+},
+{
+"w": "kids",
+"t": 551.33,
+"key": false,
+"gkey": false
+},
+{
+"w": "could",
+"t": 551.61,
+"key": false,
+"gkey": false
+},
+{
+"w": "still",
+"t": 551.83,
+"key": false,
+"gkey": false
+},
+{
+"w": "spend",
+"t": 552.13,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 552.43,
+"t1": 553.71,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "two",
+"t": 552.43,
+"key": false,
+"gkey": false
+},
+{
+"w": "years",
+"t": 552.75,
+"key": false,
+"gkey": false
+},
+{
+"w": "in",
+"t": 553.03,
+"key": false,
+"gkey": false
+},
+{
+"w": "a",
+"t": 553.23,
+"key": false,
+"gkey": false
+},
+{
+"w": "courtroom",
+"t": 553.35,
+"key": false,
+"gkey": false
+},
+{
+"w": "over",
+"t": 553.65,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 554.01,
+"t1": 555.7900000000001,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "it.",
+"t": 554.01,
+"key": false,
+"gkey": false
+},
+{
+"w": "And",
+"t": 554.77,
+"key": false,
+"gkey": false
+},
+{
+"w": "the",
+"t": 554.95,
+"key": false,
+"gkey": false
+},
+{
+"w": "fix",
+"t": 555.11,
+"key": false,
+"gkey": false
+},
+{
+"w": "is",
+"t": 555.35,
+"key": false,
+"gkey": false
+},
+{
+"w": "mostly",
+"t": 555.67,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 556.09,
+"t1": 558.02,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "paperwork.",
+"t": 556.09,
+"key": true,
+"gkey": false
+},
+{
+"w": "Boring",
+"t": 557.33,
+"key": false,
+"gkey": false
+},
+{
+"w": "paperwork.",
+"t": 557.45,
+"key": true,
+"gkey": false
+}
+]
+},
+{
+"t0": 580.14,
+"t1": 581.62,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Pick",
+"t": 580.14,
+"key": false,
+"gkey": false
+},
+{
+"w": "one.",
+"t": 580.28,
+"key": true,
+"gkey": false
+},
+{
+"w": "Just",
+"t": 580.98,
+"key": false,
+"gkey": false
+},
+{
+"w": "one.",
+"t": 581.2,
+"key": true,
+"gkey": false
+}
+]
+},
+{
+"t0": 581.92,
+"t1": 582.8000000000001,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "I",
+"t": 581.92,
+"key": false,
+"gkey": false
+},
+{
+"w": "really",
+"t": 582.14,
+"key": false,
+"gkey": false
+},
+{
+"w": "want",
+"t": 582.38,
+"key": false,
+"gkey": false
+},
+{
+"w": "to",
+"t": 582.62,
+"key": false,
+"gkey": false
+},
+{
+"w": "know",
+"t": 582.76,
+"key": false,
+"gkey": false
+},
+{
+"w": "which",
+"t": 582.92,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 583.1,
+"t1": 584.0,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "one",
+"t": 583.1,
+"key": false,
+"gkey": false
+},
+{
+"w": "you'd",
+"t": 583.32,
+"key": false,
+"gkey": false
+},
+{
+"w": "start",
+"t": 583.56,
+"key": false,
+"gkey": false
+},
+{
+"w": "with,",
+"t": 583.82,
+"key": false,
+"gkey": false
+}
+]
+},
+{
+"t0": 584.3,
+"t1": 585.61,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "so",
+"t": 584.3,
+"key": false,
+"gkey": false
+},
+{
+"w": "tell",
+"t": 584.4,
+"key": false,
+"gkey": false
+},
+{
+"w": "me",
+"t": 584.76,
+"key": false,
+"gkey": false
+},
+{
+"w": "in",
+"t": 584.92,
+"key": false,
+"gkey": false
+},
+{
+"w": "the",
+"t": 585.02,
 "key": false,
 "gkey": false
 },
 {
 "w": "comments.",
-"t": 566.63,
+"t": 585.14,
 "key": true,
 "gkey": false
 }
@@ -5759,59 +5759,59 @@
 ],
 "sides": [
 {
-"t0": 123.51,
-"t1": 133.94,
+"t0": 127.7,
+"t1": 138.23,
 "heading": "Rule 1",
 "body": [
 {
 "str": "Pay the future *first*",
-"at": 123.76
+"at": 127.95
 },
 {
 "str": "Emergency fund",
-"at": 129.823
+"at": 134.112
 },
 {
 "str": "House down payment",
-"at": 131.303
+"at": 135.592
 },
 {
 "str": "Car fund",
-"at": 133.303
+"at": 137.592
 }
 ]
 },
 {
-"t0": 313.73,
-"t1": 319.54,
+"t0": 325.01,
+"t1": 330.94,
 "heading": "Rule 2",
 "body": [
 {
 "str": "Debt has to *earn its keep*",
-"at": 313.98
+"at": 325.26
 },
 {
 "str": "This weekend: paper, not an app",
-"at": 317.765
+"at": 329.156
 }
 ]
 },
 {
-"t0": 407.97,
-"t1": 422.16,
+"t0": 421.46,
+"t1": 435.53,
 "heading": "Rule 3",
 "body": [
 {
 "str": "*Protect* it all",
-"at": 408.22
+"at": 421.71
 },
 {
 "str": "A family safeword",
-"at": 410.116
+"at": 423.49
 },
 {
 "str": "No word? Hang up. Call back.",
-"at": 418.496
+"at": 431.87
 }
 ]
 }
@@ -5822,45 +5822,45 @@
 "label": "Simon & Solomon"
 },
 {
-"t": 61.82,
+"t": 62.55,
 "label": "Drain 1"
 },
 {
-"t": 121.5,
+"t": 125.69,
 "label": "Rule 1"
 },
 {
-"t": 233.53,
+"t": 240.71,
 "label": "Drain 2"
 },
 {
-"t": 311.72,
+"t": 323.0,
 "label": "Rule 2"
 },
 {
-"t": 369.15,
+"t": 381.33,
 "label": "Drain 3"
 },
 {
-"t": 405.96,
+"t": 418.97,
 "label": "Rule 3"
 },
 {
-"t": 453.33,
+"t": 467.91,
 "label": "The will"
 },
 {
-"t": 540.46,
+"t": 558.23,
 "label": "Recap"
 }
 ],
 "end": {
-"t0": 573.3259999999999,
+"t0": 591.838,
 "els": [
 {
 "type": "text",
 "str": "Which drain will you close first?",
-"at": 573.6259999999999,
+"at": 592.1379999999999,
 "x": 960,
 "y": 380,
 "size": 70,
@@ -5871,7 +5871,7 @@
 {
 "type": "text",
 "str": "Tell me in the comments.",
-"at": 574.1259999999999,
+"at": 592.6379999999999,
 "x": 960,
 "y": 480,
 "size": 46,
@@ -5883,7 +5883,7 @@
 {
 "type": "text",
 "str": "Next: track it all on *one simple page*",
-"at": 574.7259999999999,
+"at": 593.2379999999999,
 "x": 960,
 "y": 640,
 "size": 56,
