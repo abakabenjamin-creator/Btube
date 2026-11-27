@@ -1,0 +1,13 @@
+{"source":"monk 1.mp4","crop":"860:484:110:960","segments":[
+ {"name":"intro (moved to front)","in":1093.10,"out":1140.60},
+ {"name":"self-trust -> failing (pre-ad1)","in":7.95,"out":314.60},
+ {"name":"cheat code 3 -> build others (pre-ad2)","in":336.40,"out":608.80},
+ {"name":"build others -> judgment (pre-plug)","in":619.60,"out":960.50},
+ {"name":"gut feeling -> meta skill -> ending","in":977.50,"out":1091.30}],
+"removed":[
+ {"id":"R1","in":0.0,"out":7.95,"why":"phone home screen + YouTube app UI (PiP, not fullscreen)"},
+ {"id":"R2","in":314.60,"out":336.40,"why":"AD: AdOutreach '19-page YT ads strategy' + replayed line"},
+ {"id":"R3","in":608.80,"out":619.60,"why":"AD: Meet Grok Bot (xAI) + replayed line + sponsored bar"},
+ {"id":"R6","in":960.50,"out":977.50,"why":"self-promo plug for creator's separate judgment video"},
+ {"id":"R4","in":1091.30,"out":1093.10,"why":"player UI scrub back to 0:00 + silence"},
+ {"id":"R5","in":1140.60,"out":1145.46,"why":"'Stop sharing screen?' dialog / recording end"}]}

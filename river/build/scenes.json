@@ -1,0 +1,329 @@
+{
+ "duration": 19.5,
+ "broll": [],
+ "images": [],
+ "cards": [],
+ "overlays": [],
+ "sides": [
+  {
+   "t0": 3.0,
+   "t1": 4.3,
+   "heading": "Not with strength",
+   "body": [
+    {
+     "str": "It does it by *showing up*",
+     "at": 3.1,
+     "span": 0.92
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t0": 0.0,
+   "t1": 1.5799999999999998,
+   "words": [
+    {
+     "w": "A",
+     "t": 0.0,
+     "key": false
+    },
+    {
+     "w": "river",
+     "t": 0.22,
+     "key": true
+    },
+    {
+     "w": "doesn't",
+     "t": 0.52,
+     "key": false
+    },
+    {
+     "w": "cut",
+     "t": 1.08,
+     "key": false
+    },
+    {
+     "w": "through",
+     "t": 1.36,
+     "key": false
+    },
+    {
+     "w": "rock",
+     "t": 1.64,
+     "key": false
+    }
+   ],
+   "broll": true,
+   "size": 72,
+   "upper": true,
+   "pos": "c"
+  },
+  {
+   "t0": 1.88,
+   "t1": 2.3,
+   "words": [
+    {
+     "w": "with",
+     "t": 1.88,
+     "key": false
+    },
+    {
+     "w": "strength,",
+     "t": 2.12,
+     "key": false
+    }
+   ],
+   "impact": true,
+   "upper": true,
+   "pos": "c"
+  },
+  {
+   "t0": 4.28,
+   "t1": 5.45,
+   "words": [
+    {
+     "w": "every",
+     "t": 4.28,
+     "key": false
+    },
+    {
+     "w": "single",
+     "t": 4.66,
+     "key": false
+    },
+    {
+     "w": "day.",
+     "t": 4.96,
+     "key": true
+    }
+   ],
+   "broll": true,
+   "size": 72,
+   "upper": true,
+   "pos": "c"
+  },
+  {
+   "t0": 5.75,
+   "t1": 7.29,
+   "words": [
+    {
+     "w": "Your",
+     "t": 5.75,
+     "key": false
+    },
+    {
+     "w": "habits",
+     "t": 5.99,
+     "key": false
+    },
+    {
+     "w": "are",
+     "t": 6.35,
+     "key": false
+    },
+    {
+     "w": "the",
+     "t": 6.69,
+     "key": false
+    },
+    {
+     "w": "river.",
+     "t": 6.85,
+     "key": true
+    }
+   ],
+   "upper": true,
+   "pos": "c"
+  },
+  {
+   "t0": 7.59,
+   "t1": 8.87,
+   "words": [
+    {
+     "w": "Your",
+     "t": 7.59,
+     "key": false
+    },
+    {
+     "w": "goals",
+     "t": 7.67,
+     "key": false
+    },
+    {
+     "w": "are",
+     "t": 8.05,
+     "key": false
+    },
+    {
+     "w": "the",
+     "t": 8.29,
+     "key": false
+    },
+    {
+     "w": "rock.",
+     "t": 8.45,
+     "key": true
+    }
+   ],
+   "broll": true,
+   "size": 72,
+   "upper": true,
+   "pos": "c"
+  },
+  {
+   "t0": 9.17,
+   "t1": 10.889999999999999,
+   "words": [
+    {
+     "w": "Be",
+     "t": 9.17,
+     "key": false
+    },
+    {
+     "w": "patient.",
+     "t": 9.27,
+     "key": false
+    },
+    {
+     "w": "Keep",
+     "t": 10.09,
+     "key": false
+    },
+    {
+     "w": "flowing.",
+     "t": 10.21,
+     "key": true
+    }
+   ],
+   "impact": true,
+   "upper": true,
+   "pos": "c"
+  },
+  {
+   "t0": 11.19,
+   "t1": 12.45,
+   "words": [
+    {
+     "w": "One",
+     "t": 11.19,
+     "key": false
+    },
+    {
+     "w": "day",
+     "t": 11.37,
+     "key": false
+    },
+    {
+     "w": "people",
+     "t": 11.63,
+     "key": false
+    },
+    {
+     "w": "will",
+     "t": 11.91,
+     "key": false
+    },
+    {
+     "w": "call",
+     "t": 12.23,
+     "key": false
+    },
+    {
+     "w": "it",
+     "t": 12.45,
+     "key": false
+    },
+    {
+     "w": "a",
+     "t": 12.63,
+     "key": false
+    }
+   ],
+   "broll": true,
+   "size": 72,
+   "upper": true,
+   "pos": "c"
+  },
+  {
+   "t0": 12.75,
+   "t1": 15.7,
+   "words": [
+    {
+     "w": "canyon.",
+     "t": 12.79,
+     "key": true
+    }
+   ],
+   "broll": true,
+   "impact": true,
+   "upper": true,
+   "pos": "c"
+  }
+ ],
+ "chapters": [
+  {
+   "t": 0.3,
+   "label": "The River"
+  }
+ ],
+ "end": {
+  "t0": 16.0,
+  "els": [
+   {
+    "type": "text",
+    "str": "The River",
+    "at": 16.25,
+    "x": 960,
+    "y": 330,
+    "size": 110,
+    "align": "center"
+   },
+   {
+    "type": "text",
+    "str": "Your habits are the *river.*",
+    "at": 16.7,
+    "x": 960,
+    "y": 500,
+    "size": 56,
+    "align": "center",
+    "weight": 700,
+    "font": "\"Inter\", sans-serif"
+   },
+   {
+    "type": "text",
+    "str": "Your goals are the rock.",
+    "at": 17.0,
+    "x": 960,
+    "y": 590,
+    "size": 56,
+    "align": "center",
+    "weight": 700,
+    "font": "\"Inter\", sans-serif"
+   },
+   {
+    "type": "text",
+    "str": "Keep flowing.",
+    "at": 17.3,
+    "x": 960,
+    "y": 680,
+    "size": 56,
+    "align": "center",
+    "weight": 700,
+    "font": "\"Inter\", sans-serif"
+   },
+   {
+    "type": "text",
+    "str": "Follow for more",
+    "at": 17.8,
+    "x": 960,
+    "y": 880,
+    "size": 40,
+    "align": "center",
+    "weight": 600,
+    "font": "\"Inter\", sans-serif",
+    "color": "rgba(255,255,255,0.8)"
+   }
+  ]
+ }
+}
