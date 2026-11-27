@@ -311,6 +311,15 @@ These come from the channel owner's notes on real edits ("Five Rules of Money", 
 - Match the **age** of anyone in a story (teen story = teenagers with visible faces). Use **no smoking** and nothing off-brand.
 - For old/archival photos, use a split screen: photo on one half, matching stock clip on the other.
 - Stock comes from licence-safe sources only (e.g. Mixkit: free, commercial use).
+- When a famous person is named (e.g. Prince), show a **short real clip of them** (a few seconds, licence-safe such as CC BY on Wikimedia Commons) with a name card ("Prince (1958–2016)") and a small credit line. Blur any TV-show logo or watermark.
+
+**Real sources on screen (receipts)**
+- **Every claim that has data on the internet gets its real source shown on screen**, at the exact moment the line is spoken. This covers every number, statistic, limit, rate, survey, news event and famous-person fact.
+- Show the **actual article, news story or official page**: a screenshot of the original page, zoomed in on the key line, with that line highlighted (yellow `#FFD400` mark, red `#E10600` outline). Hold it **2–3 s** with a slow push-in, then return to the card or footage.
+- **News headlines are preferred** for stories (e.g. "FTC warns of record $3.5 billion losses to imposter scams"). Official pages (IRS, FDIC, CFPB, BLS) are used for limits and rates.
+- Add a red "**Source: …**" pill at the bottom centre naming the outlet. If an official site blocks access, show a reputable news article that quotes it, and label it "citing BLS/FTC".
+- Fact-check every number in at least two sources before the edit. Never change the script to match a source: flag differences to the owner instead, as with the 8% vs ~10% market return.
+- Keep a research log (claim → source link → verdict) and put the source links and photo/clip credits in the YouTube description.
 
 **Sound**
 - **No whoosh / swipe / "shhh" noise SFX on transitions.**
