@@ -1912,11 +1912,23 @@
 "str": "Education, not financial advice",
 "at": 57.288,
 "x": 925,
-"y": 818,
-"size": 50,
+"y": 812,
+"size": 52,
 "align": "left",
 "weight": 700,
 "font": "\"Inter\", sans-serif"
+},
+{
+"type": "text",
+"str": "Talk to a licensed pro before you move real money.",
+"at": 57.738,
+"x": 925,
+"y": 872,
+"size": 32,
+"align": "left",
+"weight": 500,
+"font": "\"Inter\", sans-serif",
+"color": "rgba(255,255,255,0.88)"
 }
 ]
 }

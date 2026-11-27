@@ -165,7 +165,8 @@ overlays_ = [dict(t0=round(t0(69), 2), t1=round(wt(69, 'It') - 0.25, 2), panel=[
 # disclaimer (channel rule): glass panel on 'this is education, not advice...'
 D0, D1 = wt(6, 'Quick') - 0.1, t1(6) + 0.7
 overlays_.append(dict(t0=round(D0, 2), t1=round(D1, 2), panel=[875, 740, 1000, 170], style='tag', els=[
-    T('Education, not financial advice', D0 + 0.15, 925, 818, 50, align='left', weight=700)]))
+    T('Education, not financial advice', D0 + 0.15, 925, 812, 52, align='left', weight=700),
+    T('Talk to a licensed pro before you move real money.', D0 + 0.6, 925, 872, 32, align='left', weight=500, color='rgba(255,255,255,0.88)')]))
 broll.sort(key=lambda x: x['t0'])
 for x, y in zip(broll, broll[1:]):   # butt joins, no overlaps
     if y['t0'] < x['t1']: x['t1'] = y['t0']
