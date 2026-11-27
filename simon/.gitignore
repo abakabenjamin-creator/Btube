@@ -1,7 +1,9 @@
-src/*.wav
-src/*.mp3
-src/*.mp4
 work/
 out/
 clips/
+models/
 node_modules
+src/*.mp4
+src/*.wav
+src/*.mp3
+assets/people/*.jpg
