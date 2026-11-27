@@ -297,6 +297,7 @@ These come from the channel owner's notes on real edits ("Five Rules of Money", 
 - Show his **full torso** in every presenter shot.
 - **No sharp zoom/punch-in cuts.** Use only a gentle slow push-in (about 3%, anchored bottom-centre), and use it sparingly.
 - **Definition moments:** slide him to the side at full framing, with the heading and explanation on the right. No part of his body (no stray hand) may show on the emptied side.
+- **The emptied side must be a clean continuation of the room, never a mirror.** Mirroring duplicates objects (e.g. a second lamp or a second set of photo frames). Build the strip from lamp-free parts of the set (blinds, window sill, plain wall), so every object appears only once.
 - **Off-camera (3/4 side-angle) shots: side text is optional, not automatic.** Use it only on key lines worth reading; otherwise the off-camera shot plays normally with its chest caption.
   When you do use it, sequence it like this:
   1. **Start on the original camera framing** (untouched) for a few seconds, with any chest caption faded out before step 2.
