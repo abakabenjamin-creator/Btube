@@ -284,6 +284,7 @@ These come from the channel owner's notes on real edits ("Five Rules of Money", 
 - Use **Inter** only: Bold/ExtraBold for captions, **Inter Black, all caps** for shocking or must-see moments.
 - Keep the red **Subscribe** button top-right and the white **ABAKA SIKA** wordmark (stacked) bottom-right on **every frame**.
 - The chapter/title pill stays **top-left**.
+- **Disclaimer, every finance video:** when the presenter says it's education, not advice (or near the start if the script has no such line), show a frosted-glass panel on the lower right, clear of his face, reading **"Education, not financial advice"** (Inter Bold, white) for the length of that line. No chest caption sits under it.
 
 **Captions**
 - Each word **rises slowly from below** and settles beside the previous one.

@@ -162,6 +162,10 @@ broll.append(dict(t0=round(P[69]['start'] - 0.2, 2), t1=round(wt(69, 'It') - 0.1
 overlays_ = [dict(t0=round(t0(69), 2), t1=round(wt(69, 'It') - 0.25, 2), panel=[40, 180, 640, 150], els=[
     T('Prince  (1958-2016)', t0(69) + 0.1, 90, 255, 50, align='left', weight=800),
     T('Video: The Arsenio Hall Show, CC BY 3.0', t0(69) + 0.3, 90, 300, 22, align='left', weight=500, color='rgba(255,255,255,0.7)')])]
+# disclaimer (channel rule): glass panel on 'this is education, not advice...'
+D0, D1 = wt(6, 'Quick') - 0.1, t1(6) + 0.7
+overlays_.append(dict(t0=round(D0, 2), t1=round(D1, 2), panel=[880, 740, 1000, 170], els=[
+    T('Education, not financial advice', D0 + 0.15, 930, 845, 54, align='left', weight=700)]))
 broll.sort(key=lambda x: x['t0'])
 for x, y in zip(broll, broll[1:]):   # butt joins, no overlaps
     if y['t0'] < x['t1']: x['t1'] = y['t0']
@@ -215,6 +219,7 @@ for a, b in zip(captions, captions[1:]): a['t1'] = min(a['t1'], b['t0'] - 0.3)  
 for s0, s1, e in SLIDE:   # chest captions gone before the slide begins
     for c in captions:
         if c['t0'] < s0 <= c['t1'] + 0.3: c['t1'] = min(c['t1'], s0 - 0.3)
+captions = [c for c in captions if not (D0 - 0.3 <= c['t0'] < D1)]   # no chest caption under the disclaimer
 captions = [c for c in captions if c['t1'] - c['t0'] > 0.25]
 
 chapters = [dict(t=round(max(0.3, P[i]['start'] - 0.1), 2), label=lab) for i, lab in sorted(CHAPTERS.items())]
