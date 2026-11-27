@@ -223,6 +223,27 @@ for s0, s1, e in SLIDE:   # chest captions gone before the slide begins
 captions = [c for c in captions if not (D0 - 0.3 <= c['t0'] < D1)]   # no chest caption under the disclaimer
 captions = [c for c in captions if c['t1'] - c['t0'] > 0.25]
 
+# ---- keep ~50% of caption screen time: the lines that carry the story
+def score(c):
+    txt=' '.join(w['w'] for w in c['words']); n=len(c['words'])
+    return (3 if c.get('impact') else 0) + (2 if any(w.get('key') or w.get('gkey') for w in c['words']) else 0) \
+         + (1.5 if re.search(r'[0-9$%]|hundred|thousand|million|billion|percent|grand', txt, re.I) else 0) \
+         + (1 if re.search(r'[?!]$', txt) else 0) + (1 if n <= 4 else 0) + (0.5 if c.get('side') == 'r' else 0)
+groups, cur = [], []   # whole sentences only: a sentence's captions are kept or dropped together
+for k, c in enumerate(captions):
+    if cur and (c['t0'] - captions[cur[-1]]['t1'] > 1.2 or c.get('broll') != captions[cur[-1]].get('broll') or c.get('side') != captions[cur[-1]].get('side')):
+        groups.append(cur); cur = []
+    cur.append(k)
+    if re.search(r'[.?!]$', c['words'][-1]['w']): groups.append(cur); cur = []
+if cur: groups.append(cur)
+dur = lambda g: sum(captions[k]['t1'] - captions[k]['t0'] for k in g)
+gscore = lambda g: max(score(captions[k]) for k in g) + (1 if sum(len(captions[k]['words']) for k in g) <= 6 else 0)
+full = sum(c['t1'] - c['t0'] for c in captions); kept = set(); acc = 0
+for g in sorted(groups, key=lambda g: (-gscore(g), dur(g))):
+    if acc >= 0.5 * full: break
+    kept |= set(g); acc += dur(g)
+captions = [c for k, c in enumerate(captions) if k in kept]
+print(f'captions kept {len(captions)} ({acc:.0f}s of {full:.0f}s)')
 chapters = [dict(t=round(max(0.3, P[i]['start'] - 0.1), 2), label=lab) for i, lab in sorted(CHAPTERS.items())]
 END0 = E['duration'] + 0.3
 end = dict(t0=END0, els=[T('Which drain will you close first?', END0 + 0.3, 960, 380, 70, weight=800),
