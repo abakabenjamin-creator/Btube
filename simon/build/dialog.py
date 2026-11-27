@@ -8,10 +8,21 @@ GAIN={}
 def load(f):
     return np.frombuffer(subprocess.run(['ffmpeg','-v','error','-i',f'{ROOT}/{f}','-ac','1','-ar',str(SR),'-f','s16le','-'],capture_output=True).stdout,np.int16).astype(float)/32768
 A={k:load(f) for k,f in FILES.items()}
+# voiceover -> presenter sound: matched EQ (less boxy, brighter) + gentle gate so its hiss sits at the presenter's floor
+from scipy.signal import fftconvolve
+from scipy.ndimage import uniform_filter1d
+v=fftconvolve(A['V'],np.load(f'{ROOT}/work/vo_eq.npy'),'same')
+env=np.sqrt(uniform_filter1d(v**2,int(0.02*SR)))+1e-9; db=20*np.log10(env)
+g=np.clip((db+52)/8,0,1)            # below -60 dBFS fully gated by 8 dB, above -52 untouched
+g=10**((-8*(1-g))/20); g=uniform_filter1d(g,int(0.03*SR))
+A['V']=v*g
+def act_rms(x):
+    n=int(0.05*SR); fr=x[:len(x)//n*n].reshape(-1,n); e=np.sqrt((fr**2).mean(1)); return np.sqrt(np.mean(e[e>np.percentile(e,50)]**2))
 def lufs(f): 
     r=subprocess.run(['ffmpeg','-nostats','-i',f'{ROOT}/{f}','-af','ebur128','-f','null','-'],capture_output=True,text=True).stderr
     return float([l for l in r.split('\n') if l.strip().startswith('I:')][-1].split()[1])
 for k,f in FILES.items(): GAIN[k]=10**((-16-lufs(f))/20)
+GAIN['V']=GAIN['P']*act_rms(A['P'])/act_rms(A['V'])   # same speech level as the presenter
 fade=int(0.012*SR)
 for p in E['pieces']:
     a=int(p['in_']*SR); b=int(p['out']*SR); seg=A[p['src']][a:b]*GAIN[p['src']]

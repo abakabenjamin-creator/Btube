@@ -326,6 +326,7 @@ These come from the channel owner's notes on real edits ("Five Rules of Money", 
 
 **Sound**
 - **No whoosh / swipe / "shhh" noise SFX on transitions.**
+- **Voiceover must sound like the presenter.** Match the voiceover's EQ to the presenter's own audio, band by band, within about 1 dB (typically less boxiness around 600–1,000 Hz and more treble above 4 kHz). Match the speech level too, and gate its hiss down to the presenter's noise floor. A viewer should not hear a change when the edit cuts between them.
 - Use a soft ambient pad about 20 dB under the voice, and master to −14 LUFS.
 
 **Delivery**
