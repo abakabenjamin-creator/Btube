@@ -250,15 +250,16 @@ function drawPill(label, t, a0, compact) {   // template chapter pill: frosted g
 function drawCaption(cap, t) {
   if (t < cap.t0 - 0.05 || t > cap.t1 + 0.35) return;
   const out = 1 - ease(prog(t, cap.t1, 0.3)); SHADOW = true;
-  const size = cap.impact ? 92 : (cap.size || 74); font(size, cap.impact ? 900 : 800);
-  const up = w => w.toUpperCase(); const sp = g.measureText(' ').width; const maxw = 1450;
+  const R = cap.side === 'r';   // side-angle presenter: text on the right, the ABAKA SIKA side
+  const size = cap.impact ? (R ? 84 : 92) : (R ? 66 : (cap.size || 74)); font(size, cap.impact ? 900 : 800);
+  const up = w => w.toUpperCase(); const sp = g.measureText(' ').width; const maxw = R ? 640 : 1450;
   const lines = [[]]; let lw = 0, prevEnd = false;
   for (const w of cap.words) { const ww = g.measureText(up(w.w)).width; const L = lines[lines.length - 1];
     if (L.length && (lw + ww > maxw || (prevEnd && lw > maxw * 0.25))) { lines.push([]); lw = 0; }
     lines[lines.length - 1].push({ ...w, ww }); lw += ww + sp; prevEnd = /[.?!,]$/.test(w.w); }
   let cur = 0; lines.forEach((ln, i) => { if (t >= ln[0].t - 0.06) cur = i; });
   const ln = lines[cur]; const tot = ln.reduce((a, w) => a + w.ww, 0) + sp * (ln.length - 1);
-  let x = W / 2 - tot / 2; const y = cap.broll ? 930 : 730;   // presenter: centred across the chest (reference); b-roll: lower third
+  let x = (R ? 1560 : W / 2) - tot / 2; const y = R ? 640 : cap.broll ? 930 : 730;   // presenter: centred across the chest (reference); b-roll: lower third
   for (const w of ln) {
     if (t >= w.t - 0.08) { const wi = wordIn(prog(t, w.t - 0.08, RISE.dur));
       g.globalAlpha = wi.a * out; g.fillStyle = w.key ? C.yellow : w.gkey ? C.green : '#FFFFFF';

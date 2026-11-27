@@ -288,6 +288,7 @@ These come from the channel owner's notes on real edits ("Five Rules of Money", 
 **Captions**
 - Each word **rises slowly from below** and settles beside the previous one.
 - On the presenter, captions are **centred across his chest**, not to one side. Over stock they are centred low.
+- **Exception, side-angle (off-camera) presenter:** captions and any text overlays always go on the **right side, the ABAKA SIKA side**, in the empty room beside him (centred around x≈1560, mid-height, above the wordmark). They never sit on his chest or face in this angle.
 - Use one yellow key word per line.
 - A caption must fully fade out **before** the next line rises, so lines never overlap.
 

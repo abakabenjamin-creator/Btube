@@ -208,6 +208,7 @@ for i, p in sorted(P.items()):
         cap = dict(t0=round(ch[0]['t'], 2), t1=round(ch[-1]['e'] + 0.15, 2), upper=True, pos='c',
                    words=[dict(w=w['w'], t=round(w['t'], 2), key=KEY.get(w['w'].lower()) == 'y', gkey=KEY.get(w['w'].lower()) == 'g') for w in ch])
         if on_stock: cap.update(broll=True, size=66)
+        if p['src'] == 'S': cap['side'] = 'r'   # side-angle presenter: text on the ABAKA SIKA side
         if i in IMPACT: cap['impact'] = True
         captions.append(cap)
 for a, b in zip(captions, captions[1:]): a['t1'] = min(a['t1'], b['t0'] - 0.3)   # a line fades out before the next rises
