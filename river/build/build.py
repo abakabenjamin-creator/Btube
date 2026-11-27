@@ -12,7 +12,7 @@ def words(part, i0, i1, off, key=(), impact=False):
 # ---- shots (global time): ('P', file, src_off, zoom) presenter / ('B', clip id, clip start) stock
 SHOTS = [
     (0.00, 1.88, 'B', 570, 3.0),             # "A river doesn't cut through rock"
-    (1.88, 2.80, 'P', 'part1', 0.0),         # "with strength,"  (3/4 camera)
+    (1.88, 2.80, 'P', 'part1_clean', 0.0),         # "with strength,"  (3/4 camera)
     (2.80, 4.02, 'B', 50753, 0.6),           # "it does it by showing up" (alarm, every morning)
     (4.02, 5.75, 'B', 32799, 1.0),           # "every single day" (daily run)
     (5.75, 7.47, 'P', 'part2', -O2),         # "Your habits are the river."  (frontal camera)
@@ -32,6 +32,7 @@ caps = [
     dict(t0=12.75, t1=15.70, words=words('part2', 21, 22, O2, key=('canyon',)), broll=True, impact=True),
 ]
 for c in caps: c['upper'] = True; c['pos'] = 'c'
+for a, b in zip(caps, caps[1:]): a['t1'] = min(a['t1'], b['t0'] - 0.3)   # each line has faded out before the next one rises
 F = '"Inter", sans-serif'
 end = dict(t0=END0, els=[
     dict(type='text', str='The River', at=END0 + 0.25, x=960, y=330, size=110, align='center'),
