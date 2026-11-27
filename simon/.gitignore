@@ -1,0 +1,7 @@
+src/*.wav
+src/*.mp3
+src/*.mp4
+work/
+out/
+clips/
+node_modules
