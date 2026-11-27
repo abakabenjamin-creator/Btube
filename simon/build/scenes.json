@@ -266,14 +266,49 @@
 "file:///home/user/Btube/simon/assets/people/prince_1986.jpg",
 "file:///home/user/Btube/simon/assets/receipts/fdic_z.png",
 "file:///home/user/Btube/simon/assets/receipts/bls2_z.png",
+"file:///home/user/Btube/simon/assets/receipts/hysa_z.png",
 "file:///home/user/Btube/simon/assets/receipts/irs_z.png",
+"file:///home/user/Btube/simon/assets/receipts/market_z.png",
 "file:///home/user/Btube/simon/assets/receipts/lt_apr_z.png",
+"file:///home/user/Btube/simon/assets/receipts/bnpl_groceries_z.png",
 "file:///home/user/Btube/simon/assets/receipts/lt_bnpl_z.png",
+"file:///home/user/Btube/simon/assets/receipts/voiceclone_z.png",
 "file:///home/user/Btube/simon/assets/receipts/ftc2_z.png",
-"file:///home/user/Btube/simon/assets/receipts/fbi_z.png",
-"file:///home/user/Btube/simon/assets/receipts/prince_z.png"
+"file:///home/user/Btube/simon/assets/receipts/fbi_news_z.png",
+"file:///home/user/Btube/simon/assets/receipts/freeze_z.png",
+"file:///home/user/Btube/simon/assets/receipts/probate_z.png",
+"file:///home/user/Btube/simon/assets/receipts/prince_z.png",
+"file:///home/user/Btube/simon/assets/receipts/heirs_z.png"
 ],
 "cards": [
+{
+"t0": 509.69,
+"t1": 512.39,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/heirs_z.png",
+"at": 509.689,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: Star Tribune",
+"at": 509.839,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
 {
 "t0": 504.16,
 "t1": 506.64,
@@ -303,13 +338,69 @@
 ]
 },
 {
+"t0": 476.69,
+"t1": 480.05,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/probate_z.png",
+"at": 476.692,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: LegalZoom",
+"at": 476.842,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 433.4,
+"t1": 435.71,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/freeze_z.png",
+"at": 433.396,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: Consumer Financial Protection Bureau",
+"at": 433.546,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
 "t0": 422.17,
 "t1": 423.93,
 "nopill": true,
 "els": [
 {
 "type": "photo",
-"src": "file:///home/user/Btube/simon/assets/receipts/fbi_z.png",
+"src": "file:///home/user/Btube/simon/assets/receipts/fbi_news_z.png",
 "at": 422.166,
 "x": 0,
 "y": 0,
@@ -321,7 +412,7 @@
 },
 {
 "type": "pill",
-"str": "Source: Malwarebytes, citing FBI IC3 report",
+"str": "Source: Malwarebytes, citing the FBI",
 "at": 422.316,
 "x": 960,
 "y": 1000,
@@ -359,6 +450,34 @@
 ]
 },
 {
+"t0": 388.94,
+"t1": 391.39,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/voiceclone_z.png",
+"at": 388.94300000000004,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: Hawaii News Now",
+"at": 389.093,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
 "t0": 293.86,
 "t1": 296.37,
 "nopill": true,
@@ -379,6 +498,34 @@
 "type": "pill",
 "str": "Source: LendingTree BNPL survey",
 "at": 294.00999999999993,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 287.45,
+"t1": 290.83,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/bnpl_groceries_z.png",
+"at": 287.45300000000003,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: News4Jax",
+"at": 287.603,
 "x": 960,
 "y": 1000,
 "size": 34,
@@ -415,6 +562,34 @@
 ]
 },
 {
+"t0": 210.25,
+"t1": 212.9,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/market_z.png",
+"at": 210.24599999999998,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: SoFi: S&P 500 long-run average ~10% (8% is the cautious case)",
+"at": 210.396,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
 "t0": 200.9,
 "t1": 203.55,
 "nopill": true,
@@ -435,6 +610,34 @@
 "type": "pill",
 "str": "Source: IRS.gov",
 "at": 201.054,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 174.18,
+"t1": 177.09,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/hysa_z.png",
+"at": 174.176,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: Bankrate, best savings rates Nov 2026",
+"at": 174.326,
 "x": 960,
 "y": 1000,
 "size": 34,

@@ -29,3 +29,15 @@
 | Prince estate $156.4M | [NBC News](https://www.nbcnews.com/news/us-news/princes-estate-pegged-1564-million-final-valuation-rcna12540) |
 
 Prince footage: "Prince & The New Power Generation Perform Mutiny", The Arsenio Hall Show, CC BY 3.0, via Wikimedia Commons.
+
+### Added news/article receipts
+| Moment | Page shown |
+|---|---|
+| ~4% at online banks | [Bankrate best high-yield savings, Nov 2026](https://www.bankrate.com/banking/savings/best-high-yield-interests-savings-accounts/) (top 4.35%) |
+| "8% the market has averaged" | [SoFi: S&P 500 long-run ~10% nominal, 6-7% after inflation](https://www.sofi.com/learn/content/average-stock-market-return/) — 8% is a cautious nominal assumption |
+| BNPL for groceries | [News4Jax, May 2026](https://news4jax.com/money/2026/05/18/more-americans-are-using-buy-now-pay-later-for-groceries-but-at-what-cost) |
+| Voice cloned from a video | [Hawaii News Now, Mar 2026](https://www.hawaiinewsnow.com/2026/03/05/mom-loses-thousands-fake-kidnapping-call-using-ai-clone-daughters-voice/) |
+| $3.5B imposter scams (headline) | [CFP Board](https://www.cfp.net/news/2026/06/imposter-scams-led-fraud-reports-to-the-ftc-for-fifth-straight-year-in-2025) |
+| Credit freeze is free | [CFPB](https://www.consumerfinance.gov/about-us/blog/free-credit-freezes-are-here/) |
+| Probate 3-7% | [LegalZoom](https://legalzoom.com/articles/understanding-probate-lawyer-fees) |
+| Two heirs died waiting | [Star Tribune via Yahoo](https://news.yahoo.com/princes-brother-one-remaining-family-195500607.html) (John R. Nelson, 2021; Alfred Jackson died 2019) |

@@ -128,18 +128,27 @@ for c in cards:   # 'num' uses from (python keyword) and fade out at the card en
         if 'from_' in e: e['from'] = e.pop('from_')
 # ---------------- source receipts: the original page, key line highlighted (full frame, slow push) ----------------
 RC = f'file://{ROOT}/assets/receipts/'
+PROOFS = []
 def proof(name, label, a, b):
+    PROOFS.append(name)
     cards.insert(0, dict(t0=round(a, 2), t1=round(b, 2), nopill=True, els=[
         dict(type='photo', src=RC + name + '_z.png', at=a, x=0, y=0, w=1920, h=1080, fx=0.5, fy=0.5, dur=6),
         dict(type='pill', str='Source: ' + label, at=a + 0.15, x=960, y=1000, size=34, tint='#E10600')]))
 proof('fdic', 'FDIC national rates', wt(12, 'Basically') - 0.15, wt(12, 'Basically') + 2.3)
 proof('bls2', 'Kiplinger, citing BLS', wt(12, 'seven') + 0.35, wt(12, 'seven') + 2.9)
+proof('hysa', 'Bankrate, best savings rates Nov 2026', wt(22, 'Lots') - 0.15, wt(22, 'That') - 0.1)
 proof('irs', 'IRS.gov', t1(24) - 2.4, t1(24) + 0.25)
+proof('market', 'SoFi: S&P 500 long-run average ~10% (8% is the cautious case)', wt(25, 'And') - 0.15, wt(25, 'In') - 0.1)
 proof('lt_apr', 'LendingTree', t0(33) - 0.35, wt(33, 'New') - 0.05)
+proof('bnpl_groceries', 'News4Jax', wt(37, 'Groceries') - 0.15, wt(37, 'Different') - 0.1)
 proof('lt_bnpl', 'LendingTree BNPL survey', t0(38) - 0.35, wt(38, 'forty') - 0.1)
+proof('voiceclone', 'Hawaii News Now', wt(53, 'Somebody') - 0.15, t1(53) + 0.25)
 proof('ftc2', 'CFP Board, citing FTC data', t0(55) - 0.35, wt(55, 'three') - 0.1)
-proof('fbi', 'Malwarebytes, citing FBI IC3 report', t0(59) - 0.45, wt(59, 'nine') - 0.05)
+proof('fbi_news', 'Malwarebytes, citing the FBI', t0(59) - 0.45, wt(59, 'nine') - 0.05)
+proof('freeze', 'Consumer Financial Protection Bureau', wt(61, "It's") - 0.15, wt(61, 'And', 3) - 0.1)
+proof('probate', 'LegalZoom', wt(66, 'drag') - 0.8, t1(66) + 0.25)
 proof('prince', 'NBC News', wt(69, 'estate') - 0.1, t1(69) + 0.25)
+proof('heirs', 'Star Tribune', wt(70, 'And', 2) - 0.15, t1(70) + 0.25)
 CARDED = {i for c in cards for i in P if c['t0'] - 0.01 <= t0(i) < c['t1']}
 
 # ---------------- stock footage under the remaining voiceover ----------------
@@ -212,7 +221,7 @@ END0 = E['duration'] + 0.3
 end = dict(t0=END0, els=[T('Which drain will you close first?', END0 + 0.3, 960, 380, 70, weight=800),
                          T('Tell me in the comments.', END0 + 0.8, 960, 480, 46, weight=600, color='rgba(255,255,255,0.85)'),
                          T('Next: track it all on *one simple page*', END0 + 1.4, 960, 640, 56, weight=700)])
-S = dict(duration=round(END0 + 5.5, 2), broll=broll, images=[f'file://{ROOT}/assets/people/prince_1986.jpg'] + [RC + n + '_z.png' for n in ('fdic','bls2','irs','lt_apr','lt_bnpl','ftc2','fbi','prince')], cards=cards,
+S = dict(duration=round(END0 + 5.5, 2), broll=broll, images=[f'file://{ROOT}/assets/people/prince_1986.jpg'] + [RC + n + '_z.png' for n in PROOFS], cards=cards,
          overlays=overlays_, captions=captions, sides=sides, chapters=chapters, end=end)
 json.dump(S, open(f'{ROOT}/build/scenes.json', 'w'), indent=0)
 json.dump(dict(broll=broll, slide=SLIDE), open(f'{ROOT}/build/broll.json', 'w'), indent=0)
