@@ -22,6 +22,7 @@ SHOTS = [
 ]
 caps = [
     dict(t0=0.0, t1=1.88, words=words('part1', 0, 6, 0, key=('river',)), broll=True, size=72),
+    dict(t0=1.88, t1=2.30, words=words('part1', 6, 8, 0), impact=True),   # original framing first
     dict(t0=4.28, t1=5.62, words=words('part1', 14, 17, 0, key=('day.',)), broll=True, size=72),
     dict(t0=O2, t1=7.47, words=words('part2', 0, 5, O2, key=('river',))),
     dict(t0=7.59, t1=9.00, words=words('part2', 5, 10, O2, key=('rock',)), broll=True, size=72),
@@ -31,7 +32,7 @@ caps = [
 ]
 for c in caps: c['upper'] = True; c['pos'] = 'c'
 for a, b in zip(caps, caps[1:]): a['t1'] = min(a['t1'], b['t0'] - 0.3)   # each line has faded out before the next one rises
-caps[0]['t1'] = 1.88 - 0.3   # ...and before the side layout starts   # each line has faded out before the next one rises
+   # each line has faded out before the next one rises
 F = '"Inter", sans-serif'
 end = dict(t0=END0, els=[
     dict(type='text', str='The River', at=END0 + 0.25, x=960, y=330, size=110, align='center'),
@@ -41,7 +42,9 @@ end = dict(t0=END0, els=[
     dict(type='text', str='Follow for more', at=END0 + 1.8, x=960, y=880, size=40, align='center', weight=600, font=F, color='rgba(255,255,255,0.8)'),
 ])
 # off-camera (3/4) angle: he is pushed left, the words sit on the empty right side (channel rule)
-SIDES = [dict(t0=1.88, t1=4.30, heading='Not with strength', body=[dict(str='It does it by *showing up*', at=2.86, span=1.16)])]
+# off-camera angle: hold the ORIGINAL framing first, then slide him aside (PUSH_A..PUSH_A+PUSH_D), then the words come in
+PUSH_A, PUSH_D = 2.60, 0.40
+SIDES = [dict(t0=3.00, t1=4.30, heading='Not with strength', body=[dict(str='It does it by *showing up*', at=3.10, span=0.92)])]
 scenes = dict(duration=DUR, broll=[], images=[], cards=[], overlays=[], sides=SIDES, captions=caps,
               chapters=[dict(t=0.3, label='The River')], end=end)
 json.dump(scenes, open(f'{ROOT}/build/scenes.json', 'w'), indent=1)
@@ -63,7 +66,8 @@ for i, (a, b, kind, src, off) in enumerate(SHOTS):
         pre = ''
         if src.startswith('part1'):   # push him left by SH px; the freed right strip continues the room (mirrored sofa, softened)
             SH = 240
-            pre = f"split[m][e];[m]crop={1920-SH}:1080:{SH}:0[l];[e]crop={SH}:1080:{1920-SH}:0,hflip,boxblur=3[r];[l][r]hstack,"
+            u = f"clip((t-{PUSH_A - a:.3f})/{PUSH_D:.3f}\\,0\\,1)"; E = f"(3*pow({u}\\,2)-2*pow({u}\\,3))"   # smoothstep slide
+            pre = f"split[m][e];[e]crop={SH}:1080:{1920-SH}:0,hflip,boxblur=3[r];[m][r]hstack,crop=1920:1080:'{SH}*{E}':0,"
         if src == 'part2':
             Z = f"(1+0.03*t/{D:.3f})"
             pre = f"scale=w='2*trunc(960*{Z})':h='2*trunc(540*{Z})':eval=frame:flags=lanczos,crop=1920:1080:'920*({Z}-1)':'1080*({Z}-1)',"

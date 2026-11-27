@@ -6,14 +6,14 @@
  "overlays": [],
  "sides": [
   {
-   "t0": 1.88,
+   "t0": 3.0,
    "t1": 4.3,
    "heading": "Not with strength",
    "body": [
     {
      "str": "It does it by *showing up*",
-     "at": 2.86,
-     "span": 1.16
+     "at": 3.1,
+     "span": 0.92
     }
    ]
   }
@@ -56,6 +56,25 @@
    ],
    "broll": true,
    "size": 72,
+   "upper": true,
+   "pos": "c"
+  },
+  {
+   "t0": 1.88,
+   "t1": 2.3,
+   "words": [
+    {
+     "w": "with",
+     "t": 1.88,
+     "key": false
+    },
+    {
+     "w": "strength,",
+     "t": 2.12,
+     "key": false
+    }
+   ],
+   "impact": true,
    "upper": true,
    "pos": "c"
   },

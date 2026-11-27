@@ -2,11 +2,12 @@
 Per frame: find the bright, low-saturation band near the tracked finger position, dilate, inpaint from the surrounding skin."""
 import cv2, numpy as np, subprocess, os
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TRACK={47:(1147,1060),48:(1128,1058),49:(1108,1057),50:(1082,1055),51:(1055,1055),52:(1025,1055),53:(1000,1057),54:(980,1060),55:(970,1075),
+TRACK={35:(1200,1032),36:(1185,1022),37:(1180,1004),38:(1175,989),39:(1180,986),40:(1185,991),41:(1200,1008),42:(1195,1043),
+       43:(1185,1046),44:(1176,1050),45:(1166,1053),46:(1157,1057),47:(1147,1060),48:(1128,1058),49:(1108,1057),50:(1082,1055),51:(1055,1055),52:(1025,1055),53:(1000,1057),54:(980,1060),55:(970,1075),
        # 56-90: ring hidden by curled fingers (checked frame by frame). 91-103: hand-marked on full-res crops
        91:(1125,1063),92:(1115,1032),93:(1112,1007),94:(1120,969),95:(1128,944),96:(1140,931),97:(1162,933),98:(1182,938),99:(1195,973),
        100:(1205,995),101:(1207,1025),102:(1195,1040),103:(1180,1040),104:(1160,1029),105:(1150,1012),106:(1147,989),107:(1153,971),108:(1162,961),109:(1170,941)}
-RAD={n:(22 if n>=91 else 34) for n in TRACK}   # tighter window near the watch
+RAD={n:(22 if n>=91 or n<=46 else 34) for n in TRACK}   # tighter window near the watch
 cap=cv2.VideoCapture(f'{ROOT}/src/part1.mp4'); frames=[]
 while True:
     ok,f=cap.read()
