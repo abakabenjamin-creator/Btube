@@ -25,8 +25,8 @@ def sentences(i):
 
 cards, captions, sides, broll = [], [], [], []
 def T(s, at, x, y, size=58, align='center', weight=700, **k): return dict(type='text', str=s, at=at, x=x, y=y, size=size, align=align, weight=weight, font=F, **k)
-def card(lines, els, dim=False, black=False):
-    a = t0(lines[0]) - 0.15; b = t1(lines[-1]) + 0.25
+def card(lines, els, dim=False, black=False, a0=None):
+    a = (a0 if a0 is not None else t0(lines[0])) - 0.15; b = t1(lines[-1]) + 0.25
     c = dict(t0=round(a, 2), t1=round(b, 2), els=els)
     if dim: c['dim'] = True
     cards.append(c)
@@ -111,7 +111,7 @@ card([66], [T('Estate: about $500,000', t0(66), 960, 230, 62, weight=800),
             T('Probate commonly eats  {3-7%}', wt(66, 'Probate'), 960, 520, 64, weight=800),
             T('= {$15,000 - $35,000}', wt(66, 'fifteen'), 960, 650, 84, weight=900),
             T('Months, sometimes a couple of years', wt(66, 'drag'), 960, 790, 50, weight=600, color='rgba(255,255,255,0.8)')], black=True)
-card([69], [dict(type='photo', src=f'file://{ROOT}/assets/people/prince_1986.jpg', at=t0(69), x=1060, y=0, w=860, h=1080, fade='left', fx=0.5, fy=0.2,
+card([69], a0=wt(69, 'It'), els=[dict(type='photo', src=f'file://{ROOT}/assets/people/prince_1986.jpg', at=t0(69), x=1060, y=0, w=860, h=1080, fade='left', fx=0.5, fy=0.2,
                  credit='Photo: Yves Lorson, CC BY 2.0'),
             T('Prince', t0(69), 140, 330, 110, align='left', weight=900),
             T('Died 2016. *No will.*', wt(69, 'will'), 140, 450, 56, align='left'),
@@ -126,6 +126,20 @@ card([74], [T('Three drains. Three rules.', t0(74), 960, 240, 68, weight=800),
 for c in cards:   # 'num' uses from (python keyword) and fade out at the card end
     for e in c['els']:
         if 'from_' in e: e['from'] = e.pop('from_')
+# ---------------- source receipts: the original page, key line highlighted (full frame, slow push) ----------------
+RC = f'file://{ROOT}/assets/receipts/'
+def proof(name, label, a, b):
+    cards.insert(0, dict(t0=round(a, 2), t1=round(b, 2), nopill=True, els=[
+        dict(type='photo', src=RC + name + '_z.png', at=a, x=0, y=0, w=1920, h=1080, fx=0.5, fy=0.5, dur=6),
+        dict(type='pill', str='Source: ' + label, at=a + 0.15, x=960, y=1000, size=34, tint='#E10600')]))
+proof('fdic', 'FDIC national rates', wt(12, 'Basically') - 0.15, wt(12, 'Basically') + 2.3)
+proof('bls2', 'Kiplinger, citing BLS', wt(12, 'seven') + 0.35, wt(12, 'seven') + 2.9)
+proof('irs', 'IRS.gov', t1(24) - 2.4, t1(24) + 0.25)
+proof('lt_apr', 'LendingTree', t0(33) - 0.35, wt(33, 'New') - 0.05)
+proof('lt_bnpl', 'LendingTree BNPL survey', t0(38) - 0.35, wt(38, 'forty') - 0.1)
+proof('ftc2', 'CFP Board, citing FTC data', t0(55) - 0.35, wt(55, 'three') - 0.1)
+proof('fbi', 'Malwarebytes, citing FBI IC3 report', t0(59) - 0.45, wt(59, 'nine') - 0.05)
+proof('prince', 'NBC News', wt(69, 'estate') - 0.1, t1(69) + 0.25)
 CARDED = {i for c in cards for i in P if c['t0'] - 0.01 <= t0(i) < c['t1']}
 
 # ---------------- stock footage under the remaining voiceover ----------------
@@ -134,6 +148,11 @@ for i, ids in BROLL.items():
     for k, s in enumerate(ss):
         a = a0 if k == 0 else s[0]['t'] - 0.1; b = (ss[k + 1][0]['t'] - 0.1) if k + 1 < len(ss) else P[i]['start'] + P[i]['out'] - P[i]['in_'] + 0.25
         broll.append(dict(t0=round(a, 2), t1=round(b, 2), id=ids[k % len(ids)]))
+# Prince: real performance footage (Arsenio Hall Show, CC BY 3.0) while his name lands
+broll.append(dict(t0=round(P[69]['start'] - 0.2, 2), t1=round(wt(69, 'It') - 0.15, 2), id='prince'))
+overlays_ = [dict(t0=round(t0(69), 2), t1=round(wt(69, 'It') - 0.25, 2), panel=[40, 180, 640, 150], els=[
+    T('Prince  (1958-2016)', t0(69) + 0.1, 90, 255, 50, align='left', weight=800),
+    T('Video: The Arsenio Hall Show, CC BY 3.0', t0(69) + 0.3, 90, 300, 22, align='left', weight=500, color='rgba(255,255,255,0.7)')])]
 broll.sort(key=lambda x: x['t0'])
 for x, y in zip(broll, broll[1:]):   # butt joins, no overlaps
     if y['t0'] < x['t1']: x['t1'] = y['t0']
@@ -193,8 +212,8 @@ END0 = E['duration'] + 0.3
 end = dict(t0=END0, els=[T('Which drain will you close first?', END0 + 0.3, 960, 380, 70, weight=800),
                          T('Tell me in the comments.', END0 + 0.8, 960, 480, 46, weight=600, color='rgba(255,255,255,0.85)'),
                          T('Next: track it all on *one simple page*', END0 + 1.4, 960, 640, 56, weight=700)])
-S = dict(duration=round(END0 + 5.5, 2), broll=broll, images=[f'file://{ROOT}/assets/people/prince_1986.jpg'], cards=cards,
-         overlays=[], captions=captions, sides=sides, chapters=chapters, end=end)
+S = dict(duration=round(END0 + 5.5, 2), broll=broll, images=[f'file://{ROOT}/assets/people/prince_1986.jpg'] + [RC + n + '_z.png' for n in ('fdic','bls2','irs','lt_apr','lt_bnpl','ftc2','fbi','prince')], cards=cards,
+         overlays=overlays_, captions=captions, sides=sides, chapters=chapters, end=end)
 json.dump(S, open(f'{ROOT}/build/scenes.json', 'w'), indent=0)
 json.dump(dict(broll=broll, slide=SLIDE), open(f'{ROOT}/build/broll.json', 'w'), indent=0)
 vo = sum(P[i]['out'] - P[i]['in_'] for i in P if P[i]['src'] == 'V')

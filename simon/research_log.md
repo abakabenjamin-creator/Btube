@@ -15,3 +15,17 @@
 | $10,000 at ~4% HYSA ≈ $400/yr vs ~$7 at 0.07% | FDIC national rate ~0.07% | Confirmed |
 | Probate commonly 3-7% | Common industry estimate | Plausible, general |
 | Prince died 2016, no will, ~$156M estate, 6 yrs in court, 2 heirs died waiting | Estate settled 2022 at $156.4M (IRS agreement); heirs Alfred Jackson (d. 2019) and John R. Nelson (d. 2021) | Confirmed |
+
+## On-screen source receipts (screenshots of the original pages, key line highlighted)
+| Moment | Page shown |
+|---|---|
+| Checking pays ~0.07% | [FDIC National Rates and Rate Caps](https://www.fdic.gov/national-rates-and-rate-caps) |
+| Sept CPI 3.7% | [Kiplinger, citing BLS](https://www.kiplinger.com/investing/economy/cpi-report-september-2026-what-to-expect) (bls.gov blocks automated browsers) |
+| 2026 IRA / 401(k) limits | [IRS newsroom](https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500) |
+| New card APR 24.00% | [LendingTree average APR](https://www.lendingtree.com/credit-cards/study/average-credit-card-interest-rate-in-america/) |
+| 47% BNPL users paid late | [LendingTree BNPL tracker](https://www.lendingtree.com/personal/buy-now-pay-later-loan-statistics/) |
+| $3.5B imposter scams | [CFP Board, citing FTC](https://www.cfp.net/news/2026/06/imposter-scams-led-fraud-reports-to-the-ftc-for-fifth-straight-year-in-2025) (ftc.gov blocks automated browsers) |
+| $893M AI scams | [Malwarebytes, citing FBI IC3 2025 report](https://www.malwarebytes.com/blog/news/2026/06/americans-lost-nearly-900-million-to-ai-powered-scams-fbi-says) |
+| Prince estate $156.4M | [NBC News](https://www.nbcnews.com/news/us-news/princes-estate-pegged-1564-million-final-valuation-rcna12540) |
+
+Prince footage: "Prince & The New Power Generation Perform Mutiny", The Arsenio Hall Show, CC BY 3.0, via Wikimedia Commons.

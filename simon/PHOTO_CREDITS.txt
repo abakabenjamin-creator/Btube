@@ -1,2 +1,3 @@
 prince_1986.jpg: File:Prince Brussels 1986.jpg | Yves Lorson | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Prince_Brussels_1986.jpg
 prince_coachella.jpg: File:Prince at Coachella 001 (upres retouch).jpg | Micahmedia at en.wikipedia | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Prince_at_Coachella_001_(upres_retouch).jpg
+prince_mutiny.webm: File:Prince & The New Power Generation Perform Mutiny no sound.webm | The Arsenio Hall Show | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Prince_%26_The_New_Power_Generation_Perform_Mutiny_no_sound.webm

@@ -7,3 +7,5 @@ src/*.mp4
 src/*.wav
 src/*.mp3
 assets/people/*.jpg
+assets/receipts/*.png
+assets/prince/*.webm

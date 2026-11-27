@@ -237,6 +237,11 @@
 "id": 23046
 },
 {
+"t0": 491.65,
+"t1": 498.26,
+"id": "prince"
+},
+{
 "t0": 506.55,
 "t1": 509.74,
 "id": 47687
@@ -258,9 +263,241 @@
 }
 ],
 "images": [
-"file:///home/user/Btube/simon/assets/people/prince_1986.jpg"
+"file:///home/user/Btube/simon/assets/people/prince_1986.jpg",
+"file:///home/user/Btube/simon/assets/receipts/fdic_z.png",
+"file:///home/user/Btube/simon/assets/receipts/bls2_z.png",
+"file:///home/user/Btube/simon/assets/receipts/irs_z.png",
+"file:///home/user/Btube/simon/assets/receipts/lt_apr_z.png",
+"file:///home/user/Btube/simon/assets/receipts/lt_bnpl_z.png",
+"file:///home/user/Btube/simon/assets/receipts/ftc2_z.png",
+"file:///home/user/Btube/simon/assets/receipts/fbi_z.png",
+"file:///home/user/Btube/simon/assets/receipts/prince_z.png"
 ],
 "cards": [
+{
+"t0": 504.16,
+"t1": 506.64,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/prince_z.png",
+"at": 504.157,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: NBC News",
+"at": 504.30699999999996,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 422.17,
+"t1": 423.93,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/fbi_z.png",
+"at": 422.166,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: Malwarebytes, citing FBI IC3 report",
+"at": 422.316,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 393.03,
+"t1": 395.63,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/ftc2_z.png",
+"at": 393.03099999999995,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: CFP Board, citing FTC data",
+"at": 393.1809999999999,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 293.86,
+"t1": 296.37,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/lt_bnpl_z.png",
+"at": 293.85999999999996,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: LendingTree BNPL survey",
+"at": 294.00999999999993,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 261.11,
+"t1": 263.11,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/lt_apr_z.png",
+"at": 261.10699999999997,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: LendingTree",
+"at": 261.25699999999995,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 200.9,
+"t1": 203.55,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/irs_z.png",
+"at": 200.904,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: IRS.gov",
+"at": 201.054,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 97.01,
+"t1": 99.56,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/bls2_z.png",
+"at": 97.011,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: Kiplinger, citing BLS",
+"at": 97.161,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
+{
+"t0": 91.22,
+"t1": 93.67,
+"nopill": true,
+"els": [
+{
+"type": "photo",
+"src": "file:///home/user/Btube/simon/assets/receipts/fdic_z.png",
+"at": 91.22,
+"x": 0,
+"y": 0,
+"w": 1920,
+"h": 1080,
+"fx": 0.5,
+"fy": 0.5,
+"dur": 6
+},
+{
+"type": "pill",
+"str": "Source: FDIC national rates",
+"at": 91.37,
+"x": 960,
+"y": 1000,
+"size": 34,
+"tint": "#E10600"
+}
+]
+},
 {
 "t0": 18.58,
 "t1": 25.59,
@@ -1287,7 +1524,7 @@
 ]
 },
 {
-"t0": 491.75,
+"t0": 498.26,
 "t1": 506.64,
 "els": [
 {
@@ -1420,7 +1657,43 @@
 "dim": true
 }
 ],
-"overlays": [],
+"overlays": [
+{
+"t0": 491.9,
+"t1": 498.16,
+"panel": [
+40,
+180,
+640,
+150
+],
+"els": [
+{
+"type": "text",
+"str": "Prince  (1958-2016)",
+"at": 492.005,
+"x": 90,
+"y": 255,
+"size": 50,
+"align": "left",
+"weight": 800,
+"font": "\"Inter\", sans-serif"
+},
+{
+"type": "text",
+"str": "Video: The Arsenio Hall Show, CC BY 3.0",
+"at": 492.205,
+"x": 90,
+"y": 300,
+"size": 22,
+"align": "left",
+"weight": 500,
+"font": "\"Inter\", sans-serif",
+"color": "rgba(255,255,255,0.7)"
+}
+]
+}
+],
 "captions": [
 {
 "t0": 0.31,
@@ -7490,6 +7763,360 @@
 "gkey": false
 }
 ]
+},
+{
+"t0": 491.9,
+"t1": 493.84,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Prince.",
+"t": 491.9,
+"key": false,
+"gkey": false
+},
+{
+"w": "2016.",
+"t": 492.46,
+"key": false,
+"gkey": false
+},
+{
+"w": "One",
+"t": 493.5,
+"key": false,
+"gkey": false
+},
+{
+"w": "of",
+"t": 493.76,
+"key": false,
+"gkey": false
+},
+{
+"w": "the",
+"t": 493.85,
+"key": false,
+"gkey": false
+},
+{
+"w": "most",
+"t": 493.93,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 494.14,
+"t1": 495.55,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "famous",
+"t": 494.14,
+"key": false,
+"gkey": false
+},
+{
+"w": "musicians",
+"t": 494.66,
+"key": false,
+"gkey": false
+},
+{
+"w": "alive,",
+"t": 495.13,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 495.85,
+"t1": 497.2,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "and",
+"t": 495.85,
+"key": false,
+"gkey": false
+},
+{
+"w": "he",
+"t": 496.06,
+"key": false,
+"gkey": false
+},
+{
+"w": "died",
+"t": 496.19,
+"key": false,
+"gkey": false
+},
+{
+"w": "with",
+"t": 496.45,
+"key": false,
+"gkey": false
+},
+{
+"w": "no",
+"t": 496.62,
+"key": false,
+"gkey": false
+},
+{
+"w": "will.",
+"t": 496.88,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 497.73,
+"t1": 498.96,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "None.",
+"t": 497.73,
+"key": false,
+"gkey": false
+},
+{
+"w": "It",
+"t": 498.41,
+"key": false,
+"gkey": false
+},
+{
+"w": "took",
+"t": 498.67,
+"key": false,
+"gkey": false
+},
+{
+"w": "more",
+"t": 498.84,
+"key": false,
+"gkey": false
+},
+{
+"w": "than",
+"t": 499.01,
+"key": false,
+"gkey": false
+},
+{
+"w": "a",
+"t": 499.14,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 499.26,
+"t1": 500.42,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "year",
+"t": 499.26,
+"key": false,
+"gkey": false
+},
+{
+"w": "to",
+"t": 499.65,
+"key": false,
+"gkey": false
+},
+{
+"w": "even",
+"t": 499.82,
+"key": false,
+"gkey": false
+},
+{
+"w": "figure",
+"t": 499.99,
+"key": false,
+"gkey": false
+},
+{
+"w": "out",
+"t": 500.37,
+"key": false,
+"gkey": false
+},
+{
+"w": "who",
+"t": 500.59,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 500.72,
+"t1": 501.46,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "his",
+"t": 500.72,
+"key": false,
+"gkey": false
+},
+{
+"w": "heirs",
+"t": 500.89,
+"key": false,
+"gkey": false
+},
+{
+"w": "were.",
+"t": 501.14,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 501.87,
+"t1": 503.36,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "Then",
+"t": 501.87,
+"key": false,
+"gkey": false
+},
+{
+"w": "six",
+"t": 502.25,
+"key": false,
+"gkey": false
+},
+{
+"w": "years",
+"t": 502.76,
+"key": false,
+"gkey": false
+},
+{
+"w": "in",
+"t": 502.98,
+"key": false,
+"gkey": false
+},
+{
+"w": "court,",
+"t": 503.11,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 503.66,
+"t1": 505.02,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "over",
+"t": 503.66,
+"key": false,
+"gkey": false
+},
+{
+"w": "an",
+"t": 504.13,
+"key": false,
+"gkey": false
+},
+{
+"w": "estate",
+"t": 504.26,
+"key": false,
+"gkey": false
+},
+{
+"w": "worth",
+"t": 504.68,
+"key": false,
+"gkey": false
+},
+{
+"w": "about",
+"t": 504.98,
+"key": false,
+"gkey": false
+},
+{
+"w": "a",
+"t": 505.2,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
+},
+{
+"t0": 505.32,
+"t1": 506.51,
+"upper": true,
+"pos": "c",
+"words": [
+{
+"w": "hundred",
+"t": 505.32,
+"key": false,
+"gkey": false
+},
+{
+"w": "fifty-six",
+"t": 505.67,
+"key": false,
+"gkey": false
+},
+{
+"w": "million.",
+"t": 506.22,
+"key": false,
+"gkey": false
+}
+],
+"broll": true,
+"size": 66
 },
 {
 "t0": 506.81,
