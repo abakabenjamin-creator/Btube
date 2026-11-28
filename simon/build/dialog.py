@@ -38,6 +38,8 @@ def lufs(f):
 for k,f in FILES.items(): GAIN[k]=10**((-16-lufs(f))/20)
 GAIN['V']=GAIN['P']*act_rms(A['P'])/act_rms(A['V'])   # same speech level as the presenter
 P_=E['pieces']; F=int(0.06*SR)
+SWORDS={'P':json.load(open(f'{ROOT}/src/p2_words.json')),'S':json.load(open(f'{ROOT}/src/p1_words.json')),
+        'V':[dict(w=w['text'],s=w['start_time'],e=w['end_time']) for w in json.load(open(f'{ROOT}/src/vo_words_slow.json'))]}
 pres=np.zeros(N)                                    # where the presenter's own audio (and room) is playing
 def ramp(n,up): return np.linspace(0,1,n) if up else np.linspace(1,0,n)
 for k,p in enumerate(P_):
@@ -46,10 +48,17 @@ for k,p in enumerate(P_):
     cont_prev=prev is not None and prev['src']==p['src'] and abs(pend(prev)-p['start'])<1e-3 and abs(prev['out']-p['in_'])<1e-3
     cont_next=nxt is not None and nxt['src']==p['src'] and abs(pend(p)-nxt['start'])<1e-3 and abs(p['out']-nxt['in_'])<1e-3
     h0=h1=0.0
-    if p['src']!='V':   # presenter: real breath/room audio runs into the gaps beside his line
-        if prev is not None and not cont_prev: g=p['start']-pend(prev); h0=g if prev['src']=='V' else g/2
-        if nxt is not None and not cont_next: g=nxt['start']-pend(p); h1=g if nxt['src']=='V' else g/2
+    if True:   # every source: real breath/room audio runs into the gaps beside the line (voiceover tails finish naturally)
+        # voiceover lines own the whole pause after them (their last word rings on ~0.3 s); presenter lines yield it
+        if prev is not None and not cont_prev:
+            g=p['start']-pend(prev); h0=0 if prev['src']=='V' else (g/2 if p['src']!='V' else 0.08)
+        if nxt is not None and not cont_next:
+            g=nxt['start']-pend(p); h1=g if p['src']=='V' else (g/2 if nxt['src']!='V' else 0)
         h0=min(h0,p['in_']); h1=max(0.0,min(h1,len(A[p['src']])/SR-p['out']))
+        SWd=SWORDS[p['src']]   # never let a handle reach into another line's words
+        pe=[w['e'] for w in SWd if w['e']<=p['in_']+0.02]; ns=[w['s'] for w in SWd if w['s']>=p['out']-0.02]
+        if pe: h0=max(0.0,min(h0,p['in_']-(pe[-1]+0.08)))
+        if ns: h1=max(0.0,min(h1,(ns[0]-0.08)-p['out']))
     a=int((p['in_']-h0)*SR); b=int((p['out']+h1)*SR); seg=A[p['src']][a:b]*GAIN[p['src']]
     r=np.ones(len(seg))
     if not cont_prev: r[:F]=ramp(F,1)

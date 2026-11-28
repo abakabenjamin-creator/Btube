@@ -21,6 +21,12 @@ for r in runs:
     sl = [s for s in B['slide'] if a - 0.05 <= s[0] < b]
     held = [s for s in B['slide'] if s[1] <= a + 0.05 and a < s[2] - 0.05]       # later line of a rule moment: stays pushed aside
     shots.append(dict(r, zoom=0 if (sl or held) else z, slide=sl[0] if sl else None, held=bool(held)))
+SW = {'P': json.load(open(f'{ROOT}/build/../src/p2_words.json')), 'S': json.load(open(f'{ROOT}/src/p1_words.json'))}
+for sh in shots:   # timeline limits for using his real frames outside the line: silence only (no other line's mouth movement)
+    a, b = sh['t0'] + sh['off'], sh['t1'] + sh['off']
+    pe = [w['e'] for w in SW[sh['src']] if w['e'] <= a + 0.02]; ns = [w['s'] for w in SW[sh['src']] if w['s'] >= b - 0.02]
+    sh['safe0'] = (pe[-1] + 0.12 - sh['off']) if pe else -1e9
+    sh['safe1'] = (ns[0] - 0.12 - sh['off']) if ns else 1e9
 own = [None] * NF
 for k, br in enumerate(B['broll']):
     for f in range(round(br['t0'] * FPS), min(NF, round(br['t1'] * FPS))): own[f] = ('broll', k)
@@ -33,8 +39,14 @@ while f < NF:
     while g < NF and own[g] is None: g += 1
     prev = own[f - 1] if f else None; nxt = own[g] if g < NF else None
     if (g - f) <= round(1.6 * FPS):
-        fill = prev if prev and prev[0] == 'broll' else nxt if nxt and nxt[0] == 'broll' else ('hold', prev[1]) if prev and prev[0] == 'shot' else ('hold0', nxt[1]) if nxt and nxt[0] == 'shot' else None
-        for h in range(f, g): own[h] = fill
+        for h in range(f, g):
+            T = h / FPS
+            if prev and prev[0] == 'shot' and T <= shots[prev[1]]['safe1']: own[h] = ('hold', prev[1])
+            elif nxt and nxt[0] == 'shot' and T >= shots[nxt[1]]['safe0']: own[h] = ('hold0', nxt[1])
+            elif prev and prev[0] == 'broll': own[h] = prev
+            elif nxt and nxt[0] == 'broll': own[h] = nxt
+            elif prev and prev[0] == 'shot': own[h] = ('freeze', prev[1])
+            elif nxt and nxt[0] == 'shot': own[h] = ('freeze0', nxt[1])
     f = g
 segs = []; f = 0
 while f < NF:
@@ -56,19 +68,21 @@ for i, (o, f0, f1) in enumerate(segs):
         cmd = ['-stream_loop', '-1', '-ss', f'{off:.3f}', '-i', f"{ROOT}/clips/{br['id']}.mp4"]
     else:
         sh = shots[o[1]]
-        st = T0 + sh['off']   # breaths between speakers: the presenter's real frames just before/after his line (no freeze frames)
+        st = T0 + sh['off']
+        if o[0] == 'freeze': st = min(sh['t1'], sh['safe1']) - 1 / FPS + sh['off']
+        if o[0] == 'freeze0': st = max(sh['t0'], sh['safe0']) + sh['off']   # breaths between speakers: the presenter's real frames just before/after his line (no freeze frames)
         pre = ''
         if sh['slide'] and o[0] == 'shot':
             s0, s1, se = sh['slide']; a = s0 - T0; dd = s1 - s0
             u = f"clip((t-{a:.3f})/{dd:.3f}\\,0\\,1)"; Ez = f"(3*pow({u}\\,2)-2*pow({u}\\,3))"
             pre = f"[1:v]setsar=1[r];[0:v][r]hstack=shortest=1,crop=1920:1080:'{SH}*{Ez}':0,"
-        elif (sh['slide'] and o[0] == 'hold' and T0 >= sh['slide'][1]) or (sh.get('held') and o[0] in ('shot', 'hold')):
+        elif (sh['slide'] and o[0] in ('hold', 'freeze') and T0 >= sh['slide'][1]) or (sh.get('held') and o[0] in ('shot', 'hold', 'freeze')):
             pre = f"[1:v]setsar=1[r];[0:v][r]hstack=shortest=1,crop=1920:1080:{SH}:0,"
         elif sh['zoom'] == 3:
             D = sh['t1'] - sh['t0']; tin = min(D, T0 - sh['t0'])
             Z = f"(1+0.03*max(0\\,t+{tin:.3f})/{D:.3f})"
             pre = f"scale=w='2*trunc(960*{Z})':h='2*trunc(540*{Z})':eval=frame:flags=lanczos,crop=1920:1080:'920*({Z}-1)':'1080*({Z}-1)',"
-        vf = pre + 'tpad=stop_mode=clone:stop_duration=30,fps=25'
+        vf = pre + ('trim=end_frame=1,' if o[0] in ('freeze', 'freeze0') else '') + 'tpad=stop_mode=clone:stop_duration=30,fps=25'
         cmd = ['-ss', f'{max(0, st):.3f}', '-i', FILE[sh['src']]]
     if vf and '[1:v]' in vf: cmd += ['-loop', '1', '-framerate', '25', '-i', f'{ROOT}/work/plate_main.png']   # clean room plate: one lamp only
     flt = [] if vf is None else (['-filter_complex', vf] if ('split' in vf or '[1:v]' in vf) else ['-vf', vf])
