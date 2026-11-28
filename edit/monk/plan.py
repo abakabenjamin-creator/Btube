@@ -137,7 +137,8 @@ def main():
         if r["src"] == "VO":
             a0, a1 = r["vs"] - PAD_IN, r["ve"] + PAD_OUT
         else:
-            a0, a1 = r["s"] - PAD_IN, r["e"] + PAD_OUT
+            a0 = r.get("cut_s", r["s"] - PAD_IN)        # adjacent pieces of one clip meet at a silence, never overlap
+            a1 = r.get("cut_e", r["e"] + PAD_OUT)
         a0 = max(0.0, a0)
         d = a1 - a0
         items.append(dict(i=r["i"], src=r["src"], a0=round(a0, 3), a1=round(a1, 3), t0=round(t, 3), t1=round(t + d, 3), text=r["text"]))
