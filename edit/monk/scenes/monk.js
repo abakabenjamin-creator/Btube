@@ -29,7 +29,7 @@ card('belt', 'bp', (r, s) => {
   const b = el(r, 'big', 'the belt chooses for you.'); css(b, { top: '400px', fontSize: '110px' });
   const track = el(r, 'abs'); css(track, { left: '0', right: '0', top: '640px', height: '120px' });
   const items = [];
-  for (let i = 0; i < 9; i++) { const d = el(track, 'abs'); css(d, { top: '20px', width: '150px', height: '80px', borderRadius: '18px', background: 'rgba(255,255,255,0.45)', border: '2px solid rgba(255,255,255,0.8)' }); items.push(d); }
+  for (let i = 0; i < 9; i++) { const d = el(track, 'abs'); css(d, { top: '20px', width: '150px', height: '80px', borderRadius: '18px', background: 'rgba(55,57,65,0.7)', border: '2px solid rgba(41,142,230,0.75)' }); items.push(d); }
   return t => { pop(k, t, s.t0 + 0.05); wordsIn(b, t, c[1] - 0.6, 7); b.style.opacity = 1;
     items.forEach((d, i) => { d.style.left = (((i * 230 + (t - s.t0) * 260) % 2070) - 150) + 'px'; }); };
 });
@@ -68,7 +68,7 @@ card('pyramid', 'lp', (r, s) => {
     const d = el(r, 'tier'); const y = 820 - (i + 1) * 210;
     css(d, { top: y + 'px', width: w + 'px', height: h + 'px', marginLeft: (-w / 2) + 'px',
       clipPath: `polygon(${(100 * 100 / w).toFixed(1)}% 0, ${(100 - 100 * 100 / w).toFixed(1)}% 0, 100% 100%, 0 100%)`,
-      background: `linear-gradient(180deg, rgba(${190 - i * 15},${160 - i * 20},255,0.95), rgba(${150 - i * 10},${110 - i * 10},240,0.95))` });
+      background: ['linear-gradient(180deg,#8A5240,#AC6F56)','linear-gradient(180deg,#074CA6,#1E6FD0)','linear-gradient(180deg,#298EE6,#6FB6FF)'][i], boxShadow: '0 0 40px rgba(41,142,230,0.35)' });
     const t2 = el(r, 'big', lab); css(t2, { top: (y + 70) + 'px', fontSize: '50px' });
     return [d, t2];
   });
@@ -118,7 +118,7 @@ card('habit', 'lp', (r, s) => {
   const x = d => 260 + 1400 * (d - 0) / 260;
   const marks = [[18, 'some people', c[3]], [66, 'average', c[2]], [250, 'others', c[4]]].map(([d, lab, tt]) => {
     const dt = el(r, 'dot'); place(dt, x(d) - 15, 625);
-    const v = el(r, 'abs', `<div style="font-size:${d === 66 ? 120 : 70}px;font-weight:700;text-align:center;text-shadow:0 4px 20px rgba(90,60,180,.35)">${d}</div><div style="font-size:28px;font-weight:600;text-align:center;opacity:.9">days · ${lab}</div>`);
+    const v = el(r, 'abs', `<div style="font-size:${d === 66 ? 120 : 70}px;font-weight:700;text-align:center;text-shadow:0 0 30px rgba(41,142,230,.6)">${d}</div><div style="font-size:28px;font-weight:600;text-align:center;opacity:.9">days · ${lab}</div>`);
     css(v, { left: (x(d) - 160) + 'px', width: '320px', top: d === 66 ? '400px' : '470px' });
     return [dt, v, tt];
   });
@@ -130,7 +130,7 @@ card('habit', 'lp', (r, s) => {
 card('quote', 'ld', (r, s) => {
   const c = PL.cues[35];
   const q1 = el(r, 'big dark', 'People overestimate what they can do in one year'); css(q1, { top: '330px', fontSize: '62px' });
-  const q2 = el(r, 'big dark', 'and underestimate what they can do in ten.'); css(q2, { top: '430px', fontSize: '62px', color: '#7B55E8' });
+  const q2 = el(r, 'big dark', 'and underestimate what they can do in ten.'); css(q2, { top: '430px', fontSize: '62px', color: '#6FB6FF' });
   const lo = el(r, 'lower', '<div class="n">Bill Gates</div><div class="r">often credited</div>'); place(lo, 830, 600);
   return t => { wordsIn(q1, t, c[1], 9); q1.style.opacity = 1; wordsIn(q2, t, c[2], 9); q2.style.opacity = 1; pop(lo, t, c[0] + 0.4); };
 });
@@ -165,7 +165,7 @@ card('recap', 'lp', (r, s) => {
   const R = PL.recap;
   const k = el(r, 'kicker', 'Seven steps'); k.style.top = '90px';
   const steps = ['Decide, and cut the cord', 'A six-month plan with a date', 'Build the skill, practice daily', 'Find one person, borrow their map', 'Your floor is safe', 'Move, then outlast the awkward', 'Give it a full year'];
-  const rows = steps.map((txt, i) => { const g = el(r, 'glass', `<div style="position:absolute;left:30px;top:50%;transform:translateY(-50%);font-size:40px;font-weight:700;color:#7B55E8">${i + 1}</div><div style="position:absolute;left:90px;top:50%;transform:translateY(-50%);font-size:34px;font-weight:600;color:#3B2A80">${txt}</div>`);
+  const rows = steps.map((txt, i) => { const g = el(r, 'glass', `<div style="position:absolute;left:30px;top:50%;transform:translateY(-50%);font-size:40px;font-weight:700;color:#298EE6">${i + 1}</div><div style="position:absolute;left:90px;top:50%;transform:translateY(-50%);font-size:34px;font-weight:600;color:#FFFFFF">${txt}</div>`);
     place(g, i < 4 ? 140 : 990, 200 + (i % 4) * 190, 790, 150); return g; });
   return t => { pop(k, t, s.t0 + 0.05); rows.forEach((g, i) => pop(g, t, R[i] - 0.05, { rise: 30 })); };
 });

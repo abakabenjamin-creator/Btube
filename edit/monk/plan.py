@@ -29,7 +29,7 @@ TTS = [w for w in json.load(open(os.path.join(HERE, "vo_resp.json")))["original_
 # ------------------------------------------------------------------ visuals for voiceover runs
 # (cue words that start the shot, visual). Visual: ("B", clip_id, in_point_s) or ("G", card)
 VO_SHOTS = {
-    1: [("Your life", ("B", "20770", 0.5)), ("It's on a conveyor", ("B", "22433", 4.0)), ("Every day you", ("G", "belt"))],
+    1: [("Your life", ("B", "20770", 0.5)), ("It's on a conveyor", ("B", "22433", 0.0)), ("Every day you", ("G", "belt"))],
     4: [("The word", ("G", "decide")), ("So when you", ("B", "11711", 1.0)), ("Fifteen years", ("G", "days")),
         ("And the belt", ("B", "38501", 3.0))],
     6: [("Picture the guy", ("B", "4151", 2.0)), ("Or the mom", ("B", "26232", 1.0))],
