@@ -181,7 +181,7 @@ function build() {
   });
   L.pill = el(st, 'secpill', '');
   L.caps = PL.caps.map(c => { const e = el(st, 'cap', escapeHtml(c.text)); e.style.top = c.over === 'B' ? '850px' : '880px'; return { c, e }; });
-  L.sides = PL.sides.map(sd => { const e = el(st, 'side'); place(e, 1230, 300);
+  L.sides = PL.sides.map(sd => { const e = el(st, 'side'); place(e, 1400, 330);
     sd.lines.forEach((ln, i) => el(e, 'ln' + (i < sd.lines.length - 1 ? ' dim' : ''), escapeHtml(ln))); return { sd, e }; });
   el(st, 'subbtn', '<svg viewBox="0 0 22 16"><rect x="0" y="0" width="22" height="16" rx="4" fill="#fff"/><path d="M9 4.5 L15 8 L9 11.5 Z" fill="#E21B1B"/></svg><span>Subscribe</span>');
   el(st, 'signame', 'Abaka<br>Sika');
