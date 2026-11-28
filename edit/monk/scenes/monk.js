@@ -68,7 +68,7 @@ card('pyramid', 'lp', (r, s) => {
     const d = el(r, 'tier'); const y = 820 - (i + 1) * 210;
     css(d, { top: y + 'px', width: w + 'px', height: h + 'px', marginLeft: (-w / 2) + 'px',
       clipPath: `polygon(${(100 * 100 / w).toFixed(1)}% 0, ${(100 - 100 * 100 / w).toFixed(1)}% 0, 100% 100%, 0 100%)`,
-      background: ['linear-gradient(180deg,#8A5240,#AC6F56)','linear-gradient(180deg,#074CA6,#1E6FD0)','linear-gradient(180deg,#298EE6,#6FB6FF)'][i], boxShadow: '0 0 40px rgba(41,142,230,0.35)' });
+      background: ['linear-gradient(180deg,#051427,#0B2340)','linear-gradient(180deg,#062C4F,#074CA6)','linear-gradient(180deg,#1E6FD0,#298EE6)'][i], boxShadow: '0 10px 40px rgba(40,15,5,0.4)' });
     const t2 = el(r, 'big', lab); css(t2, { top: (y + 70) + 'px', fontSize: '50px' });
     return [d, t2];
   });
@@ -130,7 +130,7 @@ card('habit', 'lp', (r, s) => {
 card('quote', 'ld', (r, s) => {
   const c = PL.cues[35];
   const q1 = el(r, 'big dark', 'People overestimate what they can do in one year'); css(q1, { top: '330px', fontSize: '62px' });
-  const q2 = el(r, 'big dark', 'and underestimate what they can do in ten.'); css(q2, { top: '430px', fontSize: '62px', color: '#6FB6FF' });
+  const q2 = el(r, 'big dark', 'and underestimate what they can do in ten.'); css(q2, { top: '430px', fontSize: '62px', color: '#051427', textShadow: 'none' });
   const lo = el(r, 'lower', '<div class="n">Bill Gates</div><div class="r">often credited</div>'); place(lo, 830, 600);
   return t => { wordsIn(q1, t, c[1], 9); q1.style.opacity = 1; wordsIn(q2, t, c[2], 9); q2.style.opacity = 1; pop(lo, t, c[0] + 0.4); };
 });
