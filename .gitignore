@@ -23,3 +23,5 @@ __pycache__/
 # Rendered video deliverables (too large for git)
 edit/**/*.mp4
 edit/parts/
+edit/monk/*.json
+!edit/monk/plan.json

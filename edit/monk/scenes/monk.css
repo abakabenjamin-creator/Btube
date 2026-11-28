@@ -1,0 +1,63 @@
+/* Monk 1 look: pastel lavender / pink / sky-blue gradients, purple pill labels,
+   frosted-glass cards, glossy 3D spheres, clean white captions. */
+@font-face { font-family: "Instrument Sans"; font-weight: 400; src: url(fonts/instrument-sans-latin-400-normal.woff2); }
+@font-face { font-family: "Instrument Sans"; font-weight: 500; src: url(fonts/instrument-sans-latin-500-normal.woff2); }
+@font-face { font-family: "Instrument Sans"; font-weight: 600; src: url(fonts/instrument-sans-latin-600-normal.woff2); }
+@font-face { font-family: "Instrument Sans"; font-weight: 700; src: url(fonts/instrument-sans-latin-700-normal.woff2); }
+
+:root {
+  --lav: #C9B6FF;
+  --lav-deep: #8D6CF0;
+  --pink: #F6A6E6;
+  --sky: #6FA8FF;
+  --pill: rgba(141, 108, 240, 0.88);
+  --ink: #2B1F5C;
+  --white: #FFFFFF;
+  --shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+body { font-family: "Instrument Sans", sans-serif; color: var(--white); letter-spacing: -0.02em; -webkit-font-smoothing: antialiased; }
+#stage { position: absolute; inset: 0; overflow: hidden; }
+.abs { position: absolute; }
+
+/* backgrounds */
+.bg-lp { position: absolute; inset: 0; background: linear-gradient(135deg, #E9DDFF 0%, #D7C2FF 35%, #F3B6EA 75%, #F9C9EE 100%); }
+.bg-bp { position: absolute; inset: 0; background: linear-gradient(120deg, #5F9CFF 0%, #8FB4FF 40%, #E8A6EC 85%, #F6B9E9 100%); }
+.bg-ld { position: absolute; inset: 0; background: linear-gradient(160deg, #F4EEFF 0%, #E4D6FF 60%, #D3BDFF 100%); }
+.noise { position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 15%, rgba(255,255,255,0.55), rgba(255,255,255,0) 45%), radial-gradient(ellipse at 85% 90%, rgba(255,255,255,0.35), rgba(255,255,255,0) 50%); }
+
+/* labels and type on cards */
+.kicker { position: absolute; left: 0; right: 0; text-align: center; font-size: 30px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.95); text-shadow: 0 2px 10px rgba(90,60,180,0.35); }
+.big { position: absolute; left: 0; right: 0; text-align: center; font-weight: 700; color: #fff; text-shadow: 0 4px 24px rgba(90,60,180,0.35); white-space: nowrap; }
+.dark { color: var(--ink); text-shadow: none; }
+.ppill { position: absolute; padding: 14px 30px; border-radius: 14px; background: var(--pill); color: #fff; font-size: 44px; font-weight: 600; white-space: nowrap; box-shadow: 0 10px 30px rgba(90,60,180,0.35); }
+.glass { position: absolute; border-radius: 34px; background: rgba(255,255,255,0.32); border: 2px solid rgba(255,255,255,0.65); box-shadow: 0 20px 60px rgba(90,60,180,0.22), inset 0 1px 0 rgba(255,255,255,0.8); backdrop-filter: blur(18px); }
+.glass .lab { position: absolute; left: 34px; top: 26px; font-size: 22px; font-weight: 600; color: rgba(60,40,140,0.65); }
+.glass .val { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: center; font-size: 54px; font-weight: 700; color: #3D7BFF; }
+.sphere { position: absolute; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #FFFFFF 0%, #FBD3F3 18%, #F08BD8 48%, #C866D9 75%, #9E57E0 100%); box-shadow: 0 30px 80px rgba(140,70,200,0.35), inset -18px -24px 60px rgba(120,40,180,0.35); }
+.sphere.blue { background: radial-gradient(circle at 32% 28%, #FFFFFF 0%, #D6E6FF 18%, #8FB4FF 48%, #6F8CF0 75%, #7A62E6 100%); }
+.sphere .t { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: center; font-weight: 700; color: #fff; text-shadow: 0 3px 14px rgba(90,40,160,0.45); }
+.dash { position: absolute; border: 3px dashed rgba(255,255,255,0.8); border-radius: 50%; }
+.line { position: absolute; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.85); }
+.dot { position: absolute; width: 30px; height: 30px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 8px rgba(255,255,255,0.35); }
+
+/* pyramid */
+.tier { position: absolute; left: 50%; transform-origin: 50% 100%; }
+
+/* overlays on footage */
+.secpill { position: absolute; left: 64px; top: 50px; padding: 9px 22px; border-radius: 999px; background: rgba(20,16,30,0.42); border: 1px solid rgba(255,255,255,0.35); color: #fff; font-size: 22px; font-weight: 600; letter-spacing: 0; backdrop-filter: blur(8px); white-space: nowrap; z-index: 80; }
+.cap { position: absolute; left: 0; right: 0; text-align: center; font-size: 50px; font-weight: 600; line-height: 1.18; z-index: 70; }
+.cap .w { display: inline-block; margin: 0 0.13em; text-shadow: var(--shadow); }
+.cap .w.soft { font-weight: 400; color: rgba(255,255,255,0.82); }
+.side { position: absolute; z-index: 70; }
+.side .ln { font-size: 44px; font-weight: 600; text-shadow: var(--shadow); margin-top: 10px; white-space: nowrap; }
+.side .ln.dim { color: rgba(255,255,255,0.55); font-weight: 500; }
+.lower { position: absolute; padding: 14px 28px; border-radius: 16px; background: rgba(20,16,30,0.55); border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(8px); }
+.lower .n { font-size: 34px; font-weight: 700; }
+.lower .r { font-size: 21px; font-weight: 500; color: rgba(255,255,255,0.8); margin-top: 2px; }
+
+/* channel branding (My Editing Style 2): right side */
+.subbtn { position: absolute; right: 64px; top: 52px; display: flex; align-items: center; gap: 8px; padding: 6px 13px 6px 9px; border-radius: 4px; background: #E21B1B; color: #fff; font-size: 17px; font-weight: 600; letter-spacing: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.45); z-index: 90; }
+.subbtn svg { width: 22px; height: 16px; flex: none; }
+.signame { position: absolute; right: 64px; bottom: 40px; text-align: right; font-size: 32px; font-weight: 700; line-height: 0.95; letter-spacing: 0.01em; text-transform: uppercase; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.6); z-index: 90; }
