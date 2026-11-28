@@ -1,0 +1,21 @@
+{
+ "url": "https://www.usinflationcalculator.com/inflation/current-inflation-rates/",
+ "status": 200,
+ "captured": "2026-10-22T18:17:42.709Z",
+ "boxes": {
+  "2026": {
+   "x": -2245.012451171875,
+   "y": 356,
+   "w": 79.0625,
+   "h": 40
+  },
+  "3.4": {
+   "x": 446.59375,
+   "y": 514.1875,
+   "w": 45.90625,
+   "h": 38
+  }
+ },
+ "w": 2880,
+ "h": 1800
+}

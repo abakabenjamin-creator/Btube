@@ -1,0 +1,21 @@
+{
+ "url": "https://www.census.gov/econ/bfs/current/index.html",
+ "status": 200,
+ "captured": "2026-10-22T18:19:57.302Z",
+ "boxes": {
+  "Business Formation Statistics": {
+   "x": 1046.21875,
+   "y": 262.25,
+   "w": 282.4375,
+   "h": 28
+  },
+  "new business startups with payroll tax liabilities will form within 4 quarters": {
+   "x": 630,
+   "y": 1591.25,
+   "w": 1296.21875,
+   "h": 96
+  }
+ },
+ "w": 2880,
+ "h": 1800
+}

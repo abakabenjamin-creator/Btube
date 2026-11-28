@@ -1,0 +1,15 @@
+{
+ "url": "https://www.fdic.gov/national-rates-and-rate-caps",
+ "status": 200,
+ "captured": "2026-10-22T18:20:05.444Z",
+ "boxes": {
+  "Savings": {
+   "x": 820,
+   "y": 700,
+   "w": 111.9375,
+   "h": 44
+  }
+ },
+ "w": 2880,
+ "h": 1800
+}
